@@ -1,0 +1,68 @@
+{
+ "similarity": {
+  "sparse+tv": {
+   "Eternal Star / We hope so": {
+    "row1": 0.7379867434501648,
+    "row2": 0.7601120471954346
+   },
+   "L is real 2401 / (row 2 not claimed)": {
+    "row1": 0.2865985929965973,
+    "row2": null
+   },
+   "A Secret star / lie here ~": {
+    "row1": 0.3032321631908417,
+    "row2": 0.43658447265625
+   },
+   "Eternal Star / My hope is": {
+    "row1": 0.7380494475364685,
+    "row2": 0.6819362044334412
+   }
+  },
+  "sparse+tv+binary": {
+   "Eternal Star / We hope so": {
+    "row1": 0.5780295133590698,
+    "row2": 0.5662969350814819
+   },
+   "L is real 2401 / (row 2 not claimed)": {
+    "row1": 0.19545483589172363,
+    "row2": null
+   },
+   "A Secret star / lie here ~": {
+    "row1": 0.22128964960575104,
+    "row2": 0.30146145820617676
+   },
+   "Eternal Star / My hope is": {
+    "row1": 0.5778347253799438,
+    "row2": 0.49110710620880127
+   }
+  }
+ },
+ "prior_scale": 0.9560239010953077,
+ "sse": {
+  "real": {
+   "none": 0.020347170531749725,
+   "sparse+tv": 326.9692687988281,
+   "sparse+tv+binary": 340.44757080078125
+  },
+  "Eternal Star / We hope so": {
+   "none": 0.010842269286513329,
+   "sparse+tv": 198.39007568359375,
+   "sparse+tv+binary": 250.05471801757812
+  },
+  "L is real 2401 / (row 2 not claimed)": {
+   "none": 0.009116290137171745,
+   "sparse+tv": 243.68429565429688,
+   "sparse+tv+binary": 263.9447326660156
+  },
+  "A Secret star / lie here ~": {
+   "none": 0.007449960336089134,
+   "sparse+tv": 209.9609832763672,
+   "sparse+tv+binary": 267.94268798828125
+  },
+  "Eternal Star / My hope is": {
+   "none": 0.01127445138990879,
+   "sparse+tv": 201.58392333984375,
+   "sparse+tv+binary": 248.62579345703125
+  }
+ }
+}

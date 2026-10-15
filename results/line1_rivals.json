@@ -1,0 +1,26 @@
+{
+ "Star": {
+  "P052-BoldItalic.otf": 756.90771484375,
+  "PalatinoBoldItalic.ttf": 759.18994140625
+ },
+ "Stat": {
+  "P052-BoldItalic.otf": 770.8330078125,
+  "PalatinoBoldItalic.ttf": 774.38232421875
+ },
+ "Sent": {
+  "P052-BoldItalic.otf": 786.1142578125,
+  "PalatinoBoldItalic.ttf": 787.68408203125
+ },
+ "Seat": {
+  "P052-BoldItalic.otf": 797.2587890625,
+  "PalatinoBoldItalic.ttf": 811.960693359375
+ },
+ "Slot": {
+  "P052-BoldItalic.otf": 791.703125,
+  "PalatinoBoldItalic.ttf": 797.109375
+ },
+ "star": {
+  "P052-BoldItalic.otf": 754.503662109375,
+  "PalatinoBoldItalic.ttf": 764.816162109375
+ }
+}
