@@ -1,0 +1,34 @@
+[
+ {
+  "stage": "square canvas",
+  "best": {
+   "P052-BoldItalic.otf": 874.72412109375,
+   "PalatinoBoldItalic.ttf": 893.427978515625,
+   "PalatinoItalic.ttf": 911.491943359375
+  }
+ },
+ {
+  "stage": "+ non-square artwork",
+  "best": {
+   "P052-BoldItalic.otf": 833.53857421875,
+   "PalatinoBoldItalic.ttf": 893.427978515625,
+   "PalatinoItalic.ttf": 1079.24951171875
+  }
+ },
+ {
+  "stage": "+ word space, blur, gamma",
+  "best": {
+   "P052-BoldItalic.otf": 769.093505859375,
+   "PalatinoBoldItalic.ttf": 783.80029296875,
+   "PalatinoItalic.ttf": 809.135986328125
+  }
+ },
+ {
+  "stage": "+ whole-pixel advances",
+  "best": {
+   "P052-BoldItalic.otf": 756.90771484375,
+   "PalatinoBoldItalic.ttf": 759.18994140625,
+   "PalatinoItalic.ttf": 809.135986328125
+  }
+ }
+]
