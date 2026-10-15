@@ -86,7 +86,6 @@ python -m plaquedecode line2 --recipes results/recipes_P052-BoldItalic.json --ho
 | `report/` | LaTeX source, figures, tables, PDF |
 | `data/vocab_en_core.txt` | 17.7k-word English vocabulary (SCOWL/Hunspell-derived) |
 | `fonts/` | put fonts here (none distributed) |
-| `legacy/` | the original exploratory research scripts, for transparency |
 
 ## Legal
 
