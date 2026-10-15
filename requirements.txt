@@ -1,0 +1,4 @@
+numpy>=1.24
+torch>=2.1        # CUDA strongly recommended for the searches; CPU works for extraction, scoring and figures
+pillow>=10.0      # FreeType text rendering (basic layout)
+matplotlib>=3.7   # figures

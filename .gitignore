@@ -1,0 +1,22 @@
+# Nintendo data never goes into this repository
+*.z64
+*.n64
+*.v64
+*.zip
+texture.npy
+# inverted artwork of the real plaque is texture-derived: regenerate locally with `plaquedecode invert`
+results/inversion.npz
+# fonts are user-supplied (licences)
+fonts/*
+!fonts/README.md
+# python / latex build files
+__pycache__/
+*.pyc
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.bbl
+report/*.blg
+report/*.fls
+report/*.fdb_latexmk
