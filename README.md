@@ -33,6 +33,7 @@ plaques with known text.
 | line 1 | **Eternal Star** (capital or lower-case s undecided) | "Star" is rank 1 of 27,122 words with every setting frozen; rivals lose even with their own recipe search |
 | line 2 | **We hope so** | same process, centred, same ink level; "hope" is rank 1 of 12,556 middle words. Fitting line 2's own typesetting on "hope" alone makes "We" and "so" the best real words on their own (held-out) pixels, and the unconstrained dictionary search then finds "We hope so" among its top 3 |
 | inversion | supports it | running the fitted process backwards: the inverted plaque correlates 0.74 / 0.76 (row 1 / row 2) with inverted "Eternal Star / We hope so", vs 0.29 for "L is real 2401" and 0.30 for "A Secret star" |
+| list-bias test | the sentence list does not invent the answer | planting 34 phrases that are NOT in the curated list and decoding them with the list: the list's best sentence lands inside the pixel-compatible window in only 5/34 (2/28 for text unrelated to "hope"; median gap 130 vs 0 on the real plaque) and never returns "We hope so"; all 8 in-list controls are recovered exactly (`results/listbias_adobe.json`, `python -m plaquedecode.listbias`) |
 | "L is real 2401" | rejected | scored as claimed (whole phrase on row 1, no claim about row 2): row 1 fits about twice as badly as "Eternal Star" |
 
 How much to trust it:
