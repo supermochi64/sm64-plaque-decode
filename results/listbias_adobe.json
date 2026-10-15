@@ -1,0 +1,1646 @@
+{
+ "window": 58.0,
+ "cfg": [
+  19,
+  0.0,
+  74,
+  128
+ ],
+ "list_size": 1368995,
+ "results": [
+  {
+   "kind": "real",
+   "truth": null,
+   "list_top": "We hope so",
+   "list_2nd": "We hope as",
+   "s_list": 311.2064208984375,
+   "s_list2": 311.48004150390625,
+   "s_dp": 311.2064208984375,
+   "dp_top": "We hope so",
+   "s_true": null,
+   "optimum": 311.2064208984375,
+   "list_minus_opt": 0.0,
+   "list_minus_true": null,
+   "in_window": true,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "We hope so",
+     311.2
+    ],
+    [
+     "We hope as",
+     311.5
+    ],
+    [
+     "We hope so.",
+     316.9
+    ],
+    [
+     "We hope us",
+     321.3
+    ],
+    [
+     "We hope or",
+     329.2
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Big Boo lives",
+   "list_top": "My Rise Ever",
+   "list_2nd": "'Tis Rise Ever",
+   "s_list": 520.7963256835938,
+   "s_list2": 542.6016845703125,
+   "s_dp": 306.8202819824219,
+   "dp_top": "Big Boa lives",
+   "s_true": 311.2063903808594,
+   "optimum": 306.8202819824219,
+   "list_minus_opt": 213.97604370117188,
+   "list_minus_true": 209.58993530273438,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "My Rise Ever",
+     520.8
+    ],
+    [
+     "'Tis Rise Ever",
+     542.6
+    ],
+    [
+     "Tis Rise Ever",
+     546.2
+    ],
+    [
+     "My Rise Now",
+     546.3
+    ],
+    [
+     "My Rise Now.",
+     546.7
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Go see Peach",
+   "list_top": "Go wait ever",
+   "list_2nd": "Go wait now",
+   "s_list": 514.91943359375,
+   "s_list2": 520.56494140625,
+   "s_dp": 298.2734680175781,
+   "dp_top": "Cu see Peach",
+   "s_true": 311.2064208984375,
+   "optimum": 298.2734680175781,
+   "list_minus_opt": 216.64596557617188,
+   "list_minus_true": 203.7130126953125,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Go wait ever",
+     514.9
+    ],
+    [
+     "Go wait now",
+     520.6
+    ],
+    [
+     "Go wait now.",
+     523.2
+    ],
+    [
+     "Go wait two",
+     525.6
+    ],
+    [
+     "To wait ever",
+     539.9
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Run and jump",
+   "list_top": "You you more",
+   "list_2nd": "Too you more",
+   "s_list": 510.5242614746094,
+   "s_list2": 533.4796142578125,
+   "s_dp": 307.1408386230469,
+   "dp_top": "Fun and jump",
+   "s_true": 311.2063903808594,
+   "optimum": 307.1408386230469,
+   "list_minus_opt": 203.3834228515625,
+   "list_minus_true": 199.31787109375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "You you more",
+     510.5
+    ],
+    [
+     "Too you more",
+     533.5
+    ],
+    [
+     "You pay more",
+     534.8
+    ],
+    [
+     "You pop more",
+     537.2
+    ],
+    [
+     "For yes more",
+     542.6
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Do not swim",
+   "list_top": "On waits now.",
+   "list_2nd": "Do eye more",
+   "s_list": 477.57525634765625,
+   "s_list2": 477.73797607421875,
+   "s_dp": 303.07147216796875,
+   "dp_top": "Do nut swim",
+   "s_true": 311.2063903808594,
+   "optimum": 303.07147216796875,
+   "list_minus_opt": 174.5037841796875,
+   "list_minus_true": 166.36886596679688,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "On waits now.",
+     477.6
+    ],
+    [
+     "Do eye more",
+     477.7
+    ],
+    [
+     "Oh waits now.",
+     481.5
+    ],
+    [
+     "On waits now",
+     481.8
+    ],
+    [
+     "Do yes more",
+     481.9
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Sun is up",
+   "list_top": "She soap .",
+   "list_2nd": "She soap",
+   "s_list": 376.45013427734375,
+   "s_list2": 378.23175048828125,
+   "s_dp": 272.4178771972656,
+   "dp_top": "Van la up",
+   "s_true": 311.2063903808594,
+   "optimum": 272.4178771972656,
+   "list_minus_opt": 104.03225708007812,
+   "list_minus_true": 65.24374389648438,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "She soap .",
+     376.5
+    ],
+    [
+     "She soap",
+     378.2
+    ],
+    [
+     "She Soup .",
+     378.4
+    ],
+    [
+     "She Soup",
+     379.2
+    ],
+    [
+     "She soup .",
+     384.4
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Fish swim here",
+   "list_top": "Thee opens now",
+   "list_2nd": "Thee opens now.",
+   "s_list": 431.8619384765625,
+   "s_list2": 433.659423828125,
+   "s_dp": 311.20635986328125,
+   "dp_top": "Fish swim here",
+   "s_true": 311.20635986328125,
+   "optimum": 311.20635986328125,
+   "list_minus_opt": 120.65557861328125,
+   "list_minus_true": 120.65557861328125,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Thee opens now",
+     431.9
+    ],
+    [
+     "Thee opens now.",
+     433.7
+    ],
+    [
+     "This gleam now",
+     437.8
+    ],
+    [
+     "This gleam now.",
+     439.6
+    ],
+    [
+     "Our yearn now",
+     441.5
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Cake is ready",
+   "list_top": "She yours up",
+   "list_2nd": "Thus yours up",
+   "s_list": 530.773193359375,
+   "s_list2": 539.1676635742188,
+   "s_dp": 297.10101318359375,
+   "dp_top": "C uh l lei sou kg",
+   "s_true": 311.2064208984375,
+   "optimum": 297.10101318359375,
+   "list_minus_opt": 233.67218017578125,
+   "list_minus_true": 219.5667724609375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "She yours up",
+     530.8
+    ],
+    [
+     "Thus yours up",
+     539.2
+    ],
+    [
+     "She peace up",
+     540.7
+    ],
+    [
+     "She enjoy up",
+     544.4
+    ],
+    [
+     "That peace up",
+     546.3
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Find the key",
+   "list_top": "Then Joy You",
+   "list_2nd": "Then Yes You",
+   "s_list": 505.50152587890625,
+   "s_list2": 505.6090393066406,
+   "s_dp": 301.326904296875,
+   "dp_top": "Find Ha hey",
+   "s_true": 311.2063903808594,
+   "optimum": 301.326904296875,
+   "list_minus_opt": 204.17462158203125,
+   "list_minus_true": 194.29513549804688,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Then Joy You",
+     505.5
+    ],
+    [
+     "Then Yes You",
+     505.6
+    ],
+    [
+     "Thus Yes You",
+     515.4
+    ],
+    [
+     "Thus Joy You",
+     517.4
+    ],
+    [
+     "They Joy You",
+     519.7
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Come back soon",
+   "list_top": "Thus open more",
+   "list_2nd": "Thou huge more",
+   "s_list": 599.329833984375,
+   "s_list2": 604.73388671875,
+   "s_dp": 299.9917907714844,
+   "dp_top": "Came back soon",
+   "s_true": 311.2063903808594,
+   "optimum": 299.9917907714844,
+   "list_minus_opt": 299.3380432128906,
+   "list_minus_true": 288.1234436035156,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Thus open more",
+     599.3
+    ],
+    [
+     "Thou huge more",
+     604.7
+    ],
+    [
+     "Thou lives more",
+     611.1
+    ],
+    [
+     "Thus hero more",
+     611.5
+    ],
+    [
+     "Thus love ever",
+     615.3
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Mind the gap",
+   "list_top": "Show the way",
+   "list_2nd": "Who fly you",
+   "s_list": 488.31622314453125,
+   "s_list2": 526.3280029296875,
+   "s_dp": 311.2063903808594,
+   "dp_top": "Mind the gap",
+   "s_true": 311.2063903808594,
+   "optimum": 311.2063903808594,
+   "list_minus_opt": 177.10983276367188,
+   "list_minus_true": 177.10983276367188,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Show the way",
+     488.3
+    ],
+    [
+     "Who fly you",
+     526.3
+    ],
+    [
+     "Why fly you",
+     528.4
+    ],
+    [
+     "Who fly one",
+     540.8
+    ],
+    [
+     "What sharp up",
+     543.9
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Watch your step",
+   "list_top": "What dreams now.",
+   "list_2nd": "What dreams now",
+   "s_list": 687.0341796875,
+   "s_list2": 687.1665649414062,
+   "s_dp": 310.7825012207031,
+   "dp_top": "Watch your stepped",
+   "s_true": 311.2064208984375,
+   "optimum": 310.7825012207031,
+   "list_minus_opt": 376.2516784667969,
+   "list_minus_true": 375.8277587890625,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "What dreams now.",
+     687.0
+    ],
+    [
+     "What dreams now",
+     687.2
+    ],
+    [
+     "Was hoping now",
+     707.8
+    ],
+    [
+     "Was hoping now.",
+     707.8
+    ],
+    [
+     "Who hoping now",
+     708.8
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Toad was here",
+   "list_top": "Too Sleeps Now",
+   "list_2nd": "Thy Sleeps Now",
+   "s_list": 411.44903564453125,
+   "s_list2": 413.09222412109375,
+   "s_dp": 292.16796875,
+   "dp_top": "Fund i a n o Sons",
+   "s_true": 311.2063903808594,
+   "optimum": 292.16796875,
+   "list_minus_opt": 119.28106689453125,
+   "list_minus_true": 100.24264526367188,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Too Sleeps Now",
+     411.4
+    ],
+    [
+     "Thy Sleeps Now",
+     413.1
+    ],
+    [
+     "Too Sleeps Now.",
+     417.9
+    ],
+    [
+     "You Sleeps Now",
+     418.2
+    ],
+    [
+     "Thy Sleeps Now.",
+     419.6
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Look up high",
+   "list_top": "For Keep Now",
+   "list_2nd": "For Keep Now.",
+   "s_list": 524.90771484375,
+   "s_list2": 525.2403564453125,
+   "s_dp": 278.40386962890625,
+   "dp_top": "l nob up high",
+   "s_true": 303.6859436035156,
+   "optimum": 278.40386962890625,
+   "list_minus_opt": 246.50384521484375,
+   "list_minus_true": 221.22177124023438,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "For Keep Now",
+     524.9
+    ],
+    [
+     "For Keep Now.",
+     525.2
+    ],
+    [
+     "Yes Keep Now",
+     538.4
+    ],
+    [
+     "Yes Keep Now.",
+     538.8
+    ],
+    [
+     "The Keep Now",
+     544.6
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Wet paint",
+   "list_top": "We peace",
+   "list_2nd": "We lay no",
+   "s_list": 413.5743103027344,
+   "s_list2": 418.1532897949219,
+   "s_dp": 288.24700927734375,
+   "dp_top": "Wit paint",
+   "s_true": 311.2063903808594,
+   "optimum": 288.24700927734375,
+   "list_minus_opt": 125.32730102539062,
+   "list_minus_true": 102.367919921875,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "We peace",
+     413.6
+    ],
+    [
+     "We lay no",
+     418.2
+    ],
+    [
+     "We peace .",
+     420.3
+    ],
+    [
+     "We lay us",
+     424.6
+    ],
+    [
+     "We lay us.",
+     424.9
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Stay calm",
+   "list_top": "Two open",
+   "list_2nd": "Oh glow in",
+   "s_list": 406.40203857421875,
+   "s_list2": 411.4647216796875,
+   "s_dp": 310.14666748046875,
+   "dp_top": "Sing calm",
+   "s_true": 311.20635986328125,
+   "optimum": 310.14666748046875,
+   "list_minus_opt": 96.25537109375,
+   "list_minus_true": 95.1956787109375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Two open",
+     406.4
+    ],
+    [
+     "Oh glow in",
+     411.5
+    ],
+    [
+     "On give on.",
+     413.8
+    ],
+    [
+     "Two open .",
+     416.8
+    ],
+    [
+     "On give on",
+     417.2
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Be brave",
+   "list_top": "By Sharp .",
+   "list_2nd": "By Sharp",
+   "s_list": 304.00390625,
+   "s_list2": 305.3515625,
+   "s_dp": 270.39727783203125,
+   "dp_top": "Bx Shy ea",
+   "s_true": 311.20635986328125,
+   "optimum": 270.39727783203125,
+   "list_minus_opt": 33.60662841796875,
+   "list_minus_true": -7.20245361328125,
+   "in_window": true,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "By Sharp .",
+     304.0
+    ],
+    [
+     "By Sharp",
+     305.4
+    ],
+    [
+     "By tiny is",
+     310.1
+    ],
+    [
+     "By Sharp ...",
+     312.6
+    ],
+    [
+     "By hug so",
+     318.8
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Have fun",
+   "list_top": "Has ways .",
+   "list_2nd": "Has ways",
+   "s_list": 390.1327209472656,
+   "s_list2": 393.200927734375,
+   "s_dp": 291.0982666015625,
+   "dp_top": "Pas u fun",
+   "s_true": 311.2064208984375,
+   "optimum": 291.0982666015625,
+   "list_minus_opt": 99.03445434570312,
+   "list_minus_true": 78.92630004882812,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Has ways .",
+     390.1
+    ],
+    [
+     "Has ways",
+     393.2
+    ],
+    [
+     "Has ways !",
+     396.4
+    ],
+    [
+     "Has helps .",
+     397.8
+    ],
+    [
+     "Has ways ...",
+     400.0
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Gone fishing",
+   "list_top": "Thou Hoping",
+   "list_2nd": "Thou Hoping .",
+   "s_list": 414.6585693359375,
+   "s_list2": 415.6133728027344,
+   "s_dp": 287.2813415527344,
+   "dp_top": "i I yow finding",
+   "s_true": 311.2064208984375,
+   "optimum": 287.2813415527344,
+   "list_minus_opt": 127.37722778320312,
+   "list_minus_true": 103.4521484375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Thou Hoping",
+     414.7
+    ],
+    [
+     "Thou Hoping .",
+     415.6
+    ],
+    [
+     "Thou Hoping ...",
+     426.3
+    ],
+    [
+     "Thou Hoping ~",
+     434.2
+    ],
+    [
+     "Thus Hoping .",
+     436.4
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Keep out",
+   "list_top": "I top one",
+   "list_2nd": "I say one",
+   "s_list": 379.0861511230469,
+   "s_list2": 383.2051086425781,
+   "s_dp": 292.59832763671875,
+   "dp_top": "R mgr put",
+   "s_true": 311.2063903808594,
+   "optimum": 292.59832763671875,
+   "list_minus_opt": 86.48782348632812,
+   "list_minus_true": 67.8797607421875,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "I top one",
+     379.1
+    ],
+    [
+     "I say one",
+     383.2
+    ],
+    [
+     "I joy one",
+     387.5
+    ],
+    [
+     "I hip one",
+     395.5
+    ],
+    [
+     "I spy one",
+     400.8
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Lost and found",
+   "list_top": "Two watch one",
+   "list_2nd": "That watch more",
+   "s_list": 600.75634765625,
+   "s_list2": 617.2125244140625,
+   "s_dp": 270.8060302734375,
+   "dp_top": "I nit and found",
+   "s_true": 311.2063903808594,
+   "optimum": 270.8060302734375,
+   "list_minus_opt": 329.9503173828125,
+   "list_minus_true": 289.5499572753906,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Two watch one",
+     600.8
+    ],
+    [
+     "That watch more",
+     617.2
+    ],
+    [
+     "Two waits one",
+     627.0
+    ],
+    [
+     "Two waits you",
+     636.2
+    ],
+    [
+     "Two spirits you",
+     636.4
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Welcome home",
+   "list_top": "Was watch now",
+   "list_2nd": "We Jump Now.",
+   "s_list": 532.810302734375,
+   "s_list2": 534.03125,
+   "s_dp": 311.2064208984375,
+   "dp_top": "Welcome home",
+   "s_true": 311.2064208984375,
+   "optimum": 311.2064208984375,
+   "list_minus_opt": 221.6038818359375,
+   "list_minus_true": 221.6038818359375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Was watch now",
+     532.8
+    ],
+    [
+     "We Jump Now.",
+     534.0
+    ],
+    [
+     "Was watch now.",
+     536.7
+    ],
+    [
+     "Who watch now",
+     541.8
+    ],
+    [
+     "Who watch now.",
+     545.7
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Sit and rest",
+   "list_top": "Of cup ever",
+   "list_2nd": "All cup ever",
+   "s_list": 421.4434509277344,
+   "s_list2": 428.99560546875,
+   "s_dp": 274.9434814453125,
+   "dp_top": "b ft and sari",
+   "s_true": 296.1417541503906,
+   "optimum": 274.9434814453125,
+   "list_minus_opt": 146.49996948242188,
+   "list_minus_true": 125.30169677734375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Of cup ever",
+     421.4
+    ],
+    [
+     "All cup ever",
+     429.0
+    ],
+    [
+     "Of wait ever",
+     431.1
+    ],
+    [
+     "Of cap ever",
+     432.9
+    ],
+    [
+     "Of god too",
+     435.7
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Bob was here",
+   "list_top": "But lays too!",
+   "list_2nd": "But joys too!",
+   "s_list": 441.0137939453125,
+   "s_list2": 441.36541748046875,
+   "s_dp": 311.2064208984375,
+   "dp_top": "Bob was here",
+   "s_true": 311.2064208984375,
+   "optimum": 311.2064208984375,
+   "list_minus_opt": 129.807373046875,
+   "list_minus_true": 129.807373046875,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "But lays too!",
+     441.0
+    ],
+    [
+     "But joys too!",
+     441.4
+    ],
+    [
+     "But lays two",
+     445.2
+    ],
+    [
+     "But joys two",
+     445.6
+    ],
+    [
+     "But rope two",
+     454.1
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Who knows",
+   "list_top": "Who day we",
+   "list_2nd": "Why day we",
+   "s_list": 357.93829345703125,
+   "s_list2": 377.19635009765625,
+   "s_dp": 311.2063903808594,
+   "dp_top": "Who knows",
+   "s_true": 311.2063903808594,
+   "optimum": 311.2063903808594,
+   "list_minus_opt": 46.731903076171875,
+   "list_minus_true": 46.731903076171875,
+   "in_window": true,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Who day we",
+     357.9
+    ],
+    [
+     "Why day we",
+     377.2
+    ],
+    [
+     "Who hop we",
+     378.3
+    ],
+    [
+     "Why hop we",
+     393.0
+    ],
+    [
+     "Who day sir",
+     393.8
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Not for sale",
+   "list_top": "Not lives we",
+   "list_2nd": "But live ever",
+   "s_list": 403.741455078125,
+   "s_list2": 409.7236328125,
+   "s_dp": 267.4308776855469,
+   "dp_top": "Vat fur sari",
+   "s_true": 311.2064208984375,
+   "optimum": 267.4308776855469,
+   "list_minus_opt": 136.31057739257812,
+   "list_minus_true": 92.5350341796875,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Not lives we",
+     403.7
+    ],
+    [
+     "But live ever",
+     409.7
+    ],
+    [
+     "Not lives no",
+     412.5
+    ],
+    [
+     "Not live ever",
+     413.0
+    ],
+    [
+     "For live ever",
+     413.0
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "See you soon",
+   "list_top": "Yes you more",
+   "list_2nd": "Yes guy more",
+   "s_list": 341.8026123046875,
+   "s_list2": 347.39251708984375,
+   "s_dp": 273.6134948730469,
+   "dp_top": "Vie you soon",
+   "s_true": 305.1609802246094,
+   "optimum": 273.6134948730469,
+   "list_minus_opt": 68.18911743164062,
+   "list_minus_true": 36.641632080078125,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Yes you more",
+     341.8
+    ],
+    [
+     "Yes guy more",
+     347.4
+    ],
+    [
+     "Yes gay more",
+     351.2
+    ],
+    [
+     "Are you more",
+     353.8
+    ],
+    [
+     "On pay more",
+     353.9
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Push to open",
+   "list_top": "Thou loves so",
+   "list_2nd": "Thou loves so.",
+   "s_list": 492.5487060546875,
+   "s_list2": 495.2466735839844,
+   "s_dp": 294.87664794921875,
+   "dp_top": "Push lix open",
+   "s_true": 311.20635986328125,
+   "optimum": 294.87664794921875,
+   "list_minus_opt": 197.67205810546875,
+   "list_minus_true": 181.34234619140625,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "Thou loves so",
+     492.5
+    ],
+    [
+     "Thou loves so.",
+     495.2
+    ],
+    [
+     "Thou dream in",
+     496.1
+    ],
+    [
+     "Thou loves in",
+     496.3
+    ],
+    [
+     "Thou live now.",
+     497.6
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Made in Kyoto",
+   "list_top": "What ship now",
+   "list_2nd": "What enjoys to",
+   "s_list": 612.0390014648438,
+   "s_list2": 612.62109375,
+   "s_dp": 308.5325927734375,
+   "dp_top": "Made in Knots",
+   "s_true": 297.875,
+   "optimum": 297.875,
+   "list_minus_opt": 314.16400146484375,
+   "list_minus_true": 314.16400146484375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "What ship now",
+     612.0
+    ],
+    [
+     "What enjoys to",
+     612.6
+    ],
+    [
+     "What ship now.",
+     612.7
+    ],
+    [
+     "What enjoys be",
+     612.8
+    ],
+    [
+     "What enjoys he",
+     622.6
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "We hope not",
+   "list_top": "We hope yet",
+   "list_2nd": "We hope us!",
+   "s_list": 368.05450439453125,
+   "s_list2": 368.3814697265625,
+   "s_dp": 308.63873291015625,
+   "dp_top": "We hope as c",
+   "s_true": 311.2064208984375,
+   "optimum": 308.63873291015625,
+   "list_minus_opt": 59.415771484375,
+   "list_minus_true": 56.84808349609375,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "We hope yet",
+     368.1
+    ],
+    [
+     "We hope us!",
+     368.4
+    ],
+    [
+     "We hope me!",
+     370.8
+    ],
+    [
+     "We hope too",
+     374.7
+    ],
+    [
+     "We hope one",
+     380.0
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "We hope yes",
+   "list_top": "We hope yet",
+   "list_2nd": "We hope am",
+   "s_list": 351.4060974121094,
+   "s_list2": 351.72198486328125,
+   "s_dp": 297.561767578125,
+   "dp_top": "We hope yrs",
+   "s_true": 311.2064208984375,
+   "optimum": 297.561767578125,
+   "list_minus_opt": 53.844329833984375,
+   "list_minus_true": 40.199676513671875,
+   "in_window": true,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "We hope yet",
+     351.4
+    ],
+    [
+     "We hope am",
+     351.7
+    ],
+    [
+     "We hope we",
+     358.3
+    ],
+    [
+     "We hope you",
+     368.3
+    ],
+    [
+     "He hope yet",
+     370.4
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "No hope left",
+   "list_top": "No hope so!",
+   "list_2nd": "No hope for",
+   "s_list": 329.00970458984375,
+   "s_list2": 331.34869384765625,
+   "s_dp": 267.9756164550781,
+   "dp_top": "Fa hope tot",
+   "s_true": 311.2064208984375,
+   "optimum": 267.9756164550781,
+   "list_minus_opt": 61.034088134765625,
+   "list_minus_true": 17.80328369140625,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "No hope so!",
+     329.0
+    ],
+    [
+     "No hope for",
+     331.3
+    ],
+    [
+     "No hope sir",
+     335.2
+    ],
+    [
+     "No hope we",
+     338.0
+    ],
+    [
+     "No huge so!",
+     347.8
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Al hope so",
+   "list_top": "St hope so",
+   "list_2nd": "St hope sir",
+   "s_list": 288.30047607421875,
+   "s_list2": 301.4101867675781,
+   "s_dp": 255.83047485351562,
+   "dp_top": "b Eh ups cm",
+   "s_true": 311.20635986328125,
+   "optimum": 255.83047485351562,
+   "list_minus_opt": 32.470001220703125,
+   "list_minus_true": -22.9058837890625,
+   "in_window": true,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "St hope so",
+     288.3
+    ],
+    [
+     "St hope sir",
+     301.4
+    ],
+    [
+     "St hope in",
+     304.2
+    ],
+    [
+     "St hope so.",
+     309.3
+    ],
+    [
+     "St hope or",
+     313.4
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "Ma hope so",
+   "list_top": "We hope us",
+   "list_2nd": "We hope so",
+   "s_list": 305.42095947265625,
+   "s_list2": 308.83233642578125,
+   "s_dp": 302.5645751953125,
+   "dp_top": "Mu hope us",
+   "s_true": 311.2063903808594,
+   "optimum": 302.5645751953125,
+   "list_minus_opt": 2.85638427734375,
+   "list_minus_true": -5.785430908203125,
+   "in_window": true,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "We hope us",
+     305.4
+    ],
+    [
+     "We hope so",
+     308.8
+    ],
+    [
+     "We hope so.",
+     311.0
+    ],
+    [
+     "My hope us",
+     312.3
+    ],
+    [
+     "We hope us.",
+     313.1
+    ]
+   ]
+  },
+  {
+   "kind": "off",
+   "truth": "We hope lots",
+   "list_top": "We hope too!",
+   "list_2nd": "We hope too",
+   "s_list": 370.7469787597656,
+   "s_list2": 382.35174560546875,
+   "s_dp": 306.18505859375,
+   "dp_top": "We hope lots",
+   "s_true": 306.18505859375,
+   "optimum": 306.18505859375,
+   "list_minus_opt": 64.56192016601562,
+   "list_minus_true": 64.56192016601562,
+   "in_window": false,
+   "list_is_truth": false,
+   "list_top5": [
+    [
+     "We hope too!",
+     370.7
+    ],
+    [
+     "We hope too",
+     382.4
+    ],
+    [
+     "He hope too!",
+     400.4
+    ],
+    [
+     "He hope too",
+     400.8
+    ],
+    [
+     "By hope too!",
+     408.6
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "We hope so",
+   "list_top": "We hope so",
+   "list_2nd": "We hope as",
+   "s_list": 311.2064208984375,
+   "s_list2": 311.48004150390625,
+   "s_dp": 311.2064208984375,
+   "dp_top": "We hope so",
+   "s_true": 311.2064208984375,
+   "optimum": 311.2064208984375,
+   "list_minus_opt": 0.0,
+   "list_minus_true": 0.0,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "We hope so",
+     311.2
+    ],
+    [
+     "We hope as",
+     311.5
+    ],
+    [
+     "We hope so.",
+     316.9
+    ],
+    [
+     "We hope us",
+     321.3
+    ],
+    [
+     "We hope or",
+     329.2
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "Shine on",
+   "list_top": "Shine on",
+   "list_2nd": "I hero am",
+   "s_list": 296.46539306640625,
+   "s_list2": 333.439208984375,
+   "s_dp": 292.0409240722656,
+   "dp_top": "Shine em",
+   "s_true": 303.4598388671875,
+   "optimum": 292.0409240722656,
+   "list_minus_opt": 4.424468994140625,
+   "list_minus_true": -6.99444580078125,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "Shine on",
+     296.5
+    ],
+    [
+     "I hero am",
+     333.4
+    ],
+    [
+     "I hero an",
+     334.0
+    ],
+    [
+     "I hero on",
+     334.3
+    ],
+    [
+     "I hero on.",
+     338.3
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "Rest in peace",
+   "list_top": "Rest in peace",
+   "list_2nd": "That ship ever",
+   "s_list": 311.2063903808594,
+   "s_list2": 434.65716552734375,
+   "s_dp": 298.0999450683594,
+   "dp_top": "Peel in peace",
+   "s_true": 311.2063903808594,
+   "optimum": 298.0999450683594,
+   "list_minus_opt": 13.1064453125,
+   "list_minus_true": 0.0,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "Rest in peace",
+     311.2
+    ],
+    [
+     "That ship ever",
+     434.7
+    ],
+    [
+     "That ship now.",
+     449.0
+    ],
+    [
+     "That ship now",
+     452.1
+    ],
+    [
+     "That days now.",
+     468.6
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "Thank you",
+   "list_top": "Thank you",
+   "list_2nd": "I kept you",
+   "s_list": 303.0482177734375,
+   "s_list2": 407.64154052734375,
+   "s_dp": 303.0482177734375,
+   "dp_top": "Thank you",
+   "s_true": 308.459228515625,
+   "optimum": 303.0482177734375,
+   "list_minus_opt": 0.0,
+   "list_minus_true": -5.4110107421875,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "Thank you",
+     303.0
+    ],
+    [
+     "I kept you",
+     407.6
+    ],
+    [
+     "I keep you",
+     418.3
+    ],
+    [
+     "The ship er",
+     420.7
+    ],
+    [
+     "The ship is",
+     427.9
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "Joy to all",
+   "list_top": "Joy to all",
+   "list_2nd": "On Wait",
+   "s_list": 311.2064208984375,
+   "s_list2": 441.35491943359375,
+   "s_dp": 261.72161865234375,
+   "dp_top": "big fa all",
+   "s_true": 311.2064208984375,
+   "optimum": 261.72161865234375,
+   "list_minus_opt": 49.48480224609375,
+   "list_minus_true": 0.0,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "Joy to all",
+     311.2
+    ],
+    [
+     "On Wait",
+     441.4
+    ],
+    [
+     "On Wait .",
+     444.3
+    ],
+    [
+     "Joy for all",
+     450.9
+    ],
+    [
+     "Glory to all",
+     451.6
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "My hope is",
+   "list_top": "My hope is",
+   "list_2nd": "My hope er",
+   "s_list": 311.2064208984375,
+   "s_list2": 331.08856201171875,
+   "s_dp": 308.1805725097656,
+   "dp_top": "Mg hope is",
+   "s_true": 311.2064208984375,
+   "optimum": 308.1805725097656,
+   "list_minus_opt": 3.025848388671875,
+   "list_minus_true": 0.0,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "My hope is",
+     311.2
+    ],
+    [
+     "My hope er",
+     331.1
+    ],
+    [
+     "We hope is",
+     342.8
+    ],
+    [
+     "My huge is",
+     349.2
+    ],
+    [
+     "My hope to",
+     352.3
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "Good night",
+   "list_top": "Good night",
+   "list_2nd": "Our stars do",
+   "s_list": 311.2064208984375,
+   "s_list2": 416.02960205078125,
+   "s_dp": 295.37548828125,
+   "dp_top": "i I nest night",
+   "s_true": 311.2064208984375,
+   "optimum": 295.37548828125,
+   "list_minus_opt": 15.8309326171875,
+   "list_minus_true": 0.0,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "Good night",
+     311.2
+    ],
+    [
+     "Our stars do",
+     416.0
+    ],
+    [
+     "Our stays he",
+     417.2
+    ],
+    [
+     "Our stays be",
+     417.7
+    ],
+    [
+     "For stars do",
+     418.8
+    ]
+   ]
+  },
+  {
+   "kind": "on",
+   "truth": "For Mario",
+   "list_top": "For Mario",
+   "list_2nd": "For Hopes",
+   "s_list": 311.2063903808594,
+   "s_list2": 400.8461608886719,
+   "s_dp": 291.4890441894531,
+   "dp_top": "Fur Man u",
+   "s_true": 311.2063903808594,
+   "optimum": 291.4890441894531,
+   "list_minus_opt": 19.71734619140625,
+   "list_minus_true": 0.0,
+   "in_window": true,
+   "list_is_truth": true,
+   "list_top5": [
+    [
+     "For Mario",
+     311.2
+    ],
+    [
+     "For Hopes",
+     400.8
+    ],
+    [
+     "The Hopes",
+     409.2
+    ],
+    [
+     "For Map ~",
+     410.4
+    ],
+    [
+     "To Mario",
+     411.5
+    ]
+   ]
+  }
+ ]
+}
