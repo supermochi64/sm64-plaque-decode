@@ -88,7 +88,10 @@ the s is upper or lower case cannot be decided);
 (iv)~line~2 is set in the same process at 17--18\,px, centred under line~1, and \q{hope} is the best of 12{,}556
 middle words. We then fitted line~2's own typesetting on the four letters of \q{hope} alone. On their own, held-out
 pixels, \q{We} becomes the best first word and \q{so} the best real ending, and the unconstrained dictionary search
-returns \q{We hope so} among its top three strings.
+returns \q{We hope so} among its top three strings;
+(v)~line~2 is in the \emph{same} font: fitted alone against 3{,}396 era faces and finally drawn hinted at its true
+pixel size, as 1996 software drew it, it is again best explained by Palatino Bold Italic, and in the final hand-kerned
+fit Adobe's file wins on both lines.
 With Adobe's original Palatino, a blind search over 17.7k words returns exactly \q{We hope so} as its best string.
 Our most likely reading is therefore
 \begin{center}\Large\textit{Eternal Star}\\\textit{We hope so}\end{center}
@@ -997,7 +1000,8 @@ hinted at.
 \paragraph{The best version.}
 Our best reconstruction is therefore: Adobe Palatino Bold Italic (1990), line~1 at 26\,px and line~2 at 19\,px, typed
 on one 190$\times$160 artwork, letters nudged by at most a third of a texture pixel, shrunk to 32$\times$32 with a
-bilinear filter, light blur and gamma 1.4, on the extracted stone (\cref{fig:designerlines}; the README's title image).
+bilinear filter, light blur and gamma 1.4, on the extracted stone (\cref{fig:designerlines}). The fourth pass
+(\cref{sec:line2font}) re-checks line~2's font and refines this version slightly (\cref{fig:final}).
 Inside the two text boxes the model is on average 1.1 grey levels away from the plaque (out of 31); 83\,\% of the
 text pixels are within 2 levels.
 
@@ -1050,6 +1054,83 @@ of the plaque that no font or setting can reproduce.
 bare stone, coloured by where they sit (cyan: gap between letters; yellow: tip of a stroke; magenta: top edge; green:
 bottom edge). Thick boxes: the seven pixels that stay wrong in every model.}
 \label{fig:cleanpx}
+\end{figure}
+
+%======================================================================================================
+\section{Fourth pass: is line 2 in the same font? And the final fit}
+\label{sec:line2font}
+Every font tournament so far was decided on line~1. Line~2 was allowed its own size, spacing and kerning, but only
+among Palatino faces (\cref{sec:hope}). A designer could have set the small second line in a different typeface, so we
+tested that directly (\texttt{python -m plaquedecode.line2font}).
+
+\paragraph{Step 1: every era font on line 2 alone.}
+For this test we use a more flexible model than the rigid recipes: each font is drawn large and smooth, then placed,
+scaled, stretched, slanted, spaced, blurred and gamma-corrected with \emph{continuous} settings that are fitted by
+gradient descent on the GPU. Gamma is limited to 0.5--2 and the ink level to what a 5-bit texture can hold: without
+these limits, picture fonts and blobby display faces \q{win} with absurd settings.
+We fitted 3{,}396 faces to line~2 alone: the era fonts of \cref{sec:stone} plus our whole 1993--96 font library
+(CorelDRAW, Bitstream, Illustrator for IRIX, Office, KanjiTalk, Mac OS and more). The surprise: the six weights of
+\textbf{Raleigh} (an upright Bitstream serif from CorelDRAW) took six of the top seven places (error 150--158), ahead of
+Palatino Bold Italic (167--175). But every Raleigh fit slanted the upright font by about 14$^\circ$ to imitate an italic.
+
+\paragraph{Step 2: the same model on both lines.}
+If the flexible model simply liked Raleigh's shapes, Raleigh would also do well on line~1. It does not
+(\cref{fig:line2font}, left): on \q{Eternal Star} the four Palatino Bold Italic files score 641--654 and beat the best
+wrong text (\q{Eternal Stat}) by about 93, while every Raleigh scores 1{,}114--1{,}262 and often loses to wrong texts.
+So the model can tell fonts apart, and line~1 is unmistakably Palatino. Line~2, however, carries far less information
+(error without any text: 4{,}027 against 9{,}086 for line~1), and there the Raleigh lead stays (\cref{fig:line2font},
+middle).
+
+\paragraph{Step 3: drawing the letters the way 1996 software did.}
+The flexible model draws every glyph large and smooth. A paint program in 1996 drew them at the real pixel size with
+\emph{hinting}: the font rasteriser snaps stems and letter heights to whole pixels, and the plaque was made with hinting
+(\cref{sec:adobe}). At 19\,px, the size of line~2, hinting changes letter shapes far more than at 26\,px. So we
+repeated the test with the release pipeline's own rendering: hinted, true pixel size, line~1's canvas, filter, blur,
+gamma and ink level locked, and line~2 free in size, spacing, kerning, word space, position and even a paint-program
+skew of up to 0.3 (\cref{fig:line2font}, right):
+\begin{itemize}
+\item \textbf{Palatino Bold Italic wins} (Mac OS~9 file 229.6, KanjiTalk 236.4, Adobe 263.1), with no skew. With Adobe's
+file the best setting is again 19\,px, no kerning and whole-pixel advances, exactly the \q{hope} calibration.
+\item Raleigh Demibold comes close (232.6) only when skewed by 0.25, and even then it explains \q{We hops so}
+\emph{better} than \q{We hope so}: it is not reading the text, it is filling blobs.
+\item Every other face is far behind (Officina Serif 271.8, Cooper 273.1, the other Raleigh weights 295--558).
+\end{itemize}
+The Raleigh lead of step~1 was a side effect of drawing the letters smooth instead of hinted. \textbf{Line~2 is set in
+Palatino Bold Italic, like line~1.}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{line2_font.png}
+\caption{Is line 2 in another font? Blue: Palatino files. Left and middle: the flexible (smooth, unhinted) model on
+line~1 and on line~2. Right: line~2 drawn hinted at its true pixel size, with the best skew and the margin over the
+best wrong text (negative: a wrong text fits better).}
+\label{fig:line2font}
+\end{figure}
+
+\paragraph{Step 4: the final fit.}
+Before the hand kerning, Apple's TrueType Palatino looked slightly better than Adobe's on line~2. To check whether line~2
+was typed with a different \emph{copy} of Palatino, we took the designer's best version (\cref{sec:designer}) and
+replaced line~2 with each Palatino Bold Italic file, re-searched its size, spacing and position on the shared
+artwork, re-nudged every letter of both lines and re-searched the artwork size. Once the letters are hand-kerned,
+Adobe's file wins on line~2 as well: \textbf{850.95} against 856.68 for the Mac~OS~9 and Apple files. The best fit is
+\begin{itemize}
+\item one artwork of 190$\times$160 pixels for both lines, shrunk to 32$\times$32 with a bilinear filter, blur 0.3 and
+gamma 1.4, on the extracted stone; ink level 43 (line~1) and 48 (line~2);
+\item line~1: Adobe Palatino Bold Italic (1990), 26\,px, tracking +2, pair kerning, whole-pixel advances;
+\item line~2: the same file at 19\,px, no extra tracking, no kerning, whole-pixel advances, slightly wider word spaces;
+\item every letter nudged by $-2$ to $+1$ artwork pixels by hand (at most a third of a texture pixel).
+\end{itemize}
+It improves the version of \cref{sec:designer} from 853.89 to 850.95, with the same quality inside the text (on average
+1.1 grey levels from the plaque, 83\,\% of the text pixels within 2 levels). Blending the text as \q{Screen} would lower
+the error to 841.3, but that gain (9.6) is smaller than what blend modes gain on noise-only fakes (10.6--18.3), so we
+do not claim it. \Cref{fig:final} shows the final fit and the artwork it implies; it is also the title image of the
+repository.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.9\linewidth]{hero.png}
+\caption{The final fit. Top: the real 32$\times$32 plaque texture and our best model. Bottom: the artwork the model
+implies, before it was shrunk: one 190$\times$160 canvas, Adobe Palatino Bold Italic at 26\,px and 19\,px, every letter
+nudged by hand.}
+\label{fig:final}
 \end{figure}
 
 %======================================================================================================
@@ -1181,7 +1262,9 @@ exhaustive test of every 3--4-letter string and a tournament of \EraN{} era face
 unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file. Treated as a designer's
 workflow (\cref{sec:designer}), the letters were nudged by hand on a slightly narrower artwork (190$\times$160);
 blend modes, shadows, emboss, outlines and sharpening do not beat noise, and the last handful of wrong pixels look
-like touch-ups on the finished texture. Read as English written by a Japanese artist (\cref{sec:japanese}), the text is a natural
+like touch-ups on the finished texture. Line~2 is set in the same font as line~1: a flexible model briefly preferred
+an artificially slanted Raleigh, but drawn hinted at its true size Palatino Bold Italic wins again, and in the final fit
+(\cref{sec:line2font}, error 850.95) Adobe's file is best on both lines. Read as English written by a Japanese artist (\cref{sec:japanese}), the text is a natural
 memorial-plaque wish, \jp{永遠の星――そうであってほしい}: an eternal star, and we hope it truly is.
 
 Our confidence in each word:
@@ -1227,6 +1310,12 @@ python -m plaquedecode claims   --font P052-BoldItalic.otf --recipes $R
 python -m plaquedecode invert   --recipes $R --hopefit results/hopefit_PalatinoBoldItalic.json \
                                 --line2 results/line2_dp_hopefit_P052line2.json
 python -m plaquedecode figures  --out report/figures                      # + report/tables/
+# fourth pass (fixed stone: PLAQUE_STONE=stone/stone_box.npy PLAQUE_STONE_VAR=stone/stone_box_var.npy)
+python -m plaquedecode.line2font screen --fonts-list FONTS.txt    # every face on line 2 alone
+python -m plaquedecode.line2font both   --fonts-list SHORT.txt    # both lines + wrong-text controls
+python -m plaquedecode.line2font hinted --fonts-list SHORT.txt    # hinted, true pixel size
+python -m plaquedecode.line2font best   --fonts-list PALATINO.txt # final fit -> results/bestfit.json
+python -m plaquedecode.line2font hero;  python -m plaquedecode.line2font figure
 \end{verbatim}}
 The searches take minutes to an hour on a consumer GPU. All result files used for this report are included in
 \texttt{results/}, so the figures and tables can be regenerated without a GPU.
