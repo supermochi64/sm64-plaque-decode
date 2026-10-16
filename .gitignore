@@ -24,3 +24,4 @@ report/*.fdb_latexmk
 # texture-derived stone estimates (never commit)
 stone/
 *.npy
+results/stone_*.npz

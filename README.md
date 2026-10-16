@@ -21,6 +21,10 @@ plaques with known text.
 
 ![real plaque vs. model](report/figures/hero.png)
 
+*Left: the real texture. Right: our best reconstruction: "Eternal Star / We hope so" in Adobe Palatino Bold Italic
+(1990), typed on a 190×160 artwork, letters nudged by hand, shrunk to 32×32 (bilinear, light blur, gamma 1.4) on the
+extracted stone. Inside the text the model is on average about 1 grey level (of 31) away from the plaque.*
+
 📄 **Full report:** [`report/report.pdf`](report/report.pdf) (LaTeX source in `report/`)
 
 ## Key results
@@ -38,6 +42,8 @@ plaques with known text.
 | line 2 | **We hope so** | same process, centred, same ink level; "hope" is rank 1 of 12,556 middle words. Fitting line 2's own typesetting on "hope" alone makes "We" and "so" the best real words on their own (held-out) pixels, and the unconstrained dictionary search then finds "We hope so" among its top 3 |
 | inversion | supports it | running the fitted process backwards: the inverted plaque correlates 0.74 / 0.76 (row 1 / row 2) with inverted "Eternal Star / We hope so", vs 0.29 for "L is real 2401" and 0.30 for "A Secret star" |
 | list-bias test | the sentence list does not invent the answer | planting 34 phrases that are NOT in the curated list and decoding them with the list: the list's best sentence lands inside the pixel-compatible window in only 5/34 (2/28 for text unrelated to "hope"; median gap 130 vs 0 on the real plaque) and never returns "We hope so"; all 8 in-list controls are recovered exactly (`results/listbias_adobe.json`, `python -m plaquedecode.listbias`) |
+| designer steps (3rd pass) | hand kerning + a slightly narrower artwork are real; effects are not | both lines on one artwork, every step tested against noise-only fake plaques: hand kerning line 1 789 → 695, line 2 262 → 201 (fakes ≤ 66 / ≤ 11); artwork **190×160** instead of 192×160 another −41 (fakes 0); Screen/Normal blend, drop shadow, outline, sharpening, moving a line: no better than on noise; emboss borderline; "Lighten" blend ruled out (`python -m plaquedecode.designer`) |
+| best version | Adobe Palatino BI (1990), 26 px / 19 px on a 190×160 artwork, hand-kerned, bilinear, blur 0.3, gamma 1.4 | mean error about 1 grey level (of 31) inside the text, 83 % of text pixels within 2 levels; the same 7 pixels stay wrong in every model (E top arm, S top, around the first t, r arm, W gap): bare stone on the plaque where every typeset version has faint ink, most likely touched up by hand |
 | "L is real 2401" | rejected | scored as claimed (whole phrase on row 1, no claim about row 2): row 1 fits about twice as badly as "Eternal Star" |
 
 How much to trust it:
@@ -80,6 +86,11 @@ python -m plaquedecode word2  --recipes results/stone_recipes_Adobe.json
 python -m plaquedecode.exhaustive --recipes results/stone_recipes_Adobe.json --hopefit results/stone_hopefit_Adobe.json \
        --line2 results/stone_line2_dp_Adobe.json --out results/stone_exhaustive_Adobe.json
 python -m plaquedecode recipe --font SomeFont.ttf --stage quick             # cheap triage (~6 s per font on a CPU)
+python -m plaquedecode.nudge --recipes results/stone_recipes_Adobe.json --top 2000 --out results/stone_nudge_Adobe.json
+python -m plaquedecode.nudge --both --recipes results/stone_recipes_Adobe.json --hopefit results/stone_hopefit_Adobe.json \
+       --line2 results/stone_line2_dp_hopefit_Adobe.json --out results/stone_nudge_both_Adobe.json      # hand kerning, both lines
+python -m plaquedecode.designer [--scale] --recipes results/stone_recipes_Adobe.json --hopefit results/stone_hopefit_Adobe.json \
+       --line2 results/stone_line2_dp_hopefit_Adobe.json --out results/stone_designer_Adobe.json        # designer steps vs noise
 ```
 
 - A CUDA GPU makes the searches take minutes. The CPU works too (`PLAQUE_DEV=cpu`); for the recipe search it is as
