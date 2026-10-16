@@ -21,9 +21,10 @@ plaques with known text.
 
 ![real plaque vs. model](report/figures/hero.png)
 
-*Left: the real texture. Right: our best reconstruction: "Eternal Star / We hope so" in Adobe Palatino Bold Italic
-(1990), typed on a 190×160 artwork, letters nudged by hand, shrunk to 32×32 (bilinear, light blur, gamma 1.4) on the
-extracted stone. Inside the text the model is on average about 1 grey level (of 31) away from the plaque.*
+*Top: the real texture and our final fit. Bottom: the artwork the model implies before it was shrunk: "Eternal Star /
+We hope so" in Adobe Palatino Bold Italic (1990) at 26 px and 19 px, typed on one 190×160 canvas, every letter nudged by
+hand, then shrunk to 32×32 (bilinear, light blur, gamma 1.4) onto the extracted stone. Inside the text the model is on
+average about 1 grey level (of 31) away from the plaque.*
 
 📄 **Full report:** [`report/report.pdf`](report/report.pdf) (LaTeX source in `report/`)
 
@@ -43,7 +44,8 @@ extracted stone. Inside the text the model is on average about 1 grey level (of 
 | inversion | supports it | running the fitted process backwards: the inverted plaque correlates 0.74 / 0.76 (row 1 / row 2) with inverted "Eternal Star / We hope so", vs 0.29 for "L is real 2401" and 0.30 for "A Secret star" |
 | list-bias test | the sentence list does not invent the answer | planting 34 phrases that are NOT in the curated list and decoding them with the list: the list's best sentence lands inside the pixel-compatible window in only 5/34 (2/28 for text unrelated to "hope"; median gap 130 vs 0 on the real plaque) and never returns "We hope so"; all 8 in-list controls are recovered exactly (`results/listbias_adobe.json`, `python -m plaquedecode.listbias`) |
 | designer steps (3rd pass) | hand kerning + a slightly narrower artwork are real; effects are not | both lines on one artwork, every step tested against noise-only fake plaques: hand kerning line 1 789 → 695, line 2 262 → 201 (fakes ≤ 66 / ≤ 11); artwork **190×160** instead of 192×160 another −41 (fakes 0); Screen/Normal blend, drop shadow, outline, sharpening, moving a line: no better than on noise; emboss borderline; "Lighten" blend ruled out (`python -m plaquedecode.designer`) |
-| best version | Adobe Palatino BI (1990), 26 px / 19 px on a 190×160 artwork, hand-kerned, bilinear, blur 0.3, gamma 1.4 | mean error about 1 grey level (of 31) inside the text, 83 % of text pixels within 2 levels; the same 7 pixels stay wrong in every model (E top arm, S top, around the first t, r arm, W gap): bare stone on the plaque where every typeset version has faint ink. They are the pixels that would blur letters together (gaps: 7 of 22 clean) or blur stroke tips (4 of 8 clean), while bottom edges keep their grey (1 of 20): a legibility clean-up of the finished texture by hand |
+| line 2 font (4th pass) | **the same Palatino Bold Italic** | 3,396 era faces fitted to line 2 alone with a flexible (smooth) model: an artificially slanted Raleigh led, but the same model on line 1 ranks every Raleigh far behind Palatino (641–654 vs 1,114+); drawn hinted at the true 19 px like 1996 software, Palatino BI wins line 2 too (Mac OS 9 229.6, Adobe 263.1) and Raleigh only comes close when skewed, while fitting "We hops so" better than "We hope so" (`python -m plaquedecode.line2font`, `results/line2font_*.json`) |
+| best version | Adobe Palatino BI (1990) on both lines, 26 px / 19 px on a 190×160 artwork, hand-kerned, bilinear, blur 0.3, gamma 1.4 — final fit error **850.95** (was 853.9); every Palatino BI file tried for line 2, Adobe's wins once letters are nudged (Mac OS 9 / Apple 856.7) | mean error about 1 grey level (of 31) inside the text, 83 % of text pixels within 2 levels; the same 7 pixels stay wrong in every model (E top arm, S top, around the first t, r arm, W gap): bare stone on the plaque where every typeset version has faint ink. They are the pixels that would blur letters together (gaps: 7 of 22 clean) or blur stroke tips (4 of 8 clean), while bottom edges keep their grey (1 of 20): a legibility clean-up of the finished texture by hand |
 | in Japanese? (interpretation) | yes, it reads like a Japanese memorial plaque | name + wish, like 「永遠の平和」 + 「を願って」: **Eternal Star** = 永遠の星, **We hope so** = そうであってほしい / そう願っています ("so" points back to the title like そう; "We" is the collective voice Japanese leaves implicit; "I/We hope so" is stock school English). The pixel look-alikes ("We hope or", "He hope so") make no sense as a Japanese wish. Best guess at the intent: 永遠の星――そうであってほしい, "an eternal star, and we hope it truly is" |
 | "L is real 2401" | rejected | scored as claimed (whole phrase on row 1, no claim about row 2): row 1 fits about twice as badly as "Eternal Star" |
 
@@ -92,6 +94,12 @@ python -m plaquedecode.nudge --both --recipes results/stone_recipes_Adobe.json -
        --line2 results/stone_line2_dp_hopefit_Adobe.json --out results/stone_nudge_both_Adobe.json      # hand kerning, both lines
 python -m plaquedecode.designer [--scale] --recipes results/stone_recipes_Adobe.json --hopefit results/stone_hopefit_Adobe.json \
        --line2 results/stone_line2_dp_hopefit_Adobe.json --out results/stone_designer_Adobe.json        # designer steps vs noise
+# fourth pass: is line 2 in the same font? + the final fit (font lists: one font path per line)
+python -m plaquedecode.line2font screen --fonts-list FONTS.txt        # every face on line 2 alone (flexible model, GPU)
+python -m plaquedecode.line2font both   --fonts-list SHORT.txt        # both lines + wrong-text controls
+python -m plaquedecode.line2font hinted --fonts-list SHORT.txt --fonts-dir fonts   # hinted at the true pixel size
+python -m plaquedecode.line2font best   --fonts-list PALATINO.txt --fonts-dir fonts # final fit -> results/bestfit.json
+python -m plaquedecode.line2font hero && python -m plaquedecode.line2font figure     # title image + line-2 font figure
 ```
 
 - A CUDA GPU makes the searches take minutes. The CPU works too (`PLAQUE_DEV=cpu`); for the recipe search it is as
