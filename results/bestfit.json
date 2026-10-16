@@ -1,0 +1,108 @@
+{
+"report_version": 853.8941650390625,
+"best": {
+"sse": 850.9513549804688,
+"font2": "AdobePalatino-BoldItalic.pfb",
+"line2": [
+19,
+0,
+false,
+"glyph",
+0.5,
+76,
+128
+],
+"artwork": [
+190,
+160,
+37,
+30
+],
+"dx": [
+0,
+1,
+0,
+1,
+1,
+0,
+0,
+-1,
+-1,
+-2,
+-2,
+0,
+-1,
+-1,
+-1,
+0,
+1,
+0,
+0
+]
+},
+"ink": [
+43.16931915283203,
+47.55954360961914
+],
+"files": [
+{
+"sse": 850.9513549804688,
+"font2": "AdobePalatino-BoldItalic.pfb",
+"line2": [
+19,
+0,
+false,
+"glyph",
+0.5,
+76,
+128
+]
+},
+{
+"sse": 856.680908203125,
+"font2": "MacOS9-PalatinoBoldItalic.ttf",
+"line2": [
+19,
+1,
+true,
+false,
+0.0,
+76,
+128
+]
+},
+{
+"sse": 856.680908203125,
+"font2": "MacOS9-PalatinoBoldItalic.ttf",
+"line2": [
+19,
+0,
+false,
+"glyph",
+0.5,
+76,
+128
+]
+},
+{
+"sse": 856.680908203125,
+"font2": "PalatinoBoldItalic.ttf",
+"line2": [
+19,
+0,
+false,
+"glyph",
+0.5,
+76,
+128
+]
+}
+],
+"blends": {
+"add": 850.95,
+"screen": 841.33,
+"normal": 842.49,
+"lighten": 5377.08
+},
+"note": "line 2 = (P2, tracking, kerning, advance mode, word space [artwork px / kx], pen x, baseline) on the 190x160 artwork; dx = per-glyph nudges (11 line-1 + 8 line-2 glyphs)"
+}

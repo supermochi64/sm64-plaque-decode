@@ -1,0 +1,698 @@
+{
+"AdobePalatino-BoldItalic.pfb": {
+"best": {
+"sse": 263.0804443359375,
+"tracking2": 0,
+"kern2": false,
+"frac2": "glyph",
+"P2": 19,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"upright": {
+"sse": 263.0804443359375,
+"tracking2": 0,
+"kern2": false,
+"frac2": "glyph",
+"P2": 19,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+265.5279541015625,
+"We hops so"
+],
+[
+282.20751953125,
+"We hope us"
+],
+[
+308.4700622558594,
+"We hope he"
+],
+[
+310.18389892578125,
+"We hope or"
+],
+[
+387.5035400390625,
+"Me hope so"
+],
+[
+406.0838623046875,
+"By hope so"
+],
+[
+418.2864074707031,
+"He hope so"
+],
+[
+839.5712890625,
+"We love so"
+]
+]
+},
+"RALEIGDB.PFB": {
+"best": {
+"sse": 232.60552978515625,
+"tracking2": 1,
+"kern2": false,
+"frac2": "glyph",
+"P2": 20,
+"esp": 0.0,
+"skew": 0.25,
+"x": 73,
+"yb": 128
+},
+"upright": {
+"sse": 296.05517578125,
+"tracking2": 0,
+"kern2": false,
+"frac2": false,
+"P2": 20,
+"esp": 0.5,
+"skew": 0.0,
+"x": 75,
+"yb": 128
+},
+"rivals": [
+[
+223.8565673828125,
+"We hops so"
+],
+[
+269.0229797363281,
+"We hope or"
+],
+[
+296.12799072265625,
+"We hope us"
+],
+[
+341.4013671875,
+"Me hope so"
+],
+[
+357.51910400390625,
+"He hope so"
+],
+[
+386.02374267578125,
+"We hope he"
+],
+[
+491.57000732421875,
+"By hope so"
+],
+[
+692.2714233398438,
+"We love so"
+]
+]
+},
+"RALEIGHM.PFB": {
+"best": {
+"sse": 307.94659423828125,
+"tracking2": 0,
+"kern2": false,
+"frac2": "glyph",
+"P2": 22,
+"esp": 0.0,
+"skew": 0.3,
+"x": 72,
+"yb": 128
+},
+"upright": {
+"sse": 336.49090576171875,
+"tracking2": 0,
+"kern2": false,
+"frac2": false,
+"P2": 20,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+336.12115478515625,
+"We hops so"
+],
+[
+359.70843505859375,
+"We hope us"
+],
+[
+415.099609375,
+"Me hope so"
+],
+[
+417.10009765625,
+"We hope or"
+],
+[
+447.29010009765625,
+"He hope so"
+],
+[
+512.9168701171875,
+"We hope he"
+],
+[
+670.1721801757812,
+"By hope so"
+],
+[
+1051.830810546875,
+"We love so"
+]
+]
+},
+"RALEIGHN.PFB": {
+"best": {
+"sse": 381.59521484375,
+"tracking2": -1,
+"kern2": false,
+"frac2": false,
+"P2": 22,
+"esp": 0.5,
+"skew": 0.0,
+"x": 75,
+"yb": 128
+},
+"upright": {
+"sse": 381.59521484375,
+"tracking2": -1,
+"kern2": false,
+"frac2": false,
+"P2": 22,
+"esp": 0.5,
+"skew": 0.0,
+"x": 75,
+"yb": 128
+},
+"rivals": [
+[
+433.9841003417969,
+"We hope us"
+],
+[
+449.19378662109375,
+"We hops so"
+],
+[
+459.5498046875,
+"Me hope so"
+],
+[
+493.9113464355469,
+"We hope he"
+],
+[
+559.2403564453125,
+"We hope or"
+],
+[
+596.35400390625,
+"He hope so"
+],
+[
+923.14990234375,
+"By hope so"
+],
+[
+1275.844482421875,
+"We love so"
+]
+]
+},
+"RALEIGHB.PFB": {
+"best": {
+"sse": 295.3712463378906,
+"tracking2": 2,
+"kern2": false,
+"frac2": false,
+"P2": 17,
+"esp": 0.0,
+"skew": 0.3,
+"x": 75,
+"yb": 128
+},
+"upright": {
+"sse": 381.2438659667969,
+"tracking2": 2,
+"kern2": false,
+"frac2": "glyph",
+"P2": 17,
+"esp": 0.0,
+"skew": 0.0,
+"x": 77,
+"yb": 128
+},
+"rivals": [
+[
+333.0409240722656,
+"We hope or"
+],
+[
+346.6769104003906,
+"We hops so"
+],
+[
+377.23455810546875,
+"We hope us"
+],
+[
+410.81884765625,
+"We hope he"
+],
+[
+427.5971374511719,
+"Me hope so"
+],
+[
+470.23211669921875,
+"He hope so"
+],
+[
+729.2808227539062,
+"By hope so"
+],
+[
+1003.4267578125,
+"We love so"
+]
+]
+},
+"RALEIGHL.PFB": {
+"best": {
+"sse": 558.1617431640625,
+"tracking2": 0,
+"kern2": false,
+"frac2": "glyph",
+"P2": 22,
+"esp": 0.0,
+"skew": 0.2,
+"x": 74,
+"yb": 128
+},
+"upright": {
+"sse": 576.029296875,
+"tracking2": -1,
+"kern2": false,
+"frac2": false,
+"P2": 22,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+583.9043579101562,
+"We hope us"
+],
+[
+611.486572265625,
+"We hops so"
+],
+[
+619.5592651367188,
+"Me hope so"
+],
+[
+634.8529052734375,
+"We hope he"
+],
+[
+689.6473388671875,
+"We hope or"
+],
+[
+724.471435546875,
+"He hope so"
+],
+[
+1057.6025390625,
+"By hope so"
+],
+[
+1326.564208984375,
+"We love so"
+]
+]
+},
+"RALEIGHM.TTF": {
+"best": {
+"sse": 335.06146240234375,
+"tracking2": 0,
+"kern2": true,
+"frac2": false,
+"P2": 20,
+"esp": 0.5,
+"skew": 0.2,
+"x": 75,
+"yb": 128
+},
+"upright": {
+"sse": 343.8206787109375,
+"tracking2": 0,
+"kern2": true,
+"frac2": false,
+"P2": 20,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+358.44464111328125,
+"We hope us"
+],
+[
+369.57745361328125,
+"We hope he"
+],
+[
+392.063720703125,
+"We hops so"
+],
+[
+447.9344482421875,
+"We hope or"
+],
+[
+473.36236572265625,
+"Me hope so"
+],
+[
+544.1649780273438,
+"He hope so"
+],
+[
+786.7112426757812,
+"By hope so"
+],
+[
+1140.077880859375,
+"We love so"
+]
+]
+},
+"MATANTQN.TTF": {
+"best": {
+"sse": 383.0337219238281,
+"tracking2": -1,
+"kern2": false,
+"frac2": false,
+"P2": 22,
+"esp": 0.0,
+"skew": 0.2,
+"x": 73,
+"yb": 128
+},
+"upright": {
+"sse": 401.1650085449219,
+"tracking2": -1,
+"kern2": true,
+"frac2": "glyph",
+"P2": 21,
+"esp": 0.5,
+"skew": 0.0,
+"x": 75,
+"yb": 128
+},
+"rivals": [
+[
+432.8651123046875,
+"We hops so"
+],
+[
+447.1135559082031,
+"We hope us"
+],
+[
+484.103515625,
+"Me hope so"
+],
+[
+532.0078735351562,
+"We hope he"
+],
+[
+551.55859375,
+"He hope so"
+],
+[
+555.2142333984375,
+"We hope or"
+],
+[
+666.88671875,
+"By hope so"
+],
+[
+1119.036865234375,
+"We love so"
+]
+]
+},
+"COOPERM.PFB": {
+"best": {
+"sse": 273.1372375488281,
+"tracking2": 2,
+"kern2": false,
+"frac2": "glyph",
+"P2": 17,
+"esp": -0.5,
+"skew": 0.3,
+"x": 73,
+"yb": 128
+},
+"upright": {
+"sse": 360.554931640625,
+"tracking2": 1,
+"kern2": false,
+"frac2": "glyph",
+"P2": 17,
+"esp": 0.0,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+318.229736328125,
+"We hope or"
+],
+[
+323.70086669921875,
+"Me hope so"
+],
+[
+326.76519775390625,
+"We hope us"
+],
+[
+330.68255615234375,
+"He hope so"
+],
+[
+339.86944580078125,
+"We hops so"
+],
+[
+374.016357421875,
+"We hope he"
+],
+[
+473.2584228515625,
+"By hope so"
+],
+[
+917.02294921875,
+"We love so"
+]
+]
+},
+"Palatino__sfnt_32751_Palatino_Bold_Italic.ttf": {
+"best": {
+"sse": 236.38818359375,
+"tracking2": 0,
+"kern2": false,
+"frac2": "glyph",
+"P2": 19,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"upright": {
+"sse": 236.38818359375,
+"tracking2": 0,
+"kern2": false,
+"frac2": "glyph",
+"P2": 19,
+"esp": 0.5,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+232.88394165039062,
+"We hops so"
+],
+[
+265.54937744140625,
+"We hope us"
+],
+[
+286.2041015625,
+"We hope he"
+],
+[
+303.5162048339844,
+"We hope or"
+],
+[
+394.1849060058594,
+"Me hope so"
+],
+[
+413.7523498535156,
+"By hope so"
+],
+[
+419.72698974609375,
+"He hope so"
+],
+[
+825.641357421875,
+"We love so"
+]
+]
+},
+"AI55IRIX-ITCOfficinaSerif-BoldItalic.pfb": {
+"best": {
+"sse": 271.83746337890625,
+"tracking2": 2,
+"kern2": false,
+"frac2": false,
+"P2": 17,
+"esp": 0.0,
+"skew": 0.25,
+"x": 75,
+"yb": 128
+},
+"upright": {
+"sse": 308.029541015625,
+"tracking2": 2,
+"kern2": false,
+"frac2": false,
+"P2": 17,
+"esp": 0.0,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+303.1817626953125,
+"We hope us"
+],
+[
+321.82794189453125,
+"We hope or"
+],
+[
+326.916259765625,
+"We hops so"
+],
+[
+382.7930908203125,
+"We hope he"
+],
+[
+405.21917724609375,
+"Me hope so"
+],
+[
+538.3096923828125,
+"He hope so"
+],
+[
+626.363525390625,
+"By hope so"
+],
+[
+866.3233032226562,
+"We love so"
+]
+]
+},
+"MacOS9-PalatinoBoldItalic.ttf": {
+"best": {
+"sse": 229.60130310058594,
+"tracking2": 1,
+"kern2": true,
+"frac2": false,
+"P2": 19,
+"esp": 0.0,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"upright": {
+"sse": 229.60130310058594,
+"tracking2": 1,
+"kern2": true,
+"frac2": false,
+"P2": 19,
+"esp": 0.0,
+"skew": 0.0,
+"x": 76,
+"yb": 128
+},
+"rivals": [
+[
+240.94314575195312,
+"We hops so"
+],
+[
+283.090576171875,
+"We hope or"
+],
+[
+284.7460632324219,
+"We hope us"
+],
+[
+288.90667724609375,
+"We hope he"
+],
+[
+347.5224609375,
+"Me hope so"
+],
+[
+375.36700439453125,
+"He hope so"
+],
+[
+422.10736083984375,
+"By hope so"
+],
+[
+652.3849487304688,
+"We love so"
+]
+]
+}
+}

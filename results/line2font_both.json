@@ -1,0 +1,852 @@
+{
+"1": {
+"null": 9086.0,
+"faces": {
+"RALEIGDB.PFB": {
+"score": 1170.88134765625,
+"text": "Eternal Star",
+"rival": [
+1183.16943359375,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.39,
+"y0": 12.5,
+"size_px_per_em": 5.049,
+"width_ratio": 1.005,
+"shear": 0.108,
+"track_em": 0.029,
+"filt_a": 0.727,
+"filt_p": 2.71,
+"gamma": 1.39,
+"weight_t": 0.723
+},
+"ink": 59.72581100463867
+},
+"RALEIGHM.PFB": {
+"score": 1218.78662109375,
+"text": "Eternal Star",
+"rival": [
+1208.28955078125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.5,
+"y0": 12.34,
+"size_px_per_em": 4.318,
+"width_ratio": 1.084,
+"shear": 0.086,
+"track_em": 0.078,
+"filt_a": 0.608,
+"filt_p": 1.81,
+"gamma": 1.001,
+"weight_t": 0.744
+},
+"ink": 58.40389633178711
+},
+"RALEIGHN.PFB": {
+"score": 1192.8037109375,
+"text": "Eternal Star",
+"rival": [
+1203.068359375,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.48,
+"y0": 12.35,
+"size_px_per_em": 4.565,
+"width_ratio": 1.031,
+"shear": 0.094,
+"track_em": 0.077,
+"filt_a": 0.663,
+"filt_p": 2.29,
+"gamma": 1.056,
+"weight_t": 0.68
+},
+"ink": 59.96799850463867
+},
+"RALEIGHB.PFB": {
+"score": 1130.5126953125,
+"text": "Eternal Star",
+"rival": [
+1138.02392578125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.32,
+"y0": 12.52,
+"size_px_per_em": 5.136,
+"width_ratio": 0.982,
+"shear": 0.122,
+"track_em": 0.026,
+"filt_a": 0.709,
+"filt_p": 2.87,
+"gamma": 1.39,
+"weight_t": 0.781
+},
+"ink": 49.06554412841797
+},
+"RALEIGHL.PFB": {
+"score": 1208.90185546875,
+"text": "Eternal Star",
+"rival": [
+1201.6826171875,
+"Eternal Scar"
+],
+"params": {
+"x0": 2.54,
+"y0": 12.33,
+"size_px_per_em": 4.28,
+"width_ratio": 1.047,
+"shear": 0.135,
+"track_em": 0.104,
+"filt_a": 0.601,
+"filt_p": 1.82,
+"gamma": 0.906,
+"weight_t": 0.687
+},
+"ink": 59.89784622192383
+},
+"RALEIGXB.PFB": {
+"score": 1114.2919921875,
+"text": "Eternal Star",
+"rival": [
+1102.19287109375,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.28,
+"y0": 12.54,
+"size_px_per_em": 5.21,
+"width_ratio": 0.96,
+"shear": 0.16,
+"track_em": 0.014,
+"filt_a": 0.689,
+"filt_p": 3.83,
+"gamma": 1.367,
+"weight_t": 0.792
+},
+"ink": 33.21870803833008
+},
+"RALEIGHM.TTF": {
+"score": 1262.2998046875,
+"text": "Eternal Star",
+"rival": [
+1243.6083984375,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.32,
+"y0": 12.46,
+"size_px_per_em": 4.61,
+"width_ratio": 1.06,
+"shear": 0.151,
+"track_em": 0.056,
+"filt_a": 0.685,
+"filt_p": 2.13,
+"gamma": 1.325,
+"weight_t": 0.606
+},
+"ink": 59.89615249633789
+},
+"ovbi____.pfb": {
+"score": 1276.1162109375,
+"text": "Eternal Star",
+"rival": [
+1303.84814453125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.88,
+"y0": 12.42,
+"size_px_per_em": 4.056,
+"width_ratio": 1.099,
+"shear": -0.047,
+"track_em": 0.068,
+"filt_a": 0.426,
+"filt_p": 1.39,
+"gamma": 0.801,
+"weight_t": 0.775
+},
+"ink": 27.612119674682617
+},
+"MATANTQN.TTF": {
+"score": 1068.4541015625,
+"text": "Eternal Star",
+"rival": [
+1072.30322265625,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.54,
+"y0": 12.52,
+"size_px_per_em": 4.701,
+"width_ratio": 0.933,
+"shear": 0.122,
+"track_em": 0.071,
+"filt_a": 0.651,
+"filt_p": 2.39,
+"gamma": 1.023,
+"weight_t": 0.716
+},
+"ink": 59.56249237060547
+},
+"usb_____.pfb": {
+"score": 1294.35498046875,
+"text": "Eternal Star",
+"rival": [
+1283.57177734375,
+"Eternal Scar"
+],
+"params": {
+"x0": 2.58,
+"y0": 12.37,
+"size_px_per_em": 4.628,
+"width_ratio": 0.918,
+"shear": 0.087,
+"track_em": 0.09,
+"filt_a": 0.637,
+"filt_p": 2.15,
+"gamma": 1.031,
+"weight_t": 0.598
+},
+"ink": 34.276973724365234
+},
+"COOPERM.PFB": {
+"score": 1123.9072265625,
+"text": "Eternal Star",
+"rival": [
+1083.3564453125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.27,
+"y0": 12.51,
+"size_px_per_em": 4.426,
+"width_ratio": 1.006,
+"shear": 0.182,
+"track_em": 0.046,
+"filt_a": 0.681,
+"filt_p": 2.82,
+"gamma": 1.471,
+"weight_t": 0.678
+},
+"ink": 50.977821350097656
+},
+"Palatino__sfnt_32751_Palatino_Bold_Italic.ttf": {
+"score": 640.84765625,
+"text": "Eternal Star",
+"rival": [
+734.697265625,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.53,
+"y0": 12.64,
+"size_px_per_em": 5.365,
+"width_ratio": 0.868,
+"shear": -0.011,
+"track_em": 0.035,
+"filt_a": 0.676,
+"filt_p": 2.52,
+"gamma": 1.343,
+"weight_t": 0.57
+},
+"ink": 44.33095169067383
+},
+"URWBookman-DemiItalic.t1": {
+"score": 1140.0615234375,
+"text": "Eternal Star",
+"rival": [
+1095.23681640625,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.42,
+"y0": 12.6,
+"size_px_per_em": 4.623,
+"width_ratio": 0.78,
+"shear": 0.042,
+"track_em": 0.081,
+"filt_a": 0.612,
+"filt_p": 2.34,
+"gamma": 1.293,
+"weight_t": 0.783
+},
+"ink": 39.683624267578125
+},
+"CHARTRBI.PFB": {
+"score": 1042.77880859375,
+"text": "Eternal Star",
+"rival": [
+1007.89501953125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.95,
+"y0": 12.57,
+"size_px_per_em": 4.949,
+"width_ratio": 0.917,
+"shear": -0.102,
+"track_em": 0.031,
+"filt_a": 0.658,
+"filt_p": 2.65,
+"gamma": 1.286,
+"weight_t": 0.788
+},
+"ink": 59.8019905090332
+},
+"AI55IRIX-ITCOfficinaSerif-BoldItalic.pfb": {
+"score": 1275.29638671875,
+"text": "Eternal Star",
+"rival": [
+1302.9072265625,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.88,
+"y0": 12.42,
+"size_px_per_em": 4.057,
+"width_ratio": 1.099,
+"shear": -0.048,
+"track_em": 0.068,
+"filt_a": 0.426,
+"filt_p": 1.39,
+"gamma": 0.802,
+"weight_t": 0.775
+},
+"ink": 27.642255783081055
+},
+"MacOS9-PalatinoBoldItalic.ttf": {
+"score": 641.0859375,
+"text": "Eternal Star",
+"rival": [
+734.265625,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.54,
+"y0": 12.64,
+"size_px_per_em": 5.361,
+"width_ratio": 0.866,
+"shear": -0.01,
+"track_em": 0.036,
+"filt_a": 0.676,
+"filt_p": 2.5,
+"gamma": 1.341,
+"weight_t": 0.57
+},
+"ink": 44.33710479736328
+},
+"AdobePalatino-BoldItalic.pfb": {
+"score": 654.0849609375,
+"text": "Eternal Star",
+"rival": [
+750.2763671875,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.52,
+"y0": 12.58,
+"size_px_per_em": 5.38,
+"width_ratio": 0.875,
+"shear": -0.007,
+"track_em": 0.029,
+"filt_a": 0.682,
+"filt_p": 2.65,
+"gamma": 1.278,
+"weight_t": 0.641
+},
+"ink": 46.48470687866211
+},
+"PalatinoBoldItalic.ttf": {
+"score": 641.611328125,
+"text": "Eternal Star",
+"rival": [
+734.3173828125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.53,
+"y0": 12.64,
+"size_px_per_em": 5.368,
+"width_ratio": 0.872,
+"shear": -0.013,
+"track_em": 0.032,
+"filt_a": 0.677,
+"filt_p": 2.55,
+"gamma": 1.343,
+"weight_t": 0.569
+},
+"ink": 43.91092300415039
+},
+"P052-BoldItalic.otf": {
+"score": 720.880859375,
+"text": "Eternal Star",
+"rival": [
+806.650390625,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.63,
+"y0": 12.58,
+"size_px_per_em": 5.285,
+"width_ratio": 0.859,
+"shear": -0.074,
+"track_em": 0.042,
+"filt_a": 0.684,
+"filt_p": 2.48,
+"gamma": 1.192,
+"weight_t": 0.684
+},
+"ink": 48.116912841796875
+},
+"AdobePalatino-Italic.pfb": {
+"score": 752.3798828125,
+"text": "Eternal Star",
+"rival": [
+824.751953125,
+"Eternal Stat"
+],
+"params": {
+"x0": 2.64,
+"y0": 12.39,
+"size_px_per_em": 4.522,
+"width_ratio": 0.976,
+"shear": -0.048,
+"track_em": 0.106,
+"filt_a": 0.628,
+"filt_p": 2.62,
+"gamma": 0.853,
+"weight_t": 0.692
+},
+"ink": 54.93304443359375
+}
+}
+},
+"2": {
+"null": 4027.0,
+"faces": {
+"RALEIGDB.PFB": {
+"score": 153.26416015625,
+"text": "We hope so",
+"rival": [
+167.497802734375,
+"We hops so"
+],
+"params": {
+"x0": 6.18,
+"y0": 19.6,
+"size_px_per_em": 3.765,
+"width_ratio": 0.94,
+"shear": 0.303,
+"track_em": 0.005,
+"filt_a": 0.669,
+"filt_p": 3.68,
+"gamma": 1.536,
+"weight_t": 0.531
+},
+"ink": 50.190284729003906
+},
+"RALEIGHM.PFB": {
+"score": 152.789794921875,
+"text": "We hope so",
+"rival": [
+165.5927734375,
+"We hops so"
+],
+"params": {
+"x0": 6.22,
+"y0": 19.6,
+"size_px_per_em": 3.712,
+"width_ratio": 1.018,
+"shear": 0.229,
+"track_em": -0.032,
+"filt_a": 0.643,
+"filt_p": 3.98,
+"gamma": 1.46,
+"weight_t": 0.501
+},
+"ink": 47.62430953979492
+},
+"RALEIGHN.PFB": {
+"score": 153.57421875,
+"text": "We hope so",
+"rival": [
+169.79638671875,
+"We hops so"
+],
+"params": {
+"x0": 6.24,
+"y0": 19.6,
+"size_px_per_em": 3.689,
+"width_ratio": 1.023,
+"shear": 0.234,
+"track_em": -0.03,
+"filt_a": 0.651,
+"filt_p": 3.85,
+"gamma": 1.479,
+"weight_t": 0.452
+},
+"ink": 50.99873352050781
+},
+"RALEIGHB.PFB": {
+"score": 152.49951171875,
+"text": "We hope so",
+"rival": [
+159.928466796875,
+"We hops so"
+],
+"params": {
+"x0": 6.06,
+"y0": 19.74,
+"size_px_per_em": 4.254,
+"width_ratio": 0.832,
+"shear": 0.269,
+"track_em": 0.006,
+"filt_a": 0.737,
+"filt_p": 3.78,
+"gamma": 1.903,
+"weight_t": 0.447
+},
+"ink": 42.15101623535156
+},
+"RALEIGHL.PFB": {
+"score": 156.26220703125,
+"text": "We hope so",
+"rival": [
+174.0439453125,
+"We hops so"
+],
+"params": {
+"x0": 6.16,
+"y0": 19.58,
+"size_px_per_em": 3.737,
+"width_ratio": 1.003,
+"shear": 0.266,
+"track_em": -0.017,
+"filt_a": 0.651,
+"filt_p": 3.48,
+"gamma": 1.458,
+"weight_t": 0.465
+},
+"ink": 59.84907150268555
+},
+"RALEIGXB.PFB": {
+"score": 156.582275390625,
+"text": "We hope so",
+"rival": [
+163.13134765625,
+"We hops so"
+],
+"params": {
+"x0": 6.08,
+"y0": 19.76,
+"size_px_per_em": 4.364,
+"width_ratio": 0.795,
+"shear": 0.295,
+"track_em": 0.006,
+"filt_a": 0.743,
+"filt_p": 4.03,
+"gamma": 1.849,
+"weight_t": 0.553
+},
+"ink": 34.48138427734375
+},
+"RALEIGHM.TTF": {
+"score": 161.830810546875,
+"text": "We hope so",
+"rival": [
+168.822021484375,
+"We hops so"
+],
+"params": {
+"x0": 6.19,
+"y0": 19.59,
+"size_px_per_em": 3.685,
+"width_ratio": 0.944,
+"shear": 0.333,
+"track_em": 0.032,
+"filt_a": 0.718,
+"filt_p": 3.2,
+"gamma": 1.578,
+"weight_t": 0.456
+},
+"ink": 59.66423034667969
+},
+"ovbi____.pfb": {
+"score": 161.837646484375,
+"text": "We hope so",
+"rival": [
+163.5263671875,
+"We hops so"
+],
+"params": {
+"x0": 6.25,
+"y0": 19.6,
+"size_px_per_em": 3.657,
+"width_ratio": 0.978,
+"shear": 0.062,
+"track_em": -0.004,
+"filt_a": 0.582,
+"filt_p": 2.86,
+"gamma": 1.495,
+"weight_t": 0.409
+},
+"ink": 26.705093383789062
+},
+"MATANTQN.TTF": {
+"score": 161.54931640625,
+"text": "We hope so",
+"rival": [
+169.626708984375,
+"We hops so"
+],
+"params": {
+"x0": 6.27,
+"y0": 19.58,
+"size_px_per_em": 3.688,
+"width_ratio": 0.915,
+"shear": 0.271,
+"track_em": 0.004,
+"filt_a": 0.652,
+"filt_p": 3.43,
+"gamma": 1.416,
+"weight_t": 0.452
+},
+"ink": 51.740535736083984
+},
+"usb_____.pfb": {
+"score": 161.39111328125,
+"text": "We hope so",
+"rival": [
+170.84765625,
+"We hops so"
+],
+"params": {
+"x0": 6.1,
+"y0": 19.6,
+"size_px_per_em": 3.895,
+"width_ratio": 0.869,
+"shear": 0.265,
+"track_em": -0.012,
+"filt_a": 0.582,
+"filt_p": 3.23,
+"gamma": 1.415,
+"weight_t": 0.536
+},
+"ink": 39.97846603393555
+},
+"COOPERM.PFB": {
+"score": 164.573486328125,
+"text": "We hope so",
+"rival": [
+186.893798828125,
+"We hops so"
+],
+"params": {
+"x0": 5.87,
+"y0": 19.72,
+"size_px_per_em": 3.744,
+"width_ratio": 0.839,
+"shear": 0.35,
+"track_em": 0.023,
+"filt_a": 0.622,
+"filt_p": 3.53,
+"gamma": 1.695,
+"weight_t": 0.392
+},
+"ink": 38.336605072021484
+},
+"Palatino__sfnt_32751_Palatino_Bold_Italic.ttf": {
+"score": 171.44775390625,
+"text": "We hope so",
+"rival": [
+177.80419921875,
+"We hops so"
+],
+"params": {
+"x0": 6.38,
+"y0": 19.6,
+"size_px_per_em": 3.721,
+"width_ratio": 0.979,
+"shear": -0.014,
+"track_em": -0.029,
+"filt_a": 0.674,
+"filt_p": 3.17,
+"gamma": 1.383,
+"weight_t": 0.479
+},
+"ink": 40.21461486816406
+},
+"URWBookman-DemiItalic.t1": {
+"score": 170.113525390625,
+"text": "We hope so",
+"rival": [
+174.70947265625,
+"We hops so"
+],
+"params": {
+"x0": 6.15,
+"y0": 19.59,
+"size_px_per_em": 3.482,
+"width_ratio": 0.851,
+"shear": 0.21,
+"track_em": 0.002,
+"filt_a": 0.588,
+"filt_p": 3.53,
+"gamma": 1.377,
+"weight_t": 0.383
+},
+"ink": 22.525920867919922
+},
+"CHARTRBI.PFB": {
+"score": 174.8076171875,
+"text": "We hope so",
+"rival": [
+180.936767578125,
+"We hope or"
+],
+"params": {
+"x0": 6.39,
+"y0": 19.61,
+"size_px_per_em": 3.768,
+"width_ratio": 0.954,
+"shear": 0.062,
+"track_em": -0.034,
+"filt_a": 0.616,
+"filt_p": 4.17,
+"gamma": 1.422,
+"weight_t": 0.45
+},
+"ink": 31.803821563720703
+},
+"AI55IRIX-ITCOfficinaSerif-BoldItalic.pfb": {
+"score": 161.837890625,
+"text": "We hope so",
+"rival": [
+163.526123046875,
+"We hops so"
+],
+"params": {
+"x0": 6.25,
+"y0": 19.6,
+"size_px_per_em": 3.656,
+"width_ratio": 0.978,
+"shear": 0.062,
+"track_em": -0.004,
+"filt_a": 0.582,
+"filt_p": 2.86,
+"gamma": 1.495,
+"weight_t": 0.409
+},
+"ink": 26.7047176361084
+},
+"MacOS9-PalatinoBoldItalic.ttf": {
+"score": 167.11328125,
+"text": "We hope so",
+"rival": [
+175.29296875,
+"We hops so"
+],
+"params": {
+"x0": 6.31,
+"y0": 19.61,
+"size_px_per_em": 3.745,
+"width_ratio": 0.976,
+"shear": 0.093,
+"track_em": -0.021,
+"filt_a": 0.721,
+"filt_p": 3.75,
+"gamma": 1.448,
+"weight_t": 0.474
+},
+"ink": 43.614925384521484
+},
+"AdobePalatino-BoldItalic.pfb": {
+"score": 174.856201171875,
+"text": "We hope so",
+"rival": [
+181.132568359375,
+"We hops so"
+],
+"params": {
+"x0": 6.35,
+"y0": 19.58,
+"size_px_per_em": 3.751,
+"width_ratio": 0.973,
+"shear": 0.0,
+"track_em": -0.036,
+"filt_a": 0.687,
+"filt_p": 3.83,
+"gamma": 1.406,
+"weight_t": 0.492
+},
+"ink": 42.22011947631836
+},
+"PalatinoBoldItalic.ttf": {
+"score": 171.0693359375,
+"text": "We hope so",
+"rival": [
+177.792236328125,
+"We hops so"
+],
+"params": {
+"x0": 6.35,
+"y0": 19.6,
+"size_px_per_em": 3.716,
+"width_ratio": 0.979,
+"shear": 0.001,
+"track_em": -0.027,
+"filt_a": 0.674,
+"filt_p": 3.16,
+"gamma": 1.39,
+"weight_t": 0.473
+},
+"ink": 40.109596252441406
+},
+"P052-BoldItalic.otf": {
+"score": 173.175048828125,
+"text": "We hope so",
+"rival": [
+185.091064453125,
+"We hops so"
+],
+"params": {
+"x0": 6.47,
+"y0": 19.61,
+"size_px_per_em": 3.764,
+"width_ratio": 0.966,
+"shear": -0.051,
+"track_em": -0.028,
+"filt_a": 0.691,
+"filt_p": 3.47,
+"gamma": 1.393,
+"weight_t": 0.528
+},
+"ink": 45.216888427734375
+},
+"AdobePalatino-Italic.pfb": {
+"score": 194.270263671875,
+"text": "We hope so",
+"rival": [
+206.326171875,
+"We hops so"
+],
+"params": {
+"x0": 6.44,
+"y0": 19.57,
+"size_px_per_em": 3.671,
+"width_ratio": 0.993,
+"shear": -0.017,
+"track_em": 0.037,
+"filt_a": 0.624,
+"filt_p": 2.26,
+"gamma": 1.389,
+"weight_t": 0.418
+},
+"ink": 55.88917541503906
+}
+}
+}
+}

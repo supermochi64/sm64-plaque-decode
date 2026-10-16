@@ -1,0 +1,1223 @@
+{
+"note": "line 2 alone, continuous model, 3,396 era faces (gamma 0.5-2, ink <= 60), 150 Adam steps; top 60 + Palatino-family ranks",
+"null": 4027.0,
+"faces": [
+{
+"rank": 1,
+"score": 150.36,
+"font": "RALEIGDB.PFB",
+"text": "We hope so",
+"ink": 47.3,
+"params": {
+"x0": 6.08,
+"y0": 19.72,
+"size_px_per_em": 4.258,
+"width_ratio": 0.877,
+"shear": 0.271,
+"track_em": -0.027,
+"filt_a": 0.66,
+"filt_p": 3.61,
+"gamma": 1.901,
+"weight_t": 0.439
+}
+},
+{
+"rank": 2,
+"score": 153.6,
+"font": "RALEIGHM.PFB",
+"text": "We hope so",
+"ink": 47.6,
+"params": {
+"x0": 6.23,
+"y0": 19.59,
+"size_px_per_em": 3.707,
+"width_ratio": 1.014,
+"shear": 0.232,
+"track_em": -0.029,
+"filt_a": 0.644,
+"filt_p": 3.46,
+"gamma": 1.462,
+"weight_t": 0.495
+}
+},
+{
+"rank": 3,
+"score": 154.32,
+"font": "RALEIGHN.PFB",
+"text": "We hope so",
+"ink": 52.5,
+"params": {
+"x0": 6.24,
+"y0": 19.59,
+"size_px_per_em": 3.689,
+"width_ratio": 1.021,
+"shear": 0.237,
+"track_em": -0.029,
+"filt_a": 0.654,
+"filt_p": 3.44,
+"gamma": 1.477,
+"weight_t": 0.463
+}
+},
+{
+"rank": 4,
+"score": 157.4,
+"font": "RALEIGHB.PFB",
+"text": "We hope so",
+"ink": 38.3,
+"params": {
+"x0": 6.05,
+"y0": 19.62,
+"size_px_per_em": 3.979,
+"width_ratio": 0.874,
+"shear": 0.297,
+"track_em": 0.016,
+"filt_a": 0.695,
+"filt_p": 3.2,
+"gamma": 1.666,
+"weight_t": 0.485
+}
+},
+{
+"rank": 5,
+"score": 157.72,
+"font": "RALEIGHL.PFB",
+"text": "We hope so",
+"ink": 58.9,
+"params": {
+"x0": 6.16,
+"y0": 19.58,
+"size_px_per_em": 3.692,
+"width_ratio": 1.012,
+"shear": 0.264,
+"track_em": -0.015,
+"filt_a": 0.657,
+"filt_p": 3.23,
+"gamma": 1.49,
+"weight_t": 0.441
+}
+},
+{
+"rank": 6,
+"score": 158.4,
+"font": "RALEIGXB.PFB",
+"text": "We hope so",
+"ink": 35.2,
+"params": {
+"x0": 6.09,
+"y0": 19.76,
+"size_px_per_em": 4.356,
+"width_ratio": 0.793,
+"shear": 0.295,
+"track_em": 0.008,
+"filt_a": 0.738,
+"filt_p": 3.32,
+"gamma": 1.868,
+"weight_t": 0.556
+}
+},
+{
+"rank": 7,
+"score": 161.16,
+"font": "RALEIGHM.TTF",
+"text": "We hope so",
+"ink": 53.9,
+"params": {
+"x0": 6.16,
+"y0": 19.7,
+"size_px_per_em": 3.869,
+"width_ratio": 0.953,
+"shear": 0.266,
+"track_em": -0.003,
+"filt_a": 0.732,
+"filt_p": 3.35,
+"gamma": 1.836,
+"weight_t": 0.369
+}
+},
+{
+"rank": 8,
+"score": 161.85,
+"font": "ovbi____.pfb",
+"text": "We hope so",
+"ink": 26.6,
+"params": {
+"x0": 6.24,
+"y0": 19.59,
+"size_px_per_em": 3.653,
+"width_ratio": 0.979,
+"shear": 0.062,
+"track_em": -0.004,
+"filt_a": 0.581,
+"filt_p": 2.83,
+"gamma": 1.497,
+"weight_t": 0.406
+}
+},
+{
+"rank": 9,
+"score": 162.07,
+"font": "AI55IRIX-ITCOfficinaSerif-BoldItalic.pfb",
+"text": "We hope so",
+"ink": 27.3,
+"params": {
+"x0": 6.25,
+"y0": 19.6,
+"size_px_per_em": 3.677,
+"width_ratio": 0.969,
+"shear": 0.064,
+"track_em": -0.002,
+"filt_a": 0.584,
+"filt_p": 2.72,
+"gamma": 1.5,
+"weight_t": 0.42
+}
+},
+{
+"rank": 10,
+"score": 164.08,
+"font": "MATANTQN.TTF",
+"text": "We hope so",
+"ink": 46.9,
+"params": {
+"x0": 6.43,
+"y0": 19.57,
+"size_px_per_em": 3.62,
+"width_ratio": 0.949,
+"shear": 0.188,
+"track_em": -0.014,
+"filt_a": 0.628,
+"filt_p": 3.24,
+"gamma": 1.393,
+"weight_t": 0.434
+}
+},
+{
+"rank": 11,
+"score": 164.29,
+"font": "usb_____.pfb",
+"text": "We hope so",
+"ink": 40.6,
+"params": {
+"x0": 6.15,
+"y0": 19.59,
+"size_px_per_em": 3.89,
+"width_ratio": 0.856,
+"shear": 0.243,
+"track_em": -0.004,
+"filt_a": 0.582,
+"filt_p": 3.23,
+"gamma": 1.367,
+"weight_t": 0.561
+}
+},
+{
+"rank": 12,
+"score": 164.4,
+"font": "RALEIGHB.TTF",
+"text": "We hope so",
+"ink": 38.4,
+"params": {
+"x0": 6.09,
+"y0": 19.73,
+"size_px_per_em": 4.18,
+"width_ratio": 0.867,
+"shear": 0.281,
+"track_em": -0.006,
+"filt_a": 0.743,
+"filt_p": 3.34,
+"gamma": 1.97,
+"weight_t": 0.405
+}
+},
+{
+"rank": 13,
+"score": 164.83,
+"font": "MATANTQN.PFB",
+"text": "We hope so",
+"ink": 44.4,
+"params": {
+"x0": 6.46,
+"y0": 19.57,
+"size_px_per_em": 3.705,
+"width_ratio": 0.925,
+"shear": 0.144,
+"track_em": -0.025,
+"filt_a": 0.578,
+"filt_p": 3.16,
+"gamma": 1.313,
+"weight_t": 0.462
+}
+},
+{
+"rank": 14,
+"score": 166.36,
+"font": "COOPERM.PFB",
+"text": "We hope so",
+"ink": 39.5,
+"params": {
+"x0": 5.88,
+"y0": 19.72,
+"size_px_per_em": 3.74,
+"width_ratio": 0.834,
+"shear": 0.35,
+"track_em": 0.029,
+"filt_a": 0.625,
+"filt_p": 3.31,
+"gamma": 1.743,
+"weight_t": 0.382
+}
+},
+{
+"rank": 15,
+"score": 166.94,
+"font": "RALEIGHN.TTF",
+"text": "We hope so",
+"ink": 56.2,
+"params": {
+"x0": 6.25,
+"y0": 19.69,
+"size_px_per_em": 3.847,
+"width_ratio": 0.99,
+"shear": 0.213,
+"track_em": -0.024,
+"filt_a": 0.697,
+"filt_p": 3.47,
+"gamma": 1.748,
+"weight_t": 0.386
+}
+},
+{
+"rank": 16,
+"score": 167.99,
+"font": "MacOS9-PalatinoBoldItalic.ttf",
+"text": "We hope so",
+"ink": 43.8,
+"params": {
+"x0": 6.3,
+"y0": 19.61,
+"size_px_per_em": 3.788,
+"width_ratio": 0.967,
+"shear": 0.095,
+"track_em": -0.022,
+"filt_a": 0.712,
+"filt_p": 3.24,
+"gamma": 1.465,
+"weight_t": 0.476
+}
+},
+{
+"rank": 17,
+"score": 169.44,
+"font": "ium_____.pfb",
+"text": "We hope so",
+"ink": 31.3,
+"params": {
+"x0": 5.94,
+"y0": 19.57,
+"size_px_per_em": 3.587,
+"width_ratio": 0.989,
+"shear": 0.267,
+"track_em": 0.027,
+"filt_a": 0.57,
+"filt_p": 2.66,
+"gamma": 1.396,
+"weight_t": 0.435
+}
+},
+{
+"rank": 18,
+"score": 169.64,
+"font": "RALEIGDB.TTF",
+"text": "We hope so",
+"ink": 39.0,
+"params": {
+"x0": 6.23,
+"y0": 19.58,
+"size_px_per_em": 3.806,
+"width_ratio": 0.984,
+"shear": 0.284,
+"track_em": -0.027,
+"filt_a": 0.631,
+"filt_p": 2.92,
+"gamma": 1.554,
+"weight_t": 0.466
+}
+},
+{
+"rank": 19,
+"score": 169.77,
+"font": "ovb_____.pfb",
+"text": "We hope so",
+"ink": 25.2,
+"params": {
+"x0": 6.09,
+"y0": 19.58,
+"size_px_per_em": 3.619,
+"width_ratio": 0.987,
+"shear": 0.261,
+"track_em": -0.022,
+"filt_a": 0.581,
+"filt_p": 2.8,
+"gamma": 1.444,
+"weight_t": 0.438
+}
+},
+{
+"rank": 20,
+"score": 170.11,
+"font": "COOPERB.PFB",
+"text": "We hope so",
+"ink": 25.0,
+"params": {
+"x0": 5.85,
+"y0": 19.7,
+"size_px_per_em": 3.818,
+"width_ratio": 0.809,
+"shear": 0.35,
+"track_em": 0.003,
+"filt_a": 0.62,
+"filt_p": 3.68,
+"gamma": 1.568,
+"weight_t": 0.442
+}
+},
+{
+"rank": 21,
+"score": 170.41,
+"font": "MATANTQB.TTF",
+"text": "We hope so",
+"ink": 29.8,
+"params": {
+"x0": 6.28,
+"y0": 19.59,
+"size_px_per_em": 3.639,
+"width_ratio": 0.911,
+"shear": 0.225,
+"track_em": 0.0,
+"filt_a": 0.638,
+"filt_p": 3.95,
+"gamma": 1.267,
+"weight_t": 0.469
+}
+},
+{
+"rank": 22,
+"score": 170.51,
+"font": "URWBookman-DemiItalic.t1",
+"text": "We hope so",
+"ink": 22.8,
+"params": {
+"x0": 6.16,
+"y0": 19.59,
+"size_px_per_em": 3.492,
+"width_ratio": 0.846,
+"shear": 0.211,
+"track_em": 0.004,
+"filt_a": 0.586,
+"filt_p": 3.08,
+"gamma": 1.397,
+"weight_t": 0.38
+}
+},
+{
+"rank": 23,
+"score": 171.0,
+"font": "AdobeTOC-Bookman-DemiItalic.pfb",
+"text": "We hope so",
+"ink": 22.6,
+"params": {
+"x0": 6.15,
+"y0": 19.59,
+"size_px_per_em": 3.496,
+"width_ratio": 0.842,
+"shear": 0.219,
+"track_em": 0.007,
+"filt_a": 0.582,
+"filt_p": 3.16,
+"gamma": 1.408,
+"weight_t": 0.376
+}
+},
+{
+"rank": 24,
+"score": 171.24,
+"font": "FRFM721K.PFB",
+"text": "We hope so",
+"ink": 25.1,
+"params": {
+"x0": 6.09,
+"y0": 19.69,
+"size_px_per_em": 4.056,
+"width_ratio": 0.787,
+"shear": 0.315,
+"track_em": 0.006,
+"filt_a": 0.679,
+"filt_p": 3.84,
+"gamma": 1.786,
+"weight_t": 0.329
+}
+},
+{
+"rank": 25,
+"score": 171.57,
+"font": "Palatino__sfnt_32751_Palatino_Bold_Italic.ttf",
+"text": "We hope so",
+"ink": 39.8,
+"params": {
+"x0": 6.36,
+"y0": 19.59,
+"size_px_per_em": 3.707,
+"width_ratio": 0.978,
+"shear": 0.001,
+"track_em": -0.025,
+"filt_a": 0.668,
+"filt_p": 2.89,
+"gamma": 1.393,
+"weight_t": 0.464
+}
+},
+{
+"rank": 26,
+"score": 171.76,
+"font": "URWBookman-DemiItalic.ttf",
+"text": "We hope so",
+"ink": 22.6,
+"params": {
+"x0": 6.16,
+"y0": 19.59,
+"size_px_per_em": 3.479,
+"width_ratio": 0.847,
+"shear": 0.208,
+"track_em": 0.006,
+"filt_a": 0.583,
+"filt_p": 3.23,
+"gamma": 1.363,
+"weight_t": 0.389
+}
+},
+{
+"rank": 27,
+"score": 171.93,
+"font": "PalatinoBoldItalic.ttf",
+"text": "We hope so",
+"ink": 40.4,
+"params": {
+"x0": 6.41,
+"y0": 19.6,
+"size_px_per_em": 3.71,
+"width_ratio": 0.975,
+"shear": -0.019,
+"track_em": -0.025,
+"filt_a": 0.668,
+"filt_p": 2.91,
+"gamma": 1.36,
+"weight_t": 0.486
+}
+},
+{
+"rank": 28,
+"score": 172.1,
+"font": "AI55IRIX-ITCBookman-DemiItalic.pfb",
+"text": "We hope so",
+"ink": 22.6,
+"params": {
+"x0": 6.15,
+"y0": 19.59,
+"size_px_per_em": 3.5,
+"width_ratio": 0.84,
+"shear": 0.219,
+"track_em": 0.008,
+"filt_a": 0.582,
+"filt_p": 3.16,
+"gamma": 1.407,
+"weight_t": 0.377
+}
+},
+{
+"rank": 29,
+"score": 172.14,
+"font": "gvb_____.pfb",
+"text": "We hope so",
+"ink": 38.8,
+"params": {
+"x0": 6.29,
+"y0": 19.63,
+"size_px_per_em": 3.956,
+"width_ratio": 0.83,
+"shear": 0.304,
+"track_em": 0.007,
+"filt_a": 0.687,
+"filt_p": 3.02,
+"gamma": 1.498,
+"weight_t": 0.409
+}
+},
+{
+"rank": 30,
+"score": 172.33,
+"font": "GAR4CYRL.PFB",
+"text": "We hope so",
+"ink": 43.7,
+"params": {
+"x0": 5.93,
+"y0": 19.42,
+"size_px_per_em": 3.202,
+"width_ratio": 1.054,
+"shear": 0.342,
+"track_em": 0.015,
+"filt_a": 0.578,
+"filt_p": 2.26,
+"gamma": 1.047,
+"weight_t": 0.513
+}
+},
+{
+"rank": 31,
+"score": 172.49,
+"font": "IWOLSTYK.PFB",
+"text": "We hope so",
+"ink": 26.0,
+"params": {
+"x0": 5.96,
+"y0": 19.58,
+"size_px_per_em": 3.461,
+"width_ratio": 0.814,
+"shear": 0.35,
+"track_em": 0.015,
+"filt_a": 0.63,
+"filt_p": 3.46,
+"gamma": 1.31,
+"weight_t": 0.484
+}
+},
+{
+"rank": 32,
+"score": 173.44,
+"font": "RALEIGXB.TTF",
+"text": "We hope so",
+"ink": 39.2,
+"params": {
+"x0": 6.23,
+"y0": 19.77,
+"size_px_per_em": 4.306,
+"width_ratio": 0.819,
+"shear": 0.267,
+"track_em": -0.003,
+"filt_a": 0.759,
+"filt_p": 3.67,
+"gamma": 1.843,
+"weight_t": 0.632
+}
+},
+{
+"rank": 33,
+"score": 173.73,
+"font": "CHARTRI.TTF",
+"text": "We hope so",
+"ink": 45.9,
+"params": {
+"x0": 6.35,
+"y0": 19.6,
+"size_px_per_em": 3.794,
+"width_ratio": 1.053,
+"shear": 0.051,
+"track_em": -0.044,
+"filt_a": 0.661,
+"filt_p": 3.54,
+"gamma": 1.597,
+"weight_t": 0.387
+}
+},
+{
+"rank": 34,
+"score": 174.27,
+"font": "iub_____.pfb",
+"text": "We hope so",
+"ink": 24.8,
+"params": {
+"x0": 5.93,
+"y0": 19.57,
+"size_px_per_em": 3.648,
+"width_ratio": 0.961,
+"shear": 0.28,
+"track_em": 0.007,
+"filt_a": 0.546,
+"filt_p": 2.87,
+"gamma": 1.353,
+"weight_t": 0.466
+}
+},
+{
+"rank": 35,
+"score": 174.32,
+"font": "COOPERBI.PFB",
+"text": "We hope so",
+"ink": 24.2,
+"params": {
+"x0": 6.12,
+"y0": 19.62,
+"size_px_per_em": 3.557,
+"width_ratio": 0.864,
+"shear": 0.22,
+"track_em": 0.027,
+"filt_a": 0.614,
+"filt_p": 3.44,
+"gamma": 1.351,
+"weight_t": 0.442
+}
+},
+{
+"rank": 36,
+"score": 174.44,
+"font": "RALEIGHL.TTF",
+"text": "We hope so",
+"ink": 55.2,
+"params": {
+"x0": 6.16,
+"y0": 19.57,
+"size_px_per_em": 3.708,
+"width_ratio": 1.011,
+"shear": 0.259,
+"track_em": -0.017,
+"filt_a": 0.636,
+"filt_p": 3.18,
+"gamma": 1.543,
+"weight_t": 0.402
+}
+},
+{
+"rank": 37,
+"score": 174.62,
+"font": "AdobePalatino-BoldItalic.pfb",
+"text": "We hope so",
+"ink": 41.8,
+"params": {
+"x0": 6.36,
+"y0": 19.58,
+"size_px_per_em": 3.75,
+"width_ratio": 0.972,
+"shear": -0.0,
+"track_em": -0.035,
+"filt_a": 0.679,
+"filt_p": 3.4,
+"gamma": 1.403,
+"weight_t": 0.491
+}
+},
+{
+"rank": 38,
+"score": 174.92,
+"font": "iuh_____.pfb",
+"text": "We hope so",
+"ink": 21.2,
+"params": {
+"x0": 5.93,
+"y0": 19.59,
+"size_px_per_em": 3.695,
+"width_ratio": 0.908,
+"shear": 0.31,
+"track_em": 0.014,
+"filt_a": 0.528,
+"filt_p": 2.93,
+"gamma": 1.224,
+"weight_t": 0.558
+}
+},
+{
+"rank": 39,
+"score": 174.95,
+"font": "Adobe1999-PalatinoBoldItalic.pfb",
+"text": "We hope so",
+"ink": 41.0,
+"params": {
+"x0": 6.36,
+"y0": 19.58,
+"size_px_per_em": 3.74,
+"width_ratio": 0.978,
+"shear": -0.005,
+"track_em": -0.037,
+"filt_a": 0.674,
+"filt_p": 3.37,
+"gamma": 1.379,
+"weight_t": 0.496
+}
+},
+{
+"rank": 40,
+"score": 175.13,
+"font": "ERA-office43-BookmanOldStyleBoldItalic.ttf",
+"text": "We hope so",
+"ink": 23.1,
+"params": {
+"x0": 6.08,
+"y0": 19.59,
+"size_px_per_em": 3.636,
+"width_ratio": 0.826,
+"shear": 0.179,
+"track_em": -0.006,
+"filt_a": 0.619,
+"filt_p": 2.97,
+"gamma": 1.427,
+"weight_t": 0.404
+}
+},
+{
+"rank": 41,
+"score": 175.29,
+"font": "P052-BoldItalic.otf",
+"text": "We hope so",
+"ink": 44.5,
+"params": {
+"x0": 6.48,
+"y0": 19.6,
+"size_px_per_em": 3.748,
+"width_ratio": 0.966,
+"shear": -0.053,
+"track_em": -0.026,
+"filt_a": 0.675,
+"filt_p": 2.92,
+"gamma": 1.378,
+"weight_t": 0.529
+}
+},
+{
+"rank": 42,
+"score": 175.32,
+"font": "CHARTRBI.PFB",
+"text": "We hope so",
+"ink": 32.4,
+"params": {
+"x0": 6.39,
+"y0": 19.61,
+"size_px_per_em": 3.772,
+"width_ratio": 0.953,
+"shear": 0.064,
+"track_em": -0.035,
+"filt_a": 0.62,
+"filt_p": 3.45,
+"gamma": 1.426,
+"weight_t": 0.456
+}
+},
+{
+"rank": 43,
+"score": 175.34,
+"font": "P052-BoldItalic.otf",
+"text": "We hope so",
+"ink": 43.4,
+"params": {
+"x0": 6.45,
+"y0": 19.61,
+"size_px_per_em": 3.767,
+"width_ratio": 0.967,
+"shear": -0.05,
+"track_em": -0.029,
+"filt_a": 0.681,
+"filt_p": 3.17,
+"gamma": 1.395,
+"weight_t": 0.512
+}
+},
+{
+"rank": 44,
+"score": 175.43,
+"font": "BOOKOSBI.TTF",
+"text": "We hope so",
+"ink": 22.9,
+"params": {
+"x0": 6.08,
+"y0": 19.59,
+"size_px_per_em": 3.637,
+"width_ratio": 0.827,
+"shear": 0.18,
+"track_em": -0.006,
+"filt_a": 0.618,
+"filt_p": 3.04,
+"gamma": 1.427,
+"weight_t": 0.404
+}
+},
+{
+"rank": 45,
+"score": 175.45,
+"font": "Bitstream-CharterBT-BoldItalic.pfb",
+"text": "We hope so",
+"ink": 32.4,
+"params": {
+"x0": 6.39,
+"y0": 19.61,
+"size_px_per_em": 3.773,
+"width_ratio": 0.953,
+"shear": 0.064,
+"track_em": -0.035,
+"filt_a": 0.62,
+"filt_p": 3.42,
+"gamma": 1.426,
+"weight_t": 0.456
+}
+},
+{
+"rank": 46,
+"score": 175.75,
+"font": "glu_____.pfb",
+"text": "We hope so",
+"ink": 23.0,
+"params": {
+"x0": 5.95,
+"y0": 19.56,
+"size_px_per_em": 3.619,
+"width_ratio": 0.865,
+"shear": 0.341,
+"track_em": 0.009,
+"filt_a": 0.666,
+"filt_p": 3.58,
+"gamma": 1.381,
+"weight_t": 0.407
+}
+},
+{
+"rank": 47,
+"score": 175.79,
+"font": "GRIZZLYN.PFB",
+"text": "We hope so",
+"ink": 21.7,
+"params": {
+"x0": 6.11,
+"y0": 19.61,
+"size_px_per_em": 3.845,
+"width_ratio": 0.859,
+"shear": 0.256,
+"track_em": 0.01,
+"filt_a": 0.581,
+"filt_p": 3.0,
+"gamma": 1.099,
+"weight_t": 0.67
+}
+},
+{
+"rank": 48,
+"score": 175.85,
+"font": "MATANTQB.PFB",
+"text": "We hope so",
+"ink": 25.9,
+"params": {
+"x0": 6.3,
+"y0": 19.57,
+"size_px_per_em": 3.685,
+"width_ratio": 0.92,
+"shear": 0.184,
+"track_em": -0.021,
+"filt_a": 0.592,
+"filt_p": 3.76,
+"gamma": 1.234,
+"weight_t": 0.434
+}
+},
+{
+"rank": 49,
+"score": 176.02,
+"font": "CHARTRKI.PFB",
+"text": "We hope so",
+"ink": 23.3,
+"params": {
+"x0": 6.4,
+"y0": 19.64,
+"size_px_per_em": 3.798,
+"width_ratio": 0.882,
+"shear": 0.08,
+"track_em": -0.068,
+"filt_a": 0.603,
+"filt_p": 3.42,
+"gamma": 1.486,
+"weight_t": 0.427
+}
+},
+{
+"rank": 50,
+"score": 176.56,
+"font": "CHARTRBI.TTF",
+"text": "We hope so",
+"ink": 36.9,
+"params": {
+"x0": 6.34,
+"y0": 19.73,
+"size_px_per_em": 3.962,
+"width_ratio": 0.935,
+"shear": 0.11,
+"track_em": -0.034,
+"filt_a": 0.711,
+"filt_p": 3.52,
+"gamma": 1.99,
+"weight_t": 0.327
+}
+},
+{
+"rank": 51,
+"score": 176.57,
+"font": "IMPERLN.PFB",
+"text": "We hope so",
+"ink": 51.7,
+"params": {
+"x0": 6.17,
+"y0": 19.6,
+"size_px_per_em": 3.326,
+"width_ratio": 0.859,
+"shear": 0.318,
+"track_em": 0.08,
+"filt_a": 0.642,
+"filt_p": 2.93,
+"gamma": 1.281,
+"weight_t": 0.535
+}
+},
+{
+"rank": 52,
+"score": 176.59,
+"font": "CAXTONN.PFB",
+"text": "We hope so",
+"ink": 50.1,
+"params": {
+"x0": 6.28,
+"y0": 19.58,
+"size_px_per_em": 3.383,
+"width_ratio": 1.015,
+"shear": 0.186,
+"track_em": 0.019,
+"filt_a": 0.666,
+"filt_p": 3.15,
+"gamma": 1.309,
+"weight_t": 0.482
+}
+},
+{
+"rank": 53,
+"score": 176.97,
+"font": "BOOKOSB.TTF",
+"text": "We hope so",
+"ink": 20.4,
+"params": {
+"x0": 6.11,
+"y0": 19.58,
+"size_px_per_em": 3.645,
+"width_ratio": 0.894,
+"shear": 0.317,
+"track_em": -0.062,
+"filt_a": 0.568,
+"filt_p": 3.06,
+"gamma": 1.304,
+"weight_t": 0.469
+}
+},
+{
+"rank": 54,
+"score": 177.17,
+"font": "AMRTYPEB.PFB",
+"text": "We hope so",
+"ink": 28.2,
+"params": {
+"x0": 6.06,
+"y0": 19.6,
+"size_px_per_em": 3.56,
+"width_ratio": 0.843,
+"shear": 0.338,
+"track_em": -0.008,
+"filt_a": 0.596,
+"filt_p": 2.25,
+"gamma": 1.448,
+"weight_t": 0.615
+}
+},
+{
+"rank": 55,
+"score": 177.19,
+"font": "URWPalladio510-BoldItalic.pfb",
+"text": "We hope so",
+"ink": 39.6,
+"params": {
+"x0": 6.37,
+"y0": 19.58,
+"size_px_per_em": 3.752,
+"width_ratio": 0.972,
+"shear": -0.006,
+"track_em": -0.036,
+"filt_a": 0.673,
+"filt_p": 3.36,
+"gamma": 1.398,
+"weight_t": 0.47
+}
+},
+{
+"rank": 56,
+"score": 177.62,
+"font": "usbl____.pfb",
+"text": "We hope so",
+"ink": 21.3,
+"params": {
+"x0": 6.13,
+"y0": 19.57,
+"size_px_per_em": 3.781,
+"width_ratio": 0.825,
+"shear": 0.297,
+"track_em": -0.007,
+"filt_a": 0.544,
+"filt_p": 2.83,
+"gamma": 1.252,
+"weight_t": 0.421
+}
+},
+{
+"rank": 57,
+"score": 178.37,
+"font": "URWBookman-Demi.t1",
+"text": "We hope so",
+"ink": 25.5,
+"params": {
+"x0": 6.29,
+"y0": 19.6,
+"size_px_per_em": 3.544,
+"width_ratio": 0.844,
+"shear": 0.344,
+"track_em": -0.003,
+"filt_a": 0.64,
+"filt_p": 3.13,
+"gamma": 1.279,
+"weight_t": 0.57
+}
+},
+{
+"rank": 58,
+"score": 178.44,
+"font": "P052-BoldItalic.t1",
+"text": "We hope so",
+"ink": 38.7,
+"params": {
+"x0": 6.36,
+"y0": 19.57,
+"size_px_per_em": 3.732,
+"width_ratio": 0.985,
+"shear": -0.01,
+"track_em": -0.041,
+"filt_a": 0.669,
+"filt_p": 3.3,
+"gamma": 1.374,
+"weight_t": 0.475
+}
+},
+{
+"rank": 59,
+"score": 178.56,
+"font": "DUT809N.PFB",
+"text": "We hope so",
+"ink": 50.3,
+"params": {
+"x0": 6.07,
+"y0": 19.68,
+"size_px_per_em": 3.723,
+"width_ratio": 0.905,
+"shear": 0.296,
+"track_em": 0.002,
+"filt_a": 0.631,
+"filt_p": 3.14,
+"gamma": 1.771,
+"weight_t": 0.341
+}
+},
+{
+"rank": 60,
+"score": 178.62,
+"font": "P052-BoldItalic.ttf",
+"text": "We hope so",
+"ink": 42.8,
+"params": {
+"x0": 6.41,
+"y0": 19.64,
+"size_px_per_em": 3.951,
+"width_ratio": 0.926,
+"shear": -0.047,
+"track_em": -0.031,
+"filt_a": 0.657,
+"filt_p": 2.75,
+"gamma": 1.521,
+"weight_t": 0.478
+}
+}
+],
+"palatino": [
+{
+"rank": 16,
+"score": 167.99,
+"font": "MacOS9-PalatinoBoldItalic.ttf"
+},
+{
+"rank": 25,
+"score": 171.57,
+"font": "Palatino__sfnt_32751_Palatino_Bold_Italic.ttf"
+},
+{
+"rank": 27,
+"score": 171.93,
+"font": "PalatinoBoldItalic.ttf"
+},
+{
+"rank": 37,
+"score": 174.62,
+"font": "AdobePalatino-BoldItalic.pfb"
+},
+{
+"rank": 39,
+"score": 174.95,
+"font": "Adobe1999-PalatinoBoldItalic.pfb"
+},
+{
+"rank": 41,
+"score": 175.29,
+"font": "P052-BoldItalic.otf"
+},
+{
+"rank": 43,
+"score": 175.34,
+"font": "P052-BoldItalic.otf"
+},
+{
+"rank": 55,
+"score": 177.19,
+"font": "URWPalladio510-BoldItalic.pfb"
+},
+{
+"rank": 58,
+"score": 178.44,
+"font": "P052-BoldItalic.t1"
+},
+{
+"rank": 60,
+"score": 178.62,
+"font": "P052-BoldItalic.ttf"
+},
+{
+"rank": 65,
+"score": 179.56,
+"font": "URWPalladio60-BoldItalic.pfb"
+},
+{
+"rank": 66,
+"score": 179.62,
+"font": "TeXLive-PalladioL-BoldItalic.pfb"
+},
+{
+"rank": 94,
+"score": 184.13,
+"font": "PalatinoLinotype-BoldItalic.ttf"
+},
+{
+"rank": 97,
+"score": 184.42,
+"font": "PalatinoLinotype-BoldItalic.ttf"
+},
+{
+"rank": 110,
+"score": 186.75,
+"font": "P052-Italic.otf"
+}
+]
+}
