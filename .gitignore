@@ -20,3 +20,7 @@ report/*.bbl
 report/*.blg
 report/*.fls
 report/*.fdb_latexmk
+
+# texture-derived stone estimates (never commit)
+stone/
+*.npy
