@@ -1,14 +1,16 @@
-\begin{tabular}{lcc}\toprule
- & Palatino Bold Italic (URW P052) & Palatino Bold Italic (Apple 1996) \\ \midrule
-artwork canvas & 160$\times$128 px & 160$\times$128 px \\
-font size & 23 px & 23 px \\
-tracking & +1 px & +1 px \\
-pair kerning & off & on \\
-advances & whole pixels per glyph & whole pixels per glyph \\
-word space & -0.5 texture px & -0.5 texture px \\
-resize filter & bilinear & bilinear \\
-blur after resize & $\sigma=0.45$ px & $\sigma=0.45$ px \\
-gamma & 1.8 & 1.8 \\
-line-1 SSE & 756.9 & 759.2 \\
-SSE / noise floor & 4.57 & 4.58 \\
+\begin{tabular}{lccc}\toprule
+ & Palatino Bold Italic (Adobe Type 1, 1990) & Palatino Bold Italic (URW P052) & Palatino Bold Italic (Apple 1996) \\ \midrule
+artwork canvas & 192$\times$160 px & 160$\times$128 px & 160$\times$128 px \\
+font size & 26 px & 23 px & 23 px \\
+tracking & +2 px & +1 px & +1 px \\
+pair kerning & on & off & on \\
+advances & whole pixels per glyph & whole pixels per glyph & whole pixels per glyph \\
+word space & +0.0 texture px & -0.5 texture px & -0.5 texture px \\
+resize filter & bilinear & bilinear & bilinear \\
+blur after resize & $\sigma=0.30$ px & $\sigma=0.45$ px & $\sigma=0.45$ px \\
+gamma & 1.4 & 1.8 & 1.8 \\
+line-1 SSE (stone planes) & 731.3 & 756.9 & 759.2 \\
+SSE / noise floor & 4.41 & 4.57 & 4.58 \\
+same recipe, fixed stone & 788.7 & 823.8 & 811.4 \\
+best recipe, fixed stone & 788.7 & 814.0 & 811.4 \\
 \bottomrule\end{tabular}
