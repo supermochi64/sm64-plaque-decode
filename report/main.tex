@@ -43,6 +43,7 @@
 \providecommand{\GameRigid}{--}\providecommand{\GameFull}{--}\providecommand{\GameRigidRatio}{--}\providecommand{\GameRank}{--}\providecommand{\GameOf}{--}\providecommand{\GameFlex}{812}
 \providecommand{\InvOursOne}{--}\providecommand{\InvOursTwo}{--}\providecommand{\InvLisRealOne}{--}\providecommand{\InvSecretOne}{--}\providecommand{\InvSecretTwo}{--}\providecommand{\InvMyHopeTwo}{--}\providecommand{\InvMyHopeOne}{--}
 \providecommand{\StoneStar}{--}\providecommand{\StoneLower}{--}\providecommand{\StoneLegend}{--}\providecommand{\StoneSecret}{--}\providecommand{\SwTwoN}{--}\providecommand{\SwTwoRank}{--}\providecommand{\SwTwoTop}{--}\providecommand{\SwBigN}{--}\providecommand{\SwBigRank}{--}\providecommand{\SwBigTop}{--}\providecommand{\ExN}{--}\providecommand{\ExRankStar}{--}\providecommand{\ExStarSse}{--}\providecommand{\ExBest}{--}\providecommand{\ExTop}{--}\providecommand{\ExFirstN}{--}\providecommand{\ExFirstRank}{--}\providecommand{\ExFirstTop}{--}\providecommand{\ExEndN}{--}\providecommand{\ExEndRank}{--}\providecommand{\ExEndTop}{--}\providecommand{\ExMidN}{--}\providecommand{\ExMidRank}{--}\providecommand{\ExMidTop}{--}\providecommand{\EraN}{--}\providecommand{\EraBest}{--}\providecommand{\EraOther}{--}\providecommand{\EraOtherSse}{--}
+\providecommand{\NgOneRigid}{--}\providecommand{\NgOneKern}{--}\providecommand{\NgOneGain}{--}\providecommand{\NgOneNoise}{--}\providecommand{\NgTwoRigid}{--}\providecommand{\NgTwoKern}{--}\providecommand{\NgTwoGain}{--}\providecommand{\NgTwoNoise}{--}\providecommand{\DzPlain}{--}\providecommand{\DzKern}{--}\providecommand{\DzNormal}{--}\providecommand{\DzScreen}{--}\providecommand{\DzLighten}{--}\providecommand{\DzBlendGain}{--}\providecommand{\DzBlendNoise}{--}\providecommand{\DzShadowGain}{--}\providecommand{\DzShadowNoise}{--}\providecommand{\DzEmbossGain}{--}\providecommand{\DzEmbossNoise}{--}\providecommand{\DzOutlineGain}{--}\providecommand{\DzOutlineNoise}{--}\providecommand{\DzSharpenGain}{--}\providecommand{\DzSharpenNoise}{--}\providecommand{\DzLineGain}{--}\providecommand{\DzLineNoise}{--}\providecommand{\DzScaleInt}{--}\providecommand{\DzScaleBest}{--}\providecommand{\DzScaleW}{--}\providecommand{\DzScaleH}{--}\providecommand{\DzScaleGain}{--}\providecommand{\DzScaleNoise}{--}
 \providecommand{\AdobeLineOne}{--}\providecommand{\AdobeLineTwo}{--}\providecommand{\AdobeTotal}{--}\providecommand{\AdobeNextTotal}{--}\providecommand{\AdobeGain}{--}
 \providecommand{\AdobeHoleW}{--}\providecommand{\AdobeHoleE}{--}\providecommand{\AdobeDPTop}{--}\providecommand{\AdobeDPTopSse}{--}\providecommand{\AdobeDPSecond}{--}
 \providecommand{\AdobeDPHopeTop}{--}\providecommand{\AdobeDPHopeTopSse}{--}\providecommand{\AdobeDPHopeSecond}{--}\providecommand{\AdobeEndSo}{--}\providecommand{\AdobeEndNr}{--}
@@ -78,6 +79,8 @@ clearly ruled out;
 26\,px type, bilinear resize, light blur and gamma~1.4; the Apple and URW Palatinos independently converge on
 160$\times$128, 23\,px and gamma~1.8. A second pass against the extracted plain stone, an exhaustive test of every
 3--4-letter string and \EraN{} era fonts (including everything an SGI workstation could install) changes nothing;
+working like the designer (hand kerning, a 1\,\% narrower 190$\times$160 artwork) brings the model to within about one
+grey level of the plaque, and the few pixels left look hand-retouched;
 (iii)~line~1 reads \textbf{\q{Eternal Star}}: \q{Star} is the best of 27{,}122 words as the second word (whether
 the s is upper or lower case cannot be decided);
 (iv)~line~2 is set in the same process at 17--18\,px, centred under line~1, and \q{hope} is the best of 12{,}556
@@ -932,7 +935,85 @@ The best face of any other design is \EraOther{} at \EraOtherSse; IRIX's own Tim
 With the stone fixed, the remaining large errors sit on the \emph{top} strokes of line~1 (E top arm, S top, the r
 arm) and in the W of line~2, where the model inks pixels the plaque shows as bare stone. To explain them by the stone
 it would have to be darker than any stone pixel on the plaque; per-letter vertical shifts do not beat a noise-only
-control. Horizontal per-letter shifts do (\cref{sec:process,fig:ablation}), which points to hinting or hand kerning; the top-stroke misses look like retouching by hand.
+control. Horizontal per-letter shifts do; \cref{sec:designer} follows this up like a designer would.
+
+%======================================================================================================
+\section{Third pass: thinking like the designer}
+\label{sec:designer}
+So far every letter sat exactly where the font put it. A real artist in 1996 typed the text, looked at it, nudged
+letters, maybe added an effect, and only then shrank the artwork to 32$\times$32. We now let the model do the same
+things and ask, for every step, one question: \emph{does it help more on the real plaque than on pure noise?}
+
+\paragraph{How we decide that a step is real.}
+Any extra freedom lowers the error a little, even on random data. So for every step we also build \emph{fake
+plaques}: our best model plus the real plaque's leftover error, shuffled to random positions. A fake looks like the
+plaque but contains no hidden structure. We run exactly the same search on several fakes. A step counts as real only
+if it helps the real plaque clearly more than it helps every fake.
+
+\paragraph{Step 1: hand kerning.}
+Each letter may move left or right by whole pixels of the artwork, the way an artist nudges letters with the arrow
+keys (one artwork pixel is a sixth of a texture pixel). Line~1 improves from \NgOneRigid{} to \NgOneKern{} (fakes:
+\NgOneNoise), line~2 from \NgTwoRigid{} to \NgTwoKern{} (fakes: \NgTwoNoise). Both gains are far above the fakes:
+the letters really were placed slightly differently than the font places them. In line~2 the nudges pull \q{so}
+slightly to the left and move the W slightly right. We also searched every one of the 2{,}000 best recipes with
+hand kerning allowed: the winner is the same recipe (26\,px, 192$\times$160, tracking +2, bilinear), so kerning does
+not change the font, the size or the process, only the letter positions.
+
+\paragraph{Step 2: one canvas for both lines.}
+Both lines are now typed on the same artwork, kerned together and shrunk together, with one ink level per line:
+\DzPlain{} before kerning, \DzKern{} after.
+
+\paragraph{Step 3: everything else a designer could have done.}
+\Cref{tab:designer,fig:designersteps} list each step with its gain on the real plaque and on the fakes.
+\begin{table}[t]\centering\small
+\begin{tabular}{p{5.4cm}rrl}\toprule
+designer step & gain (real) & gain (fakes) & verdict\\\midrule
+text layer blended with the stone as \q{Screen} (or \q{Normal}) & \DzBlendGain & \DzBlendNoise & not real\\
+text layer blended as \q{Lighten} & \multicolumn{2}{l}{much worse (\DzLighten)} & ruled out\\
+engraved / drop shadow & \DzShadowGain & \DzShadowNoise & not real\\
+emboss / bevel & \DzEmbossGain & \DzEmbossNoise & borderline\\
+outline around the letters & \DzOutlineGain & \DzOutlineNoise & no\\
+sharpen after shrinking & \DzSharpenGain & \DzSharpenNoise & no (worse)\\
+move a whole line up or down & \DzLineGain & \DzLineNoise & no (worse)\\
+artwork \DzScaleW$\times$\DzScaleH{} instead of 192$\times$160, re-kerned & \DzScaleGain & \DzScaleNoise & \textbf{real}\\
+\bottomrule\end{tabular}
+\caption{Designer steps on top of the hand-kerned two-line canvas. \q{Gain} is how much the error drops.}
+\label{tab:designer}
+\end{table}
+\begin{figure}[t]\centering
+\includegraphics[width=0.95\linewidth]{designer_steps.pdf}
+\caption{Blue bars: gain on the real plaque; orange dots: gain on noise-only fakes. Only the slightly narrower
+artwork (and the hand kerning before it) clearly beats noise.}
+\label{fig:designersteps}
+\end{figure}
+The one step that clearly survives is the artwork size. Our recipes assumed artwork exactly 6$\times$5 times the
+texture (192$\times$160). Allowing any artwork size between 176 and 208 pixels wide and 136 and 184 high, the best is
+\textbf{\DzScaleW$\times$\DzScaleH}: about 1\,\% narrower, error \DzScaleInt{} $\to$ \DzScaleBest; on the fakes this
+freedom bought nothing. The text was set a little tighter than the font sets it, which the hand kerning had already
+hinted at.
+
+\paragraph{The best version.}
+Our best reconstruction is therefore: Adobe Palatino Bold Italic (1990), line~1 at 26\,px and line~2 at 19\,px, typed
+on one 190$\times$160 artwork, letters nudged by at most a third of a texture pixel, shrunk to 32$\times$32 with a
+bilinear filter, light blur and gamma 1.4, on the extracted stone (\cref{fig:designerlines}; the README's title image).
+Inside the two text boxes the model is on average 1.1 grey levels away from the plaque (out of 31); 83\,\% of the
+text pixels are within 2 levels.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.95\linewidth]{designer_both_lines.png}
+\caption{Both lines: the real plaque, the hand-kerned model, the model with the (not significant) blend and emboss
+steps, and the hand-kerned model on the 190$\times$160 artwork. Right: error maps. Yellow boxes mark the pixels that
+stay wrong in every model.}
+\label{fig:designerlines}
+\end{figure}
+
+\paragraph{What no designer step explains.}
+The same seven pixels stay wrong in every version (yellow in \cref{fig:designerlines}): the top arm of the E, two
+pixels on top of the S, two pixels around the first \q{t}, the arm of the r, and the gap at the bottom of the W. At
+each of them the plaque shows bare stone while every typeset version predicts faint grey ink. No font, size,
+filter, blend mode or effect removes exactly these pixels without breaking others. The simplest explanation is that
+the artist touched up the finished 32$\times$32 texture by hand and cleaned away a few faint grey edge pixels. This
+cannot be modelled from the font, and it changes nothing about the reading.
 
 %======================================================================================================
 \section{Comparison with published readings}
@@ -1013,7 +1094,10 @@ that file the best artwork is 192$\times$160 at 26\,px (line~1), resized to $32{
 blurred and gamma-adjusted (1.4); the Apple and URW Palatinos independently converge on 160$\times$128 at 23\,px and
 gamma 1.8. Line~2 is set at 17--18\,px in the same process. A second pass against the extracted plain stone, an
 exhaustive test of every 3--4-letter string and a tournament of \EraN{} era faces (\cref{sec:stone}) leave all of this
-unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file.
+unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file. Treated as a designer's
+workflow (\cref{sec:designer}), the letters were nudged by hand on a slightly narrower artwork (190$\times$160);
+blend modes, shadows, emboss, outlines and sharpening do not beat noise, and the last handful of wrong pixels look
+like touch-ups on the finished texture.
 
 Our confidence in each word:
 
