@@ -229,7 +229,7 @@ def best(T, rec, fdir, hb, cfg2, sb, fonts2, log):
 
 
 # ------------------------------------------------------------------------------------------- figures
-def hero(npz, out):
+def hero(npz, out, sse=None):
     Z = np.load(npz); real, model, A = Z["real"], Z["model"], Z["alpha"]; lo, hi = np.percentile(real, 1), np.percentile(real, 99.5)
     tex = lambda a: Image.fromarray((np.clip((a - lo) / (hi - lo), 0, 1) * 255).astype(np.uint8)).resize((576, 576), Image.NEAREST).convert("RGB")
     r, m = tex(real), tex(model); bb = Image.fromarray((A > 0.02).astype(np.uint8) * 255).getbbox()
@@ -239,7 +239,7 @@ def hero(npz, out):
     try: f = ImageFont.truetype("DejaVuSans.ttf", 22); fs = ImageFont.truetype("DejaVuSans.ttf", 17)
     except OSError: f = fs = ImageFont.load_default()
     im.paste(r, (40, 60)); im.paste(m, (646, 60))
-    d.text((40, 22), "Real plaque texture (ROM, 32x32)", (20, 20, 20), font=f); d.text((646, 22), "Our best model", (20, 20, 20), font=f)
+    d.text((40, 22), "Real plaque texture (ROM, 32x32)", (20, 20, 20), font=f); d.text((646, 22), "Our best model" + (" (error %.2f)" % sse if sse else ""), (20, 20, 20), font=f)
     d.text((40, 654), "The artwork we reconstruct: 190x160 canvas, Adobe Palatino Bold Italic 26 px / 19 px, hand-kerned", (20, 20, 20), font=fs)
     im.paste(art, ((W - art.width) // 2, 686)); im.save(out)
 
@@ -284,7 +284,7 @@ def main():
     ap.add_argument("--line2", default="results/stone_line2_dp_hopefit_Adobe.json"); ap.add_argument("--scale", default="results/stone_designer_scale_Adobe.json")
     ap.add_argument("--steps", type=int, default=150); ap.add_argument("--group", type=int, default=10); a = ap.parse_args()
     log = lambda s: print(s, flush=True); R = lambda n: os.path.join(a.results, n)
-    if a.cmd == "hero": return hero(R("stone_bestfit.npz"), "report/figures/hero.png")
+    if a.cmd == "hero": return hero(R("stone_bestfit.npz"), "report/figures/hero.png", json.load(open(R("bestfit.json")))["best"]["sse"])
     if a.cmd == "figure": return figure(a.results, "report/figures/line2_font.png")
     T = load_T(a.texture); fonts = [l.strip() for l in open(a.fonts_list) if l.strip()] if a.fonts_list else []
     d = json.load(open(a.recipes))[0]; rec = Recipe(**{f: d[f] for f in Recipe.__dataclass_fields__ if f in d})
