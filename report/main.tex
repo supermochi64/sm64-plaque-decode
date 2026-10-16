@@ -42,6 +42,7 @@
 \providecommand{\ClaimLisRealOne}{--}\providecommand{\ClaimLisRealAltOne}{--}
 \providecommand{\GameRigid}{--}\providecommand{\GameFull}{--}\providecommand{\GameRigidRatio}{--}\providecommand{\GameRank}{--}\providecommand{\GameOf}{--}\providecommand{\GameFlex}{812}
 \providecommand{\InvOursOne}{--}\providecommand{\InvOursTwo}{--}\providecommand{\InvLisRealOne}{--}\providecommand{\InvSecretOne}{--}\providecommand{\InvSecretTwo}{--}\providecommand{\InvMyHopeTwo}{--}\providecommand{\InvMyHopeOne}{--}
+\providecommand{\StoneStar}{--}\providecommand{\StoneLower}{--}\providecommand{\StoneLegend}{--}\providecommand{\StoneSecret}{--}\providecommand{\SwTwoN}{--}\providecommand{\SwTwoRank}{--}\providecommand{\SwTwoTop}{--}\providecommand{\SwBigN}{--}\providecommand{\SwBigRank}{--}\providecommand{\SwBigTop}{--}\providecommand{\ExN}{--}\providecommand{\ExRankStar}{--}\providecommand{\ExStarSse}{--}\providecommand{\ExBest}{--}\providecommand{\ExTop}{--}\providecommand{\ExFirstN}{--}\providecommand{\ExFirstRank}{--}\providecommand{\ExFirstTop}{--}\providecommand{\ExEndN}{--}\providecommand{\ExEndRank}{--}\providecommand{\ExEndTop}{--}\providecommand{\ExMidN}{--}\providecommand{\ExMidRank}{--}\providecommand{\ExMidTop}{--}\providecommand{\EraN}{--}\providecommand{\EraBest}{--}\providecommand{\EraOther}{--}\providecommand{\EraOtherSse}{--}
 \providecommand{\AdobeLineOne}{--}\providecommand{\AdobeLineTwo}{--}\providecommand{\AdobeTotal}{--}\providecommand{\AdobeNextTotal}{--}\providecommand{\AdobeGain}{--}
 \providecommand{\AdobeHoleW}{--}\providecommand{\AdobeHoleE}{--}\providecommand{\AdobeDPTop}{--}\providecommand{\AdobeDPTopSse}{--}\providecommand{\AdobeDPSecond}{--}
 \providecommand{\AdobeDPHopeTop}{--}\providecommand{\AdobeDPHopeTopSse}{--}\providecommand{\AdobeDPHopeSecond}{--}\providecommand{\AdobeEndSo}{--}\providecommand{\AdobeEndNr}{--}
@@ -73,8 +74,10 @@ We find that
 with Adobe Type Manager; it beats every
 other era font family under an identical, exhaustive process search, including the game's own dialog font, which is
 clearly ruled out;
-(ii)~a \emph{single rigid designer pipeline} reproduces the texture: 160$\times$128 artwork, 23\,px type,
-bilinear resize, slight blur and gamma~1.8. Two independent versions of Palatino converge on the same settings;
+(ii)~a \emph{single rigid designer pipeline} reproduces the texture: with Adobe's file 192$\times$160 artwork,
+26\,px type, bilinear resize, light blur and gamma~1.4; the Apple and URW Palatinos independently converge on
+160$\times$128, 23\,px and gamma~1.8. A second pass against the extracted plain stone, an exhaustive test of every
+3--4-letter string and \EraN{} era fonts (including everything an SGI workstation could install) changes nothing;
 (iii)~line~1 reads \textbf{\q{Eternal Star}}: \q{Star} is the best of 27{,}122 words as the second word (whether
 the s is upper or lower case cannot be decided);
 (iv)~line~2 is set in the same process at 17--18\,px, centred under line~1, and \q{hope} is the best of 12{,}556
@@ -303,7 +306,9 @@ itself is about 1.35:1.
 \item \textbf{Whole-pixel advances.} Mac text without fractional widths places every letter on whole pixels.
 \end{enumerate}
 The final recipe (\cref{tab:recipe}) reaches \SSE~757 (URW) and 759 (Apple), 4.6 times the noise floor. Both fonts
-choose the \emph{same} canvas, size, tracking, filter, word space, blur and gamma.
+choose the \emph{same} canvas, size, tracking, filter, word space, blur and gamma. Adobe's own 1990 Type~1 file
+(first column; \cref{sec:adobe}) prefers slightly larger artwork (192$\times$160, 26\,px) and fits better than both.
+The last two rows repeat the comparison against the extracted plain stone of \cref{sec:stone}: the order is unchanged.
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.9\linewidth]{progression.pdf}
@@ -313,7 +318,7 @@ to 757.}
 \end{figure}
 \begin{table}[t]\centering\small
 \IfFileExists{tables/recipe.tex}{\input{tables/recipe.tex}}{}
-\caption{The reconstructed designer recipe for line~1.}
+\caption{The reconstructed designer recipe for line~1: Adobe's 1990 file and the two independent Palatinos.}
 \label{tab:recipe}
 \end{table}
 
@@ -843,6 +848,93 @@ floor.}
 \end{figure}
 
 %======================================================================================================
+\section{Second pass: the plain stone, every string and every era font}
+\label{sec:stone}
+Readers asked three things: can the stone be taken out of the fit, does a non-word or a word outside our lists fit
+better, and was Palatino really the font available to the artist? We answered each directly.
+
+\paragraph{The plain stone.}
+Every pixel outside two boxes drawn around the visible text is stone and is kept unchanged (line~1: rows 8--12,
+columns 2--29; line~2: rows 16--20, columns 6--24; 235 of 1{,}024 pixels). Inside the boxes the stone is filled by
+Gaussian-process inpainting from all other pixels: an anisotropic kernel along the visible streaks (bottom left to top
+right; 10\,px along, 4.5\,px across) plus a quadratic trend (\cref{fig:stonebox}; \texttt{python -m plaquedecode
+stone}). The model is then scored as $\sum_i w_i\,(t_i - s_i - L\,c_i)^2$ with the stone $s$ fixed and
+$w_i = 1/(0.15 + \operatorname{var}(s_i))$, so the stone can no longer absorb ink.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.78\linewidth]{stone_box.png}
+\caption{The text boxes (left) and the plain stone (right): only the 235 pixels inside the boxes are filled; every
+other pixel is the plaque itself.}
+\label{fig:stonebox}
+\end{figure}
+
+\paragraph{Same recipe, same words.}
+\begin{itemize}
+\item The recipe search against the fixed stone returns exactly the Adobe recipe of \cref{sec:adobe} (26\,px,
+192$\times$160, tracking +2, bilinear, blur 0.3, gamma 1.4; \SSE~\StoneStar). Apple's and URW's best recipes are
+unchanged as well (\cref{tab:recipe}).
+\item Word~2: \q{Star} is the best of \SwTwoN{} words (\SwTwoTop). Among \SwBigN{} entries of a large multilingual
+list it ranks \SwBigRank{} (\SwBigTop): only the Italian \q{stai} and the Scandinavian \q{stor} come before it.
+\item Rival texts in the same font and process: \q{Eternal star} \StoneLower, \q{L is real 2401} \StoneLegend,
+\q{A Secret star} \StoneSecret.
+\end{itemize}
+
+\paragraph{Every string, not just words.}
+We scored \q{Eternal~} followed by \emph{every} string of three or four letters (first letter in either case; \ExN{}
+strings, four word spaces each) exactly, with linear glyph tiles under the frozen recipe. \q{Star} ranks
+\ExRankStar{}; all strings ahead of it share its shape, \q{St/Sl} + a round letter + a short letter (\ExTop). The
+third and fourth letters (a/o, r/i) are not separable at this resolution; the pixels force \q{St} + round + short
+letter, and \q{Star} is the only common word of that shape. On line~2 every slot was opened the same way:
+\begin{itemize}
+\item first word, all \ExFirstN{} strings of 1--3 letters: \q{We} ranks \ExFirstRank{} behind W-shaped non-words
+(\ExFirstTop);
+\item ending, all \ExEndN{} strings: \q{so} ranks \ExEndRank{} (\ExEndTop);
+\item middle word, all \ExMidN{} four-letter strings: \q{hope} ranks \ExMidRank{} (\ExMidTop).
+\end{itemize}
+Each slot lands in the top 0.01\,\% of all strings, and in each case the strings ahead are the same shape class
+(b and h are not separable at 3.5\,px). The pixels fix the shapes; the language picks the words.
+
+\paragraph{Was Palatino available to the artist?}
+We read every package of the IRIX~5.3 installation CD for the Indy (August 1995; SGI workstations were the N64
+development platform). IRIX ships Adobe Times, Helvetica, Courier, Symbol and Utopia, Bitstream Charter and 14 SGI
+display faces, but no Palatino. Two details link Palatino to it anyway:
+\begin{itemize}
+\item SGI's online-documentation viewer expects \texttt{/usr/lib/DPS/outline/base/Palatino-BoldItalic} (symbolic links
+in \texttt{insight.sw}), together with New Century Schoolbook and Zapf Chancery.
+\item IRIX's printing package installs \texttt{/usr/sbin/typeoncall}, \q{TypeOnCall for IBM PC CD-ROM}: it unlocks
+fonts from Adobe's PC \emph{Type On Call} disc and converts their \texttt{.PFB} files into that directory.
+\end{itemize}
+That disc's \texttt{POBI\_\_\_\_} metrics file is byte-identical to the one that accompanies the Adobe 1990 file used
+here. The Palatino Bold Italic an SGI artist could install in 1995 was therefore exactly this Adobe 001.005 face.
+
+\paragraph{\EraN{} era faces under one process.}
+We then collected every outline face an artist could plausibly have had in 1993--1996 from operating systems and
+bundled applications: IRIX~5.3 (including Showcase), Adobe Illustrator~5.5 for IRIX (221 Adobe/ITC faces),
+the 1990 Adobe Type~1 disc, CorelDRAW~6/7 (the Bitstream library), Microsoft Office~4.3, Font Pack~2 and Bitstream
+TrueType packs, Apple KanjiTalk~7.5, System~7.5.3 and Mac OS~9, Photoshop~3 (ATM), FreeHand~5, and Windows~3.1/95
+(Japanese). All \EraN{} italic faces ran through the same recipe search in three tiers (a quick grid for all, the
+font-comparison grid for the top 60, the full grid for the top 8). The best is Adobe's 1990 Palatino Bold Italic
+(\EraBest); the twelve best distinct faces are all Palatino digitisations or close Palatino derivatives (\cref{tab:erafonts,fig:erafonts}).
+The best face of any other design is \EraOther{} at \EraOtherSse; IRIX's own Times Bold Italic is at 1{,}116.
+
+\begin{table}[t]\centering\small
+\IfFileExists{tables/era_fonts_stone.tex}{\input{tables/era_fonts_stone.tex}}{}
+\caption{Line~1 against the plain stone, best recipe per face (\EraN{} faces; identical files merged).}
+\label{tab:erafonts}
+\end{table}
+\begin{figure}[t]\centering
+\includegraphics[width=0.85\linewidth]{era_font_compare.png}
+\caption{Line~1: the real plaque, each font's best fit and its error map (brighter = worse).}
+\label{fig:erafonts}
+\end{figure}
+
+\paragraph{What is left.}
+With the stone fixed, the remaining large errors sit on the \emph{top} strokes of line~1 (E top arm, S top, the r
+arm) and in the W of line~2, where the model inks pixels the plaque shows as bare stone. To explain them by the stone
+it would have to be darker than any stone pixel on the plaque; per-letter vertical shifts do not beat a noise-only
+control. Horizontal per-letter shifts do (\cref{sec:process,fig:ablation}), which points to hinting or hand kerning; the top-stroke misses look like retouching by hand.
+
+%======================================================================================================
 \section{Comparison with published readings}
 \label{sec:claims}
 Every claim was scored with the same model. Each claimed line~1 received its \emph{own} exhaustive recipe search. Line~2
@@ -916,8 +1008,12 @@ by the original artist, would be the only way to reach certainty.
 \section{Conclusion}
 \label{sec:conclusion}
 A physically motivated forward model, searched exhaustively and calibrated on synthetic plaques, shows that the plaque
-was made by typing two centred lines in \textbf{Palatino Bold Italic}, most likely Adobe's 1990 Type~1 version, on a 160$\times$128 canvas, at 23\,px (line~1)
-and 17--18\,px (line~2). The artwork was resized to $32{\times}32$ with a bilinear filter, slightly blurred and gamma-adjusted (1.8).
+was made by typing two centred lines in \textbf{Palatino Bold Italic}, most likely Adobe's 1990 Type~1 version: with
+that file the best artwork is 192$\times$160 at 26\,px (line~1), resized to $32{\times}32$ with a bilinear filter, lightly
+blurred and gamma-adjusted (1.4); the Apple and URW Palatinos independently converge on 160$\times$128 at 23\,px and
+gamma 1.8. Line~2 is set at 17--18\,px in the same process. A second pass against the extracted plain stone, an
+exhaustive test of every 3--4-letter string and a tournament of \EraN{} era faces (\cref{sec:stone}) leave all of this
+unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file.
 
 Our confidence in each word:
 
