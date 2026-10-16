@@ -104,6 +104,16 @@ verification; no Nintendo data is redistributed.
 \clearpage
 
 %======================================================================================================
+\begin{figure}[t]\centering
+\includegraphics[width=0.92\linewidth]{hero.png}
+\caption{\textbf{The result in one picture.} Top left: the real plaque, a 32$\times$32 texture from the game's ROM.
+Top right: our best model of how it was made. Bottom: the artwork that model implies, before it was shrunk:
+\q{Eternal Star / We hope so} typed in Adobe Palatino Bold Italic (1990) at 26\,px and 19\,px on one 190$\times$160
+canvas, a few letters nudged by hand, then resized to 32$\times$32 with a bilinear filter, light blur and gamma~1.4
+onto the stone. Inside the text the model is on average 1.1 grey levels (of 31) from the real plaque
+(\cref{sec:line2font}).}
+\label{fig:final}
+\end{figure}
 \section{Introduction}
 In the courtyard behind Princess Peach's castle stands a statue topped by a star, with a small engraved plaque at its base
 (\cref{fig:texture}). The plaque is blurry, and for almost three decades players have argued about what it says.
@@ -1122,16 +1132,8 @@ gamma 1.4, on the extracted stone; ink level 43 (line~1) and 48 (line~2);
 It improves the version of \cref{sec:designer} from 853.89 to 850.95, with the same quality inside the text (on average
 1.1 grey levels from the plaque, 83\,\% of the text pixels within 2 levels). Blending the text as \q{Screen} would lower
 the error to 841.3, but that gain (9.6) is smaller than what blend modes gain on noise-only fakes (10.6--18.3), so we
-do not claim it. \Cref{fig:final} shows the final fit and the artwork it implies; it is also the title image of the
-repository.
-
-\begin{figure}[t]\centering
-\includegraphics[width=0.9\linewidth]{hero.png}
-\caption{The final fit. Top: the real 32$\times$32 plaque texture and our best model. Bottom: the artwork the model
-implies, before it was shrunk: one 190$\times$160 canvas, Adobe Palatino Bold Italic at 26\,px and 19\,px, every letter
-nudged by hand.}
-\label{fig:final}
-\end{figure}
+do not claim it. This final fit and the artwork it implies are shown in \cref{fig:final} at the start of the
+report; it is also the title image of the repository.
 
 %======================================================================================================
 \section{Comparison with published readings}
