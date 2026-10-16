@@ -208,6 +208,7 @@ def make_tables(res, outdir, log):
         top = D["exact"][:60]
         mac.update(DPHopeShare="%d" % sum(1 for r in top if " hope" in " " + r["phrase"]), DPBest="%.1f" % top[0]["sse"], LineTwoStone="%.1f" % D["stone"])
     make_stone_tables(res, outdir, mac)
+    make_designer_macros(res, mac)
     with open(os.path.join(outdir, "numbers.tex"), "w") as o:
         for k, v in sorted(mac.items()): o.write("\\newcommand{\\%s}{%s}\n" % (k, v))
     log("tables + %d number macros -> %s" % (len(mac), outdir))
@@ -288,3 +289,34 @@ def make_stone_tables(res, outdir, mac):
     for t, tag in (("", "StoneStar"), ("_Eternal_star", "StoneLower"), ("_L_is_real_2401", "StoneLegend"), ("_A_Secret_star", "StoneSecret")):
         R = J(res, "stone_recipes_Adobe%s.json" % t)
         if R: mac[tag] = "%.1f" % R[0]["sse"]
+
+
+def rng(g):
+    """readable range of noise gains for the text: '0', '7--32', '$-178$ to $-156$'."""
+    lo, hi = round(min(g)), round(max(g)); f = lambda v: ("$%d$" % v) if v < 0 else "%d" % v
+    if lo == hi: return f(lo)
+    return ("%s to %s" % (f(lo), f(hi))) if lo < 0 else "%d--%d" % (lo, hi)
+
+
+def make_designer_macros(res, mac):
+    """round 3 (designer canvas): hand kerning, blend modes, effects, non-integer artwork size - each vs noise."""
+    N = J(res, "stone_nudge_both_Adobe.json")
+    if N:
+        for k, tag in (("line1", "NgOne"), ("line2", "NgTwo")):
+            mac[tag + "Rigid"] = "%.1f" % N[k]["rigid"]; mac[tag + "Kern"] = "%.1f" % N[k]["nudged"]
+            mac[tag + "Gain"] = "%.0f" % (N[k]["rigid"] - N[k]["nudged"])
+            mac[tag + "Noise"] = rng(N[k]["noise_gains"])
+    D = J(res, "stone_designer_Adobe.json")
+    if D:
+        mac.update(DzPlain="%.1f" % D["plain"], DzKern="%.1f" % D["blends"]["add"]["sse"],
+                   DzNormal="%.1f" % D["blends"]["normal"]["sse"], DzScreen="%.1f" % D["blends"]["screen"]["sse"],
+                   DzLighten="%.0f" % D["blends"]["lighten"]["sse"],
+                   DzBlendGain="%.0f" % (D["blends"]["add"]["sse"] - D["blends"]["screen"]["sse"]),
+                   DzBlendNoise=rng(D["blend_noise_gains"]))
+        for k, tag in (("shadow", "DzShadow"), ("emboss", "DzEmboss"), ("outline", "DzOutline"), ("sharpen", "DzSharpen"), ("lineshift", "DzLine")):
+            e = D["effects"][k]; mac[tag + "Gain"] = ("$%d$" % round(e["gain"])) if e["gain"] < 0 else "%d" % round(e["gain"])
+            mac[tag + "Noise"] = rng(e["noise_gains"])
+    S = J(res, "stone_designer_scale_Adobe.json")
+    if S:
+        b = S["best"]; mac.update(DzScaleInt="%.1f" % S["integer"], DzScaleBest="%.1f" % b["sse"], DzScaleW=str(b["w"]), DzScaleH=str(b["h"]),
+                                  DzScaleGain="%.0f" % S["real_gain"], DzScaleNoise=rng(S["noise_gains"]))
