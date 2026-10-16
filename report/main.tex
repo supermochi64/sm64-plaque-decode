@@ -3,6 +3,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{newpxtext,newpxmath}
 \usepackage{microtype}
+\usepackage{CJKutf8}
+\newcommand{\jp}[1]{\begin{CJK}{UTF8}{min}#1\end{CJK}}
 \usepackage{graphicx}
 \usepackage{booktabs,tabularx}
 \usepackage{xcolor}
@@ -1099,6 +1101,53 @@ This reading gets \q{hope} right, but it predicts a second descender, the \q{y},
 It is also clearly worse than \q{We hope \_\_} in both fonts (\cref{tab:claims}).
 
 %======================================================================================================
+\section{Does the reading make sense in Japanese?}
+\label{sec:japanese}
+\emph{This section is interpretation, not evidence. The pixels decide the reading; here we only ask whether the
+decoded text is something a Japanese artist in 1995--96 would plausibly have written.} The plaque texture is
+identical in the Japanese and all later versions, so it was written in English from the start, in Japan.
+
+\paragraph{A memorial-plaque pattern.}
+Japanese monuments and commemorative plaques (\jp{記念碑}) very often consist of a name or theme followed by a wish,
+for example \jp{「永遠の平和」} (\q{eternal peace}) followed by \jp{を願って} (\q{wishing for it}). Our reading has
+exactly this two-part shape: \textbf{Eternal Star} names the statue (\jp{永遠の星} or \jp{永遠のスター}), and
+\textbf{We hope so} is the wish (\jp{そうであってほしい}, politely \jp{そう願っています}). An elegant bold-italic book
+face, like an engraving, suits such a plaque.
+
+\paragraph{\q{We hope so} is a direct rendering of a Japanese thought.}
+\begin{itemize}
+\item \q{I think so} and \q{I hope so} are among the first set phrases of Japanese school English; a Japanese writer
+composing a short English line would naturally reach for this ready-made block.
+\item English \q{so} works like Japanese \jp{そう}: it points back to what was said before. On its own, \q{We hope so}
+is an odd sentence for a plaque; it only makes sense together with the title above it: \emph{eternal star, and we
+hope it is so}. A native English writer would more likely have chosen something like \q{May it shine forever}; the
+slightly unusual phrasing fits an author translating his own Japanese thought quite literally.
+\item Japanese leaves out the subject, so the writer had to choose one. On a public plaque the collective voice
+(\jp{私たち}, \jp{我々}), the castle's residents or the development team, is the natural choice, which gives
+\q{We}.
+\item The tone is a modest wish rather than a claim, close to the literary blessing \jp{そうあれかし} (\q{may it be
+so}).
+\end{itemize}
+
+\paragraph{\q{Eternal Star} as a title.}
+\jp{永遠} rendered as \q{Eternal} is a typical title word in Japanese-made English, and Japanese decorative English
+usually capitalises such titles, which slightly favours the capital \q{S} that the pixels alone could not decide. In
+the game the Power Stars (\jp{パワースター}) protect the castle; a star statue wishing that its star lasts forever fits
+the story. Since \jp{スター} in Japanese also means a star performer, the line may carry a second, playful meaning,
+the team's wish that their new 3D Mario stays a star; we note this only as a possibility.
+
+\paragraph{The pixel look-alikes do not make sense.}
+The pixels also allow close shape rivals such as \q{We hope or}, \q{We hope us} or \q{He hope so}
+(\cref{sec:stone}). None of them is a plausible rendering of a Japanese wish, and none would make sense on a plaque.
+\q{We hope so} is the only candidate that is both compatible with the pixels and natural for the author.
+
+\paragraph{Our best guess at the intended meaning.}
+\begin{center}
+\jp{永遠の星――そうであってほしい（そう願っています）}\\[2pt]
+\emph{An eternal star, and we hope it truly is.}
+\end{center}
+
+%======================================================================================================
 \section{Limitations}
 \label{sec:limits}
 \begin{itemize}
@@ -1132,7 +1181,8 @@ exhaustive test of every 3--4-letter string and a tournament of \EraN{} era face
 unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file. Treated as a designer's
 workflow (\cref{sec:designer}), the letters were nudged by hand on a slightly narrower artwork (190$\times$160);
 blend modes, shadows, emboss, outlines and sharpening do not beat noise, and the last handful of wrong pixels look
-like touch-ups on the finished texture.
+like touch-ups on the finished texture. Read as English written by a Japanese artist (\cref{sec:japanese}), the text is a natural
+memorial-plaque wish, \jp{永遠の星――そうであってほしい}: an eternal star, and we hope it truly is.
 
 Our confidence in each word:
 
