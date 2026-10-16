@@ -1015,6 +1015,41 @@ filter, blend mode or effect removes exactly these pixels without breaking other
 the artist touched up the finished 32$\times$32 texture by hand and cleaned away a few faint grey edge pixels. This
 cannot be modelled from the font, and it changes nothing about the reading.
 
+\paragraph{What the clean pixels have in common.}
+To test the touch-up idea we looked at \emph{every} pixel inside the text boxes where the best model expects only
+faint ink (2--8 grey levels): 71 pixels. On the plaque, 15 of them are exactly bare stone, including the seven above.
+Sorting all 71 by where they sit in the letter shapes (\cref{tab:cleanpx,fig:cleanpx}):
+\begin{table}[h]\centering\small
+\begin{tabular}{lrr}\toprule
+where the faint pixel sits & pixels & bare stone on the plaque\\\midrule
+in a gap between two letters or strokes & 22 & 7 (32\,\%)\\
+at the tip of a horizontal stroke & 8 & 4 (50\,\%)\\
+on the top edge of a stroke & 8 & 1 (12\,\%)\\
+on the bottom edge of a stroke & 20 & 1 (5\,\%)\\
+elsewhere & 13 & 2 (15\,\%)\\
+\bottomrule\end{tabular}
+\caption{Faint-ink pixels of the best model and how many of them are bare stone on the real plaque.}
+\label{tab:cleanpx}
+\end{table}
+\begin{itemize}
+\item The clean pixels are the ones that would make letters run together (around the first \q{t}, inside the W) or
+blur the tips of strokes (the arms of E and r). Faint pixels on the bottom edges of strokes almost always keep their
+grey.
+\item Whether faint ink shows does not depend on how bright the stone underneath is (correlation $-0.08$), so no blend
+mode explains it; and because most faint pixels keep their ink, no global threshold or filter does either.
+\item 12 of the 15 lie in the upper half of \q{Eternal Star}.
+\end{itemize}
+This is the signature of a legibility clean-up of the finished texture: gaps between letters opened and fuzzy stroke
+tips trimmed so that the tiny text reads more crisply. It is ordinary hand work on a small texture and the one part
+of the plaque that no font or setting can reproduce.
+\begin{figure}[h]\centering
+\includegraphics[width=0.98\linewidth]{clean_pixels.png}
+\caption{Real plaque (left) and best model (right). Boxes: pixels where the model expects faint ink but the plaque is
+bare stone, coloured by where they sit (cyan: gap between letters; yellow: tip of a stroke; magenta: top edge; green:
+bottom edge). Thick boxes: the seven pixels that stay wrong in every model.}
+\label{fig:cleanpx}
+\end{figure}
+
 %======================================================================================================
 \section{Comparison with published readings}
 \label{sec:claims}
