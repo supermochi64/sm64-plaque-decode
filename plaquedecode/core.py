@@ -14,7 +14,7 @@ import numpy as np
 import torch
 from PIL import Image, ImageDraw, ImageFont
 
-DEV = "cuda" if torch.cuda.is_available() else "cpu"
+DEV = __import__("os").environ.get("PLAQUE_DEV") or ("cuda" if torch.cuda.is_available() else "cpu")   # PLAQUE_DEV=cpu when the GPU is busy
 LINE1 = (6, 15)          # texture rows of the line-1 band (half-open)
 LINE2 = (15, 24)         # texture rows of the line-2 band
 CLEAN = (23, 32)         # clean stone rows used for the noise floor
@@ -40,6 +40,17 @@ def block_ops(H, r0, dev=DEV):
         Xm = np.array([[1.0, c, r + r0 - 10] for r in range(H) for c in range(4)])
         Ms.append(np.eye(len(Xm)) - Xm @ np.linalg.pinv(Xm))
     return torch.tensor(np.stack(Ms), device=dev, dtype=torch.float32)
+
+
+def fixed_stone(dev=DEV):
+    """Optional fixed stone (env PLAQUE_STONE = .npy 32x32 stone estimate, PLAQUE_STONE_VAR = .npy posterior variance):
+    every score becomes sum w*(T - stone - L*cov)^2 with w = 1/(PLAQUE_STONE_NOISE + var) instead of the per-block
+    plane nuisance.  Texture-derived files: keep them local, never commit."""
+    p = os.environ.get("PLAQUE_STONE")
+    if not p: return None
+    S_ = torch.tensor(np.load(p), device=dev, dtype=torch.float32)
+    v = os.environ.get("PLAQUE_STONE_VAR"); V_ = torch.tensor(np.load(v), device=dev, dtype=torch.float32) if v else torch.zeros_like(S_)
+    return S_, 1.0 / (float(os.environ.get("PLAQUE_STONE_NOISE", "0.15")) + V_)
 
 
 # ----------------------------------------------------------------------------------------------- resampling
@@ -143,9 +154,15 @@ class Line1:
         self.T = torch.as_tensor(np.asarray(T, np.float32), device=dev)
         self.R0, self.R1 = LINE1; self.H = self.R1 - self.R0
         self.M = planes_op(self.H, 32, self.R0, dev)
-        self.t = self.T[self.R0:self.R1].reshape(-1); self.Mt = self.M @ self.t; self.tMt = float((self.Mt * self.Mt).sum())
+        self.t = self.T[self.R0:self.R1].reshape(-1)
         Mc = planes_op(CLEAN[1] - CLEAN[0], 32, CLEAN[0], dev)
         self.floor = float(((Mc @ self.T[CLEAN[0]:CLEAN[1]].reshape(-1)) ** 2).sum())
+        self.stone = fixed_stone(dev)
+        if self.stone is not None:                        # fixed stone: data = texture - stone, metric = per-pixel weights
+            S_, W_ = self.stone
+            self.t = (self.T - S_)[self.R0:self.R1].reshape(-1)
+            self.M = torch.diag(W_[self.R0:self.R1].reshape(-1).sqrt())
+        self.Mt = self.M @ self.t; self.tMt = float((self.Mt * self.Mt).sum())
 
     def coverage(self, rec: Recipe, text, fdir=""):
         """Linear (pre-gamma) coverage of the whole 32x32 texture for `text` typed with recipe `rec`."""
@@ -171,6 +188,7 @@ class Line1:
     def prediction(self, lin, gamma):
         """stone planes (fitted to the residual) + ink, for the line-1 band."""
         a = (lin.clamp(0, 1) ** gamma)[self.R0:self.R1].reshape(-1); _, L = self.score(lin, gamma)
+        if self.stone is not None: return (self.stone[0][self.R0:self.R1].reshape(-1) + L * a).reshape(self.H, 32)
         return (self.t - self.M @ (self.t - L * a)).reshape(self.H, 32)
 
 
@@ -214,16 +232,15 @@ def search_recipes(line1: Line1, fdir, font, text, kxy, filters, blurs=(0.0,), g
             for fl, bl in itertools.product(filters, blurs):
                 wx, wy = WX[(fl, bl)], WY[(fl, bl)]
                 WXs = torch.stack([wx[:, X:X + wI] for X in Xs])
-                best = None
-                for Y in Ys:
-                    cov = torch.einsum("rw,xcw->xrc", wy[:, Y:Y + hI] @ I, WXs).reshape(len(Xs), -1)
-                    cov = (cov.clamp(0, 1)[None] ** G[:, None, None]).reshape(-1, cov.shape[1])
-                    Ma = cov @ line1.M; num = Ma @ line1.Mt; den = (Ma * Ma).sum(1)
-                    s = line1.tMt - torch.where(num > 0, num * num / den.clamp_min(1e-9), torch.zeros_like(num))
-                    j = int(torch.argmin(s)); v = float(s[j])
-                    if best is None or v < best[0]:
-                        best = (v, Xs[j % len(Xs)], Y, float(num[j] / den[j]), float(G[j // len(Xs)]))
-                v, X, Y, L, g = best
+                # all positions (Y, X) and gammas in one batch, one GPU->CPU readback (the per-Y loop with 4 syncs
+                # each was latency-bound and slowed every job sharing the GPU)
+                WYs = torch.stack([wy[:, Y:Y + hI] for Y in Ys]); nY, nX = len(Ys), len(Xs)
+                cov = torch.einsum("yrw,xcw->yxrc", WYs @ I, WXs).reshape(nY * nX, -1)
+                cov = (cov.clamp(0, 1)[None] ** G[:, None, None]).reshape(-1, cov.shape[1])
+                Ma = cov @ line1.M; num = Ma @ line1.Mt; den = (Ma * Ma).sum(1)
+                s = line1.tMt - torch.where(num > 0, num * num / den.clamp_min(1e-9), torch.zeros_like(num))
+                j = torch.argmin(s); v, L, j = torch.stack([s[j], num[j] / den[j], j.float()]).tolist(); j = int(j)
+                gi, rem = divmod(j, nY * nX); X, Y, g = Xs[rem % nX], Ys[rem // nX], float(gammas[gi])
                 out.append(Recipe(font, P, TR, kern, frac, fl, kx, ky, bl, g, esp, X - OFFX, Y - OFFY, v, L))
         if log: log("  %s %r canvas %dx%d done, best so far %.1f" % (font, text, 32 * kx, 32 * ky, min(r.sse for r in out)))
     return out
@@ -250,6 +267,12 @@ class Line2:
         self.B0, self.B1 = LINE2; self.HB = self.B1 - self.B0
         self.T2 = self.line1.T[self.B0:self.B1]; self.BASE = self.LIN1[self.B0:self.B1]
         self.MB = block_ops(self.HB, self.B0, dev)
+        if self.line1.stone is not None:
+            S_, W_ = self.line1.stone
+            self.T2 = (self.line1.T - S_)[self.B0:self.B1]
+            wb = W_[self.B0:self.B1].reshape(self.HB, 8, 4).movedim(-2, -3).reshape(8, self.HB * 4)
+            self.MB = torch.diag_embed(wb.sqrt())
+            self.L = self.L * float(os.environ.get("PLAQUE_L2_RATIO", "1.0"))
         Tc = self.line1.T[CLEAN[0]:CLEAN[1]]
         self.floor = float(sum(((self.MB[k] @ Tc[:, 4 * k:4 * k + 4].reshape(-1)) ** 2).sum() for k in range(8)))
         self.STONE = float(self.sse_blocks(torch.zeros((self.HB, 32), device=dev)).sum())
@@ -278,6 +301,7 @@ class Line2:
 
     def prediction(self, lin):
         cov = (self.BASE + lin).clamp(0, 1) ** self.G
+        if self.line1.stone is not None: return self.line1.stone[0][self.B0:self.B1] + self.L * cov
         r = self.T2 - self.L * cov
         rb = r.reshape(self.HB, 8, 4).movedim(-2, -3).reshape(8, self.HB * 4)
         p = torch.einsum("kmn,kn->km", self.MB, rb).reshape(8, self.HB, 4).movedim(0, 1).reshape(self.HB, 32)

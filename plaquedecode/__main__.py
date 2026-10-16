@@ -7,7 +7,13 @@
   python -m plaquedecode simulate --recipes ... --line2 results/line2_dp_P052-BoldItalic.json
   python -m plaquedecode claims   --fonts-dir fonts --font P052-BoldItalic.otf
   python -m plaquedecode figures                                               # report figures from results/*.json
-Fonts are looked up in --fonts-dir (default ./fonts); see fonts/README.md.  A CUDA GPU is used when available."""
+  python -m plaquedecode stone                                                 # -> stone/stone_box.npy (stays local)
+  python -m plaquedecode.exhaustive --recipes R --hopefit H --line2 L --out results/exhaustive.json
+Fixed-stone scoring (round 2): set PLAQUE_STONE=stone/stone_box.npy PLAQUE_STONE_VAR=stone/stone_box_var.npy
+(PLAQUE_L2_RATIO=1.10 = line-2 ink relative to line 1).  Recipe stages: full (default), fontcmp (identical grid for
+font comparisons), screen / quick (cheap triage for hundreds of faces).
+Fonts are looked up in --fonts-dir (default ./fonts); see fonts/README.md.  A CUDA GPU is used when available;
+PLAQUE_DEV=cpu forces the CPU (as fast as a shared GPU for these small tensors)."""
 import argparse, json, os, sys, time
 import numpy as np
 
@@ -41,7 +47,7 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("extract"); s.add_argument("--rom", required=True)
     s = sub.add_parser("recipe"); s.add_argument("--font", required=True); s.add_argument("--text", default="Eternal Star")
-    s.add_argument("--stage", choices=["square", "aniso", "full", "fontcmp"], default="full"); s.add_argument("--out")
+    s.add_argument("--stage", choices=["square", "aniso", "full", "fontcmp", "screen", "quick"], default="full"); s.add_argument("--out")
     s = sub.add_parser("word2"); s.add_argument("--recipes", required=True); s.add_argument("--vocab", default="data/vocab_en_core.txt")
     s.add_argument("--out")
     s = sub.add_parser("line2"); s.add_argument("--recipes", required=True); s.add_argument("--mode", choices=["dp", "combo"], default="dp")
@@ -62,6 +68,7 @@ def main():
     s.add_argument("--line2", required=True, help="line-2 dp result under the hope typesetting (for the 'We hope so' placement)")
     s.add_argument("--steps", type=int, default=2500); s.add_argument("--out")
     s = sub.add_parser("figures"); s.add_argument("--out", default="report/figures")
+    s = sub.add_parser("stone"); s.add_argument("--out", default="stone")
     a = ap.parse_args()
     os.makedirs(a.results, exist_ok=True)
 
@@ -76,6 +83,9 @@ def main():
         return
 
     T = load_T(a.texture)
+    if a.cmd == "stone":
+        from .stone import main as stone_main
+        stone_main(T, a.out, log); return
     if a.cmd == "recipe":
         from .core import Line1, search_recipes, FILTERS_ALL
         l1 = Line1(T)
@@ -88,6 +98,13 @@ def main():
             kxy = [(5, 4), (6, 5), (6, 6), (8, 6)]
             flt, kw = ["bilinear", "bicubic5"], dict(blurs=(0.0, 0.45), gammas=(1.0, 1.4, 1.8, 2.2),
                                                      esps=(-1.0, -0.5, 0.0, 0.5), fracs=(False, "glyph"))
+        elif a.stage == "quick":                      # ~8x cheaper triage for hundreds of long-shot faces; close ones get fontcmp
+            kxy = [(5, 4), (6, 5)]
+            flt, kw = ["bilinear"], dict(blurs=(0.3,), gammas=(1.0, 1.4, 1.8, 2.2), esps=(-0.5, 0.0), fracs=("glyph",))
+        elif a.stage == "screen":                     # cheap first pass for long-shot faces (the two canvases that ever won)
+            kxy = [(5, 4), (6, 5)]
+            flt, kw = ["bilinear"], dict(blurs=(0.0, 0.45), gammas=(1.0, 1.4, 1.8, 2.2),
+                                         esps=(-1.0, -0.5, 0.0, 0.5), fracs=(False, "glyph"))
         else:
             kxy = [(kx, ky) for kx in (4, 5, 6, 8) for ky in (4, 5, 6) if 1.0 <= kx / ky <= 1.5]
             flt, kw = ["bilinear", "bicubic5"], dict(blurs=(0.0, 0.3, 0.45, 0.6), gammas=(1.0, 1.4, 1.8, 2.2),

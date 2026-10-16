@@ -11,21 +11,29 @@ def tex(s):
 def make_tables(res, outdir, log):
     os.makedirs(outdir, exist_ok=True)
     mac = {}
-    # --- best recipes
-    rows = []
-    for f in ["P052-BoldItalic", "PalatinoBoldItalic"]:
-        R = J(res, "research_recipes_%s.json" % f)
-        if R: rows.append(R[0])
+    # --- best recipes: Adobe's 1990 Type 1 (the artist's most likely file) + the two independent Palatinos
+    rows, stone = [], {}
+    for f, sf in [("recipes_AdobePalatino-BoldItalic.json", "stone_recipes_Adobe.json"),
+                  ("research_recipes_P052-BoldItalic.json", "stone_recipes_P052-BoldItalic.otf.json"),
+                  ("research_recipes_PalatinoBoldItalic.json", "stone_recipes_PalatinoBoldItalic.ttf.json")]:
+        R = J(res, f)
+        if not R: continue
+        rows.append(R[0]); S = J(res, sf) or []
+        key = lambda r: (r["P"], r["tracking"], bool(r["kern"]), str(r["frac"]), r["filter"], r["kx"], r["ky"], round(r["blur"], 2), round(r["esp"], 1))
+        same = next((x for x in S if key(x) == key(R[0])), None)
+        stone[R[0]["font"]] = (same["sse"] if same else None, S[0]["sse"] if S else None)
     if rows:
         with open(os.path.join(outdir, "recipe.tex"), "w") as o:
-            o.write("\\begin{tabular}{lcc}\\toprule\n & %s & %s \\\\ \\midrule\n" % tuple(tex(NICE[r["font"]]) for r in rows))
+            o.write("\\begin{tabular}{l%s}\\toprule\n & %s \\\\ \\midrule\n" % ("c" * len(rows), " & ".join(tex(NICE[r["font"]]) for r in rows)))
             for lab, fn in [("artwork canvas", lambda r: "%d$\\times$%d px" % (32 * r["kx"], 32 * r["ky"])), ("font size", lambda r: "%d px" % r["P"]),
                             ("tracking", lambda r: "%+d px" % r["tracking"]), ("pair kerning", lambda r: "on" if r["kern"] else "off"),
                             ("advances", lambda r: "whole pixels per glyph" if r["frac"] == "glyph" else "rounded pen"),
                             ("word space", lambda r: "%+.1f texture px" % r["esp"]), ("resize filter", lambda r: r["filter"].replace("bicubic5", "bicubic ($a=-0.5$)")),
                             ("blur after resize", lambda r: "$\\sigma=%.2f$ px" % r["blur"]), ("gamma", lambda r: "%.1f" % r["gamma"]),
-                            ("line-1 SSE", lambda r: "%.1f" % r["sse"]), ("SSE / noise floor", lambda r: "%.2f" % (r["sse"] / 165.7))]:
-                o.write("%s & %s & %s \\\\\n" % (lab, fn(rows[0]), fn(rows[1])))
+                            ("line-1 SSE (stone planes)", lambda r: "%.1f" % r["sse"]), ("SSE / noise floor", lambda r: "%.2f" % (r["sse"] / 165.7)),
+                            ("same recipe, fixed stone", lambda r: "%.1f" % stone[r["font"]][0] if stone.get(r["font"], (None,))[0] else "--"),
+                            ("best recipe, fixed stone", lambda r: "%.1f" % stone[r["font"]][1] if stone.get(r["font"], (None, None))[1] else "--")]:
+                o.write("%s & %s \\\\\n" % (lab, " & ".join(fn(r) for r in rows)))
             o.write("\\bottomrule\\end{tabular}\n")
     # --- font comparison (rigid)
     fr = []
@@ -199,6 +207,84 @@ def make_tables(res, outdir, log):
     if D:
         top = D["exact"][:60]
         mac.update(DPHopeShare="%d" % sum(1 for r in top if " hope" in " " + r["phrase"]), DPBest="%.1f" % top[0]["sse"], LineTwoStone="%.1f" % D["stone"])
+    make_stone_tables(res, outdir, mac)
     with open(os.path.join(outdir, "numbers.tex"), "w") as o:
         for k, v in sorted(mac.items()): o.write("\\newcommand{\\%s}{%s}\n" % (k, v))
     log("tables + %d number macros -> %s" % (len(mac), outdir))
+
+
+SRC = {"palatino_versions_and_clones": "Palatino versions / clones", "adobe_type_basics_1990": "Adobe Type 1 (1990 disc)",
+       "illustrator55_irix": "Illustrator 5.5 for IRIX", "irix53_showcase": "IRIX 5.3 Showcase", "irix53": "IRIX 5.3",
+       "corel6_fonts": "CorelDRAW 6 (Bitstream)", "corel7_fonts": "CorelDRAW 7", "office43": "MS Office 4.3",
+       "ms_fontpack2": "MS Font Pack 2", "bitstream_ttf_win31": "Bitstream TT pack", "bitstream_ttf25": "Bitstream TT pack",
+       "kanjitalk75": "KanjiTalk 7.5", "photoshop3_deluxe": "Photoshop 3 (ATM)", "freehand5": "FreeHand 5",
+       "win95_jp": "Windows 95 JP", "win31_jp": "Windows 3.1 JP", "win95_fontsystem": "Windows 95"}
+
+
+FACE = {"AdobePalatino-BoldItalic.pfb": ("Palatino Bold Italic 001.005", "Adobe Type 1, 1990"),
+        "Adobe1999-PalatinoBoldItalic.pfb": ("Palatino Bold Italic 003.001", "Adobe Type 1, 1999"),
+        "PalatinoBoldItalic.ttf": ("Palatino Bold Italic", "Apple System 7.5.3 / KanjiTalk 7.5"),
+        "MacOS9-PalatinoBoldItalic.ttf": ("Palatino Bold Italic 3.5a3", "Apple Mac OS 9"),
+        "P052-BoldItalic.otf": ("P052 Bold Italic", "URW clone"), "TeXLive-PalladioL-BoldItalic.pfb": ("Palladio L Bold Italic", "URW clone (TeX Live)"),
+        "URWPalladio60-BoldItalic.pfb": ("URW Palladio Bold Italic", "URW clone (Ghostscript 6.0)"),
+        "URWPalladio510-BoldItalic.pfb": ("URW Palladio Bold Italic", "URW clone (Ghostscript 5.10)"),
+        "ZapfCalligraphic801-BoldItalic.ttf": ("Zapf Calligraphic 801 Bold Italic", "Bitstream"),
+        "PalatinoLinotype-BoldItalic.ttf": ("Palatino Linotype Bold Italic", "Linotype, 1998"),
+        "BookAntiqua-BoldItalic.ttf": ("Book Antiqua Bold Italic", "MS TrueType Font Pack, 1992"),
+        "AdobePalatino-Italic.pfb": ("Palatino Italic 001.005", "Adobe Type 1, 1990"),
+        "C059-BdIta.otf": ("C059 Bold Italic (New Century Schoolbook)", "URW clone")}
+
+
+def face_name(b):
+    import re
+    if b in FACE: return FACE[b][0]
+    for p in ("ERA-", "AdobeTOC-", "AI55IRIX-", "SGIShowcase-", "SGI-"):
+        if b.startswith(p):
+            b = b[len(p):]
+            if p == "ERA-": b = b.split("-", 1)[1]
+    b = os.path.splitext(b)[0].replace("-", " ")
+    b = re.sub(r"(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|(?<=[A-Za-z])(?=[0-9])", " ", b)
+    return b.replace(" Bd ", " Bold ").replace("Ita", "Italic").replace("Italiclic", "Italic")
+
+
+def face_source(r):
+    return FACE[r["face"]][1] if r["face"] in FACE else SRC.get(r["source"], r["source"])
+
+
+def make_stone_tables(res, outdir, mac):
+    """round 2 (fixed stone): era-font tournament, exhaustive slot checks, rival texts."""
+    E = J(res, "era_fonts_stone.json")
+    if E:
+        best = {}
+        for st in ("quick", "fontcmp", "full"):                       # deepest stage wins per face
+            for r in E[st]: best[r["face"]] = dict(r, stage=st)
+        rows = sorted(best.values(), key=lambda r: r["sse"])
+        seen, top = set(), []
+        for r in rows:                                                # one row per distinct file name (dupes = same file)
+            k = round(r["sse"], 1), r["P"], r["kx"], r["ky"]
+            if k in seen and r["source"] != "palatino_versions_and_clones": continue
+            seen.add(k); top.append(r)
+            if len(top) == 20: break
+        with open(os.path.join(outdir, "era_fonts_stone.tex"), "w") as o:
+            o.write("\\begin{tabular}{rllrl}\\toprule\n\\# & face & source & SSE & recipe \\\\ \\midrule\n")
+            for i, r in enumerate(top, 1):
+                o.write("%d & %s & %s & %.1f & %d px, %d$\\times$%d, $\\gamma$ %.1f \\\\\n" % (i, tex(face_name(r["face"])), tex(face_source(r)),
+                                                                                           r["sse"], r["P"], 32 * r["kx"], 32 * r["ky"], r["gamma"]))
+            o.write("\\bottomrule\\end{tabular}\n")
+        other = next(r for r in rows if not any(k in r["face"] for k in ("alatino", "Palladio", "P052", "ZapfCalligr", "BookAntiqua", "Pagella")))
+        mac.update(EraN=str(len(E["quick"])), EraBest="%.1f" % rows[0]["sse"], EraOther=tex(face_name(other["face"])), EraOtherSse="%.0f" % other["sse"])
+    X = J(res, "stone_exhaustive_Adobe.json")
+    if X:
+        w = X["line1_word2"]
+        mac.update(ExN="{:,}".format(w["n"]), ExRankStar=str(w["rank_Star"]), ExStarSse="%.1f" % w["score_Star"], ExBest="%.1f" % w["best_any"],
+                   ExTop=tex(", ".join("%s %.0f" % (a, b) for a, b in w["top"][:6])))
+        for k, tag in (("line2_first", "ExFirst"), ("line2_ending", "ExEnd"), ("line2_middle", "ExMid")):
+            mac[tag + "N"] = "{:,}".format(X[k]["n"]); mac[tag + "Rank"] = str(X[k]["ranks"].get("We hope so"))
+            mac[tag + "Top"] = tex(", ".join("``%s'' %.0f" % (a, b) for a, b in X[k]["top"][:4]))
+    for fn, tag in (("stone_word2_Adobe.json", "SwTwo"), ("stone_word2_big_Adobe.json", "SwBig")):
+        W = J(res, fn)
+        if W: mac.update(**{tag + "N": "{:,}".format(W["n"]), tag + "Rank": str(W["rank_Star"]),
+                            tag + "Top": tex(", ".join("%s %.0f" % (a, b) for a, b in W["ranking"][:4]))})
+    for t, tag in (("", "StoneStar"), ("_Eternal_star", "StoneLower"), ("_L_is_real_2401", "StoneLegend"), ("_A_Secret_star", "StoneSecret")):
+        R = J(res, "stone_recipes_Adobe%s.json" % t)
+        if R: mac[tag] = "%.1f" % R[0]["sse"]
