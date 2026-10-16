@@ -8,11 +8,6 @@
 …set in **Palatino Bold Italic**, most likely **Adobe's own 1990 PostScript Palatino** (Adobe Type Manager era), and **not** "L is real 2401".
 With that font, a blind search over 17.7k English words returns exactly **"We hope so"** as its best string.
 
-🎬 **The video:** [L is Real 2401 SOLVED: What Mario 64's Plaque Really Says](https://www.youtube.com/watch?v=BMtC2dH-y4g),
-the whole story on the mochi64 channel.
-
-<a href="https://www.youtube.com/watch?v=BMtC2dH-y4g"><img src="https://img.youtube.com/vi/BMtC2dH-y4g/hqdefault.jpg" width="360" alt="L is Real 2401 SOLVED: the video"></a>
-
 The plaque on the star statue in Peach's castle courtyard is a single 32×32 grey texture. Its two lines of text are
 3–5 pixels tall, too small to *read*. This project doesn't try to read or upscale it. Instead it **simulates how a
 1996 artist made it** and searches for the text that best explains the stored pixels:
@@ -32,6 +27,8 @@ hand, then shrunk to 32×32 (bilinear, light blur, gamma 1.4) onto the extracted
 average about 1 grey level (of 31) away from the plaque.*
 
 📄 **Full report:** [`report/report.pdf`](report/report.pdf) (LaTeX source in `report/`)
+
+🎬 **Video:** [L is Real 2401 SOLVED: What Mario 64's Plaque Really Says](https://www.youtube.com/watch?v=BMtC2dH-y4g) (the whole story on the mochi64 channel)
 
 ## Key results
 
