@@ -30,6 +30,13 @@ average about 1 grey level (of 31) away from the plaque.*
 
 🎬 **Video:** [L is Real 2401 SOLVED: What Mario 64's Plaque Really Says](https://www.youtube.com/watch?v=BMtC2dH-y4g) (the whole story on the mochi64 channel)
 
+## See it move
+
+| 1 · real vs. model | 2 · blink | 3 · more pixels |
+|---|---|---|
+| ![real vs model slider](media/1_overlap.gif) | ![real and model blinking](media/2_blink.gif) | ![model shown with more pixels](media/3_unshrink.gif) |
+| Left of the yellow line: the real plaque from the game. Right: the model. The letters run across the line without a jump. | Switches between the real plaque (white frame) and the model (green frame). It looks like the same picture. | The model at the game's 32×32 size, then the same model with more pixels: "Eternal Star / We hope so". |
+
 ## Key results
 
 | question | answer | evidence |
