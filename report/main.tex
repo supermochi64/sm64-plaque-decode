@@ -3,8 +3,12 @@
 \usepackage[T1]{fontenc}
 \usepackage{newpxtext,newpxmath}
 \usepackage{microtype}
-\usepackage{CJKutf8}
-\newcommand{\jp}[1]{\begin{CJK}{UTF8}{min}#1\end{CJK}}
+\usepackage{iftex}
+\ifXeTeX   % e.g. Tectonic: Japanese via xeCJK + Noto Serif CJK (put NotoSerifJP-Regular.otf next to main.tex)
+  \usepackage{xeCJK}\setCJKmainfont[Path=./]{NotoSerifJP-Regular.otf}\xeCJKDeclareCharClass{CJK}{"2015}\newcommand{\jp}[1]{#1}
+\else      % pdfLaTeX: CJK package with the classic "min" font
+  \usepackage{CJKutf8}\newcommand{\jp}[1]{\begin{CJK}{UTF8}{min}#1\end{CJK}}
+\fi
 \usepackage{graphicx}
 \usepackage{booktabs,tabularx}
 \usepackage{xcolor}
@@ -912,6 +916,17 @@ letter, and \q{Star} is the only common word of that shape. On line~2 every slot
 Each slot lands in the top 0.01\,\% of all strings, and in each case the strings ahead are the same shape class
 (b and h are not separable at 3.5\,px). The pixels fix the shapes; the language picks the words.
 
+\paragraph{The first word, too.}
+Because the recipe was fitted with \q{Eternal Star}, we also opened the first word. Under the same frozen recipe and
+fixed stone, \q{X~Star} was scored for about 245{,}000 dictionary entries (as written and capitalised) and for
+2.1~million letter strings of 4--10 letters, built letter by letter by a blind beam search without any dictionary
+(each partial string is scored on the texture columns its letters already determine; 60{,}000 kept per length and
+line shift). The 1{,}237{,}405 candidates whose width lets \q{Star} land on its pixels were then scored exactly, with
+the whole line free to shift by up to two texture pixels (\texttt{python -m plaquedecode.firstword}).
+\q{Eternal} ranks \textbf{first}. The blind search finds it on its own; the closest rivals are one-letter non-word
+lookalikes (\q{Lternal} $+6$, \q{Eterual} $+16$, \q{Eternol} $+26$); the best other real word, \q{Sternal}, fits 570
+worse (rank 13{,}217).
+
 \paragraph{Was Palatino available to the artist?}
 We read every package of the IRIX~5.3 installation CD for the Indy (August 1995; SGI workstations were the N64
 development platform). IRIX ships Adobe Times, Helvetica, Courier, Symbol and Utopia, Bitstream Charter and 14 SGI
@@ -1313,6 +1328,8 @@ python -m plaquedecode invert   --recipes $R --hopefit results/hopefit_PalatinoB
                                 --line2 results/line2_dp_hopefit_P052line2.json
 python -m plaquedecode figures  --out report/figures                      # + report/tables/
 # fourth pass (fixed stone: PLAQUE_STONE=stone/stone_box.npy PLAQUE_STONE_VAR=stone/stone_box_var.npy)
+python -m plaquedecode.firstword --recipes results/stone_recipes_Adobe.json \
+        --out results/stone_firstword_Adobe.json                   # every first word
 python -m plaquedecode.line2font screen --fonts-list FONTS.txt    # every face on line 2 alone
 python -m plaquedecode.line2font both   --fonts-list SHORT.txt    # both lines + wrong-text controls
 python -m plaquedecode.line2font hinted --fonts-list SHORT.txt    # hinted, true pixel size
