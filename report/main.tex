@@ -961,6 +961,22 @@ The best face of any other design is \EraOther{} at \EraOtherSse; IRIX's own Tim
 \label{fig:erafonts}
 \end{figure}
 
+\paragraph{Control: 4{,}583 modern fonts.}
+Is the fit special to fonts of the era, or would any well-made modern italic do as well? We ran the identical three-tier
+recipe search, with the same fixed stone, on every font of the Google Fonts repository (static styles plus the Regular,
+Italic, Bold and Bold Italic instances of every variable font; 4{,}583 styles, \texttt{plaquedecode.modern\_fonts},
+\texttt{results/modern\_fonts\_stone.json}): the quick grid for all, the font-comparison grid for the top 60, the full
+grid for the top 8. The best modern style is Libertinus Sans Italic at 905.3, followed by Libre Bodoni Italic (935.4)
+and Crimson Text Italic (952.5). Adobe's 1990 Palatino Bold Italic scores 788.7, and all twelve distinct Palatino-type
+era faces of \cref{tab:erafonts} beat every modern font; the best modern style lands just ahead of the best era face of
+another design (926.4) (\cref{fig:modernfonts}). The fit is specific to Palatino Bold Italic, not to serif italics in
+general. (Google Fonts carries no Palatino clone.)
+\begin{figure}[t]\centering
+\includegraphics[width=0.85\linewidth]{modern_fonts.png}
+\caption{Line~1 fit error after the full recipe search: the three best era faces against the eight best of 4{,}583 modern Google Fonts styles.}
+\label{fig:modernfonts}
+\end{figure}
+
 \paragraph{What is left.}
 With the stone fixed, the remaining large errors sit on the \emph{top} strokes of line~1 (E top arm, S top, the r
 arm) and in the W of line~2, where the model inks pixels the plaque shows as bare stone. To explain them by the stone
@@ -1275,8 +1291,8 @@ was made by typing two centred lines in \textbf{Palatino Bold Italic}, most like
 that file the best artwork is 192$\times$160 at 26\,px (line~1), resized to $32{\times}32$ with a bilinear filter, lightly
 blurred and gamma-adjusted (1.4); the Apple and URW Palatinos independently converge on 160$\times$128 at 23\,px and
 gamma 1.8. Line~2 is set at 17--18\,px in the same process. A second pass against the extracted plain stone, an
-exhaustive test of every 3--4-letter string and a tournament of \EraN{} era faces (\cref{sec:stone}) leave all of this
-unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file. Treated as a designer's
+exhaustive test of every 3--4-letter string, a tournament of \EraN{} era faces and a control with 4{,}583 modern fonts
+(\cref{sec:stone}) leave all of this unchanged; the Palatino an SGI workstation could install in 1995 was exactly this Adobe file. Treated as a designer's
 workflow (\cref{sec:designer}), the letters were nudged by hand on a slightly narrower artwork (190$\times$160);
 blend modes, shadows, emboss, outlines and sharpening do not beat noise, and the last handful of wrong pixels look
 like touch-ups on the finished texture. Line~2 is set in the same font as line~1: a flexible model briefly preferred
@@ -1335,6 +1351,8 @@ python -m plaquedecode.line2font both   --fonts-list SHORT.txt    # both lines +
 python -m plaquedecode.line2font hinted --fonts-list SHORT.txt    # hinted, true pixel size
 python -m plaquedecode.line2font best   --fonts-list PALATINO.txt # final fit -> results/bestfit.json
 python -m plaquedecode.line2font hero;  python -m plaquedecode.line2font figure
+python -m plaquedecode.modern_fonts main.zip fonts_gf GF_LIST.txt  # Google Fonts -> styles
+#   then recipe --stage quick for all, fontcmp for the top 60, full for the top 8
 \end{verbatim}}
 The searches take minutes to an hour on a consumer GPU. All result files used for this report are included in
 \texttt{results/}, so the figures and tables can be regenerated without a GPU.
