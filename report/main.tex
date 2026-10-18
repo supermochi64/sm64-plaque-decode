@@ -927,6 +927,20 @@ the whole line free to shift by up to two texture pixels (\texttt{python -m plaq
 lookalikes (\q{Lternal} $+6$, \q{Eterual} $+16$, \q{Eternol} $+26$); the best other real word, \q{Sternal}, fits 570
 worse (rank 13{,}217).
 
+\paragraph{Blind test: 50 secret words.}
+Does the same search find a word it was \emph{not} told? We drew 50 capitalised English words of 4--10 letters
+(from the 17.7k-word core vocabulary, restricted to widths within 24 artwork pixels of \q{Eternal}) with the operating
+system's random generator, sealed them with salted SHA-256 hashes before any decoding, and planted each as
+\q{\emph{word}~Star} into the real plaque: the ink of the fitted \q{Eternal Star} was replaced by the ink of the new line
+(same recipe and ink level, line re-centred), so the real stone and the real fit residual stay. Each plaque was then
+decoded with the unchanged first-word search above (about 1.2~million strings each; \texttt{python -m plaquedecode.blind},
+\texttt{results/blind\_firstword.json}). The scoring step checks every hash before it reads a word.
+The true word was the \textbf{best real English word in 50 of 50} plaques, first among \emph{all} strings in 38 of 50, and in
+the top ten in 49 of 50. Every miss lost only to a one-letter non-word lookalike (\q{Dnration} before \q{Duration},
+\q{Sealsd} before \q{Sealed}), the same pattern as \q{Lternal} on the real plaque, where \q{Eternal} is first outright.
+\q{Eternal} itself never came within the top 20{,}000 of any planted plaque, so the residual of the real fit does not
+pull the search towards it.
+
 \paragraph{Was Palatino available to the artist?}
 We read every package of the IRIX~5.3 installation CD for the Indy (August 1995; SGI workstations were the N64
 development platform). IRIX ships Adobe Times, Helvetica, Courier, Symbol and Utopia, Bitstream Charter and 14 SGI
@@ -1346,6 +1360,8 @@ python -m plaquedecode figures  --out report/figures                      # + re
 # fourth pass (fixed stone: PLAQUE_STONE=stone/stone_box.npy PLAQUE_STONE_VAR=stone/stone_box_var.npy)
 python -m plaquedecode.firstword --recipes results/stone_recipes_Adobe.json \
         --out results/stone_firstword_Adobe.json                   # every first word
+python -m plaquedecode.blind make --recipes results/stone_recipes_Adobe.json --n 50  # blind test
+python -m plaquedecode.blind decode --recipes results/stone_recipes_Adobe.json; python -m plaquedecode.blind score
 python -m plaquedecode.line2font screen --fonts-list FONTS.txt    # every face on line 2 alone
 python -m plaquedecode.line2font both   --fonts-list SHORT.txt    # both lines + wrong-text controls
 python -m plaquedecode.line2font hinted --fonts-list SHORT.txt    # hinted, true pixel size
