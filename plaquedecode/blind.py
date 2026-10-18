@@ -1,11 +1,11 @@
-"""Blind test of the first-word decoder: does it find a word it was NOT told?
+"""Blind test of the first-word decoder: does it find a word it was not told?
 
 make   : draws N secret English words (data/vocab_en_core.txt, 4-10 letters, capitalised, width within --wtol of
          "Eternal" so "Star" still lands on its pixels) with the OS random generator, and builds one synthetic plaque
          per word: the real texture with the ink of the fitted "Eternal Star" replaced by the ink of "<word> Star"
-         (same locked recipe, same ink level, line re-centred), so the real stone AND the real fit residual stay.
+         (same locked recipe, same ink level, line re-centred), so the real stone and the real fit residual stay.
          The words go to <secret_dir>/secret.json; <dir>/sealed.json holds a SHA-256 of every salted word and of the
-         whole secret file (publish/commit that hash BEFORE decoding).
+         whole secret file (publish/commit that hash before decoding).
 decode : decodes every synthetic plaque exactly like firstword.py decodes the real one (vocabulary + blind
          letter-by-letter beam, width filter, exact rescoring); reads only <dir>/plaque_XX.npy, never the secret.
 score  : opens the secret, checks the hashes, and reports the rank of every true word.

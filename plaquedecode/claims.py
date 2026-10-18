@@ -1,6 +1,6 @@
-"""Score published / proposed readings of the plaque with the SAME forward model.
+"""Score published / proposed readings of the plaque with the same forward model.
 
-Line 1 of every claim gets its OWN exhaustive designer-recipe search (no advantage for our reading).  Line 2 is scored
+Line 1 of every claim gets its own exhaustive designer-recipe search (no advantage for our reading).  Line 2 is scored
 (a) under that claim's own line-1 recipe and ink level (joint, self-consistent) and (b) under the 'Eternal Star'
 recipe (isolates the line-2 text).  A claim without a stated second line is scored on line 1 only."""
 import json, os

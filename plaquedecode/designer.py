@@ -1,4 +1,4 @@
-"""The designer's canvas: both lines typed on ONE artwork canvas, hand-kerned letters, then classic 1990s text effects,
+"""The designer's canvas: both lines typed on one artwork canvas, hand-kerned letters, then classic 1990s text effects,
 then the resize to 32x32 - fitted against the fixed stone, every effect checked against a noise-only control.
 
 Canvas (A = text alpha 0..1 at artwork resolution, both lines):

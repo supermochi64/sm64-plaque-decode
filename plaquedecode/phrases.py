@@ -1,4 +1,4 @@
-"""Curated MEANINGFUL candidate phrases for line 2: template product A x B x C (first word / middle word / short
+"""Curated meaningful candidate phrases for line 2: template product A x B x C (first word / middle word / short
 ending; sentence- and Title-case) + free natural phrases, including the readings proposed by others."""
 import itertools
 

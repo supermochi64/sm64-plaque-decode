@@ -1,5 +1,5 @@
-"""List-bias test: can the curated sentence list produce a confident, sensible answer when the true line-2 text is NOT
-in the list?  (Reviewer question, 2026-10-15.)
+"""List-bias test: can the curated sentence list produce a confident, sensible answer when the true line-2 text is not
+in the list?
 
 Same set-up as the real line-2 decode (Adobe recipe, line-2 typesetting calibrated on "hope", best configuration of the
 real plaque).  For every planted phrase, the real line-2 ink is replaced by the planted phrase's ink (real stone and fit
@@ -18,14 +18,14 @@ from .core import Line2
 from .phrases import curated
 from .__main__ import log, load_T, best_recipe, words_from
 
-# phrases that are NOT in the curated list (checked at run time): ordinary sign/plaque texts of similar length ...
+# phrases that are not in the curated list (checked at run time): ordinary sign/plaque texts of similar length ...
 OFF = ["Big Boo lives", "Go see Peach", "Run and jump", "Do not swim", "Sun is up", "Fish swim here", "Cake is ready",
        "Find the key", "Come back soon", "Mind the gap", "Watch your step", "Toad was here", "Look up high", "Wet paint",
        "Stay calm", "Be brave", "Have fun", "Gone fishing", "Keep out", "Lost and found", "Welcome home", "Sit and rest",
        "Bob was here", "Who knows", "Not for sale", "See you soon", "Push to open", "Made in Kyoto",
        # ... and hope-shaped sentences whose first or last word is not in the list (the critical case)
        "We hope not", "We hope yes", "No hope left", "Al hope so", "Ma hope so", "We hope lots"]
-# controls that ARE in the list
+# controls that are in the list
 ON = ["We hope so", "Shine on", "Rest in peace", "Thank you", "Joy to all", "My hope is", "Good night", "For Mario"]
 
 

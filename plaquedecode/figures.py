@@ -360,7 +360,7 @@ def fig_line2_band_panels(T, res, fdir, out, phrases):
     fig.savefig(out); plt.close(fig)
 
 
-TEX = None          # the user's own texture (set by make_all); never stored in results/
+TEX = None          # your own extracted texture (set by make_all); never stored in results/
 
 
 def _real_band():

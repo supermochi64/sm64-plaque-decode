@@ -1,4 +1,4 @@
-"""Second curated set (user suggestions 2026-10-14): first words with the plaque's measured outline (We, By, Be, Me, My,
+"""Second curated set: first words with the plaque's measured outline (We, By, Be, Me, My,
 He ...) x many middle words x short endings, in sentence- and Title-case, plus free phrases including quirky
 Japanese-English ("Engrish") phrasings that a 1996 Japanese team might plausibly have written."""
 import itertools

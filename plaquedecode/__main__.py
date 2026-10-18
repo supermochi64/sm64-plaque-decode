@@ -1,4 +1,4 @@
-"""plaquedecode — reproduce the SM64 courtyard-plaque analysis.
+"""plaquedecode: reproduce the SM64 courtyard-plaque analysis.
 
   python -m plaquedecode extract  --rom "Super Mario 64 (USA).z64"            # -> texture.npy (stays local)
   python -m plaquedecode recipe   --font P052-BoldItalic.otf [--text "Eternal Star"] [--stage full]
@@ -24,7 +24,7 @@ def log(*a):
 
 def load_T(path):
     if not os.path.exists(path):
-        sys.exit("texture %s not found — run:  python -m plaquedecode extract --rom <your SM64 ROM>" % path)
+        sys.exit("texture %s not found. Run:  python -m plaquedecode extract --rom <your SM64 ROM>" % path)
     return np.load(path)
 
 

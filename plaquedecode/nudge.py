@@ -1,8 +1,8 @@
-"""Per-letter nudges COMBINED with the recipe search (line 1), with a noise-only control.
+"""Per-letter nudges combined with the recipe search (line 1), with a noise-only control.
 
-Owner question: we know the words and the font, but not the exact transformation - does a different recipe win once
+The words and the font are known, the exact transformation is not: does a different recipe win once
 every letter may be shifted by hand?  For each of the top-K recipes of a recipe search (canvas, size, tracking,
-kerning, advances, word space, filter, blur), every glyph of "Eternal Star" may move by an integer number of CANVAS
+kerning, advances, word space, filter, blur), every glyph of "Eternal Star" may move by an integer number of canvas
 pixels (what an artist kerning by hand in a paint program does), fitted by coordinate descent together with the gamma.
 Glyph tiles are linear in the artwork, so every candidate is scored exactly under the fixed-stone metric.
 Control: synthetic plaques = the un-nudged best fit + the real residual of the band, permuted; the same nudge fit on
@@ -170,7 +170,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--texture", default="texture.npy"); ap.add_argument("--fonts-dir", default="fonts_cmp")
     ap.add_argument("--recipes", required=True); ap.add_argument("--top", type=int, default=400)
-    ap.add_argument("--range", type=float, default=1.0, help="max shift per letter in TEXTURE px (x kx canvas px)")
+    ap.add_argument("--range", type=float, default=1.0, help="max shift per letter in texture px (x kx canvas px)")
     ap.add_argument("--fakes", type=int, default=5); ap.add_argument("--control-top", type=int, default=5)
     ap.add_argument("--out", required=True)
     ap.add_argument("--both", action="store_true", help="line 1 + line 2 with the top recipe (needs --hopefit --line2)")

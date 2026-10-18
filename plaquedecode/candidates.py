@@ -2,7 +2,7 @@
 
 For each candidate the rest of the line is held fixed ("___ hope so" / "We hope ___"), the whole line is rendered
 exactly with the locked recipe, and the error is reported both for the whole band and for the 4-column stone blocks
-that contain that word only (its LOCAL evidence).  Model predictions are stored so the figures need no GPU."""
+that contain that word only (its local evidence).  Model predictions are stored so the figures need no GPU."""
 import json
 import numpy as np
 from .core import Line2

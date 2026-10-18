@@ -6,7 +6,7 @@ coverage(text): the text is typed once on a 32kx x 32ky canvas (font, integer pi
 whole-pixel advances), resized to 32x32 with a standard filter (support scaled like PIL/Photoshop), optionally
 Gaussian-blurred, then a gamma is applied.  The stone is treated as a nuisance: inside every 4-column block of a text
 band it is a plane (a + b*x + c*y) that is projected out exactly, the ink level L is solved in closed form (line 1) or
-fixed to line 1's value (line 2).  The honest noise floor is the same operator applied to the clean stone rows 23..31.
+fixed to line 1's value (line 2).  The noise floor is the same operator applied to the clean stone rows 23..31.
 """
 import math, itertools, os
 from dataclasses import dataclass, asdict
@@ -199,7 +199,7 @@ def search_recipes(line1: Line1, fdir, font, text, kxy, filters, blurs=(0.0,), g
     import os
     dev = line1.dev; fpath = os.path.join(fdir, font)
     G = torch.tensor(gammas, device=dev)
-    bitmap = font == "SM64-dialog"                     # the game's own dialog font (bitmap, from the user's ROM)
+    bitmap = font == "SM64-dialog"                     # the game's own dialog font (bitmap, from your ROM)
     if bitmap:
         from . import gamefont as GFm
         gfont = GFm.load(os.path.join(fdir, "sm64_dialog_font.npz"))
@@ -248,7 +248,7 @@ def search_recipes(line1: Line1, fdir, font, text, kxy, filters, blurs=(0.0,), g
 
 # ----------------------------------------------------------------------------------------------- line 2
 class Line2:
-    """Line-2 decoder under a LOCKED line-1 recipe: same face, canvas, tracking, advance rounding, filter, blur, gamma
+    """Line-2 decoder under a locked line-1 recipe: same face, canvas, tracking, advance rounding, filter, blur, gamma
     and the same ink level L.  Free: pixel size P2, baseline yb, start pen x, word space."""
     ESPS = (-1.0, -0.5, 0.0, 0.5)
 
@@ -371,7 +371,7 @@ class Line2:
 
     # --- word-sequence search (K-best dynamic programme, additive approximation, exact re-render afterwards)
     def run_dp(self, words, P2S, K=48, log=None, first=None):
-        """first: optional list of allowed FIRST words (they are added to the vocabulary); the rest of the line is free."""
+        """first: optional list of allowed first words (they are added to the vocabulary); the rest of the line is free."""
         if first: words = list(dict.fromkeys(list(words) + list(first)))
         chars = sorted(set("".join(words)) | {" "})
         found = {}; cfg_best = []

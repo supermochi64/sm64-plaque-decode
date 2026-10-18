@@ -1,4 +1,4 @@
-"""Line 1, FIRST word: does any string at all beat "Eternal"?  (Reddit question: "does assuming 'Eternal' bias it?")
+"""Line 1, first word: does any string at all beat "Eternal"?  (Checks that assuming 'Eternal' does not bias the result.)
 
 Under the locked line-1 recipe (font, canvas, size, tracking, kerning, advances, filter, blur, gamma), X + " Star" is
 scored for

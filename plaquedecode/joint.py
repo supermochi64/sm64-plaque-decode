@@ -1,6 +1,6 @@
 """Joint two-line test for the case of 'Star' vs 'star': for each spelling take its top-N line-1 recipes, and for each
 recipe score line 2 ("We hope so", free size/position/word space) under that same process + ink level.
-The best SUM over both lines decides which spelling is consistent with one process for the whole plaque."""
+The best sum over both lines decides which spelling is consistent with one process for the whole plaque."""
 import json
 from .core import Line2, Recipe
 

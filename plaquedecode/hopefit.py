@@ -1,4 +1,4 @@
-"""Work backwards from 'hope' (user idea 2026-10-14): assume the middle word of line 2 is 'hope' and fit line 2's OWN
+"""Work backwards from 'hope': assume the middle word of line 2 is 'hope' and fit line 2's own
 typesetting on the pixels of that word only (4-column stone blocks 3-4 = texture cols 12-19): face/style, pixel size,
 tracking, pair kerning, advance mode, exact pen position and baseline.  Canvas, resize filter, blur, gamma and ink level
 are shared with line 1 (one image, resized once).  The calibrated line-2 setting is then used to re-score the

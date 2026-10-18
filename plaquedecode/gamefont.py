@@ -1,6 +1,6 @@
 """Super Mario 64's own dialog font (US), for testing the popular claim that the plaque uses the in-game font.
 
-Glyphs are extracted from YOUR OWN US ROM at run time (segment 2, 16x8 IA4, stored rotated; upright = transpose+flip),
+Glyphs are extracted from your own US ROM at run time (segment 2, 16x8 IA4, stored rotated; upright = transpose+flip),
 advances are the game's gDialogCharWidths; offsets come from the public decompilation.  Nothing is redistributed.
 The renderer mimics a designer who typed the line in the game font and scaled it up as pixel art (nearest) or with
 Photoshop's default (bicubic) interpolation, before the same canvas -> 32x32 process as every other font."""

@@ -6,7 +6,7 @@ Challenge 1, "Beat Eternal Star": score any reading of the plaque exactly the wa
     python -m plaquedecode.challenge score "L is real 2401"                      # line 1 only
     python -m plaquedecode.challenge score "My line 1" "my line 2" --font SomeOtherFont.ttf
 
-Challenge 2, "Fool the decoder": write a secret English word into YOUR copy of the real plaque as "<word> Star"
+Challenge 2, "Fool the decoder": write a secret English word into your copy of the real plaque as "<word> Star"
 (deterministic; same procedure as the 50-word blind test), publish the PNG and the hash, let us decode it:
     python -m plaquedecode.challenge make   --word Harness --out my_plaque.png    # prints the hash to publish
     python -m plaquedecode.challenge decode --png my_plaque.png                   # what the decoder reads

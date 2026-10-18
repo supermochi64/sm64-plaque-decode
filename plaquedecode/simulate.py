@@ -1,6 +1,6 @@
 """Calibration by simulation for the line-2 decoder.
 
-Take the best real reading, remove its ink from the real texture and paint the ink of a KNOWN phrase in its place
+Take the best real reading, remove its ink from the real texture and paint the ink of a known phrase in its place
 (same recipe and configuration), keeping the real stone and the real fit residual.  Decode blind with the dictionary
 search and record: exact-phrase rank, words recovered, and the gap between the true phrase's error and the best error
 the decoder finds (this gap defines the "pixel-compatible window" used for the real plaque)."""

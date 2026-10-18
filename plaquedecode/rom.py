@@ -1,4 +1,4 @@
-"""Extract the courtyard plaque texture from YOUR OWN Super Mario 64 ROM (no Nintendo data ships with this repo).
+"""Extract the courtyard plaque texture from your own Super Mario 64 ROM (no Nintendo data ships with this repo).
 
 Texture: castle_grounds_textures.08800 (32x32 RGBA16, grey) inside the MIO0-compressed 'outside' texture segment.
 Segment offsets per ROM version come from the public sm64 decompilation's assets.json.  The texture is byte-identical
@@ -51,4 +51,4 @@ def extract(rom_path):
         if hashlib.sha1(raw).hexdigest() != TEX_SHA1: continue
         v = np.frombuffer(raw, ">u2").reshape(32, 32)
         return ((v >> 11) & 31).astype(np.float32), ver, raw
-    raise ValueError("plaque texture not found — is this an unmodified Super Mario 64 ROM (US/JP/EU/Shindou/iQue)?")
+    raise ValueError("plaque texture not found. Is this an unmodified Super Mario 64 ROM (US/JP/EU/Shindou/iQue)?")

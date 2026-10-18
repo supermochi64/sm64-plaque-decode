@@ -1,9 +1,9 @@
-"""Exhaustive slot checks: does any string at all beat the reading?  (owner: "make sure we miss no word candidate")
+"""Exhaustive slot checks: does any string at all beat the reading?
 
-  line 1, word 2 : "Eternal " + EVERY string of 3 or 4 letters (first letter any case, rest lower case) - 950 k strings
-  line 2, first  : X + " hope so" for EVERY string of 1-3 letters (first letter any case)
-  line 2, middle : "We " + X + " so" for EVERY lower-case string of 4 letters (457 k)
-  line 2, ending : "We hope " + X for EVERY string of 1-3 letters (first letter any case) + "so." / "so!"
+  line 1, word 2 : "Eternal " + every string of 3 or 4 letters (first letter any case, rest lower case) - 950 k strings
+  line 2, first  : X + " hope so" for every string of 1-3 letters (first letter any case)
+  line 2, middle : "We " + X + " so" for every lower-case string of 4 letters (457 k)
+  line 2, ending : "We hope " + X for every string of 1-3 letters (first letter any case) + "so." / "so!"
 Line 1 uses glyph tiles (coverage is linear in the artwork before gamma), so every candidate is scored exactly under the
 locked recipe; line 2 uses the additive glyph-table search (run_combo) followed by an exact re-render of the best.
     python -m plaquedecode.exhaustive --recipes R --hopefit H --line2 L --out results/exhaustive.json

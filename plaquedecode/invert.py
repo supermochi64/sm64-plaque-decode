@@ -3,7 +3,7 @@
 forward:  texture = stone + L * ( WY @ X @ WX^T ).clamp(0,1) ** gamma        (X = canvas ink, 0..1)
 The stone is removed exactly as in scoring (planes per 4-column block, both text bands); L and gamma come from the
 line-1 fit.  The problem is heavily underdetermined (a 160x128 artwork from ~576 text pixels), so we report three
-priors -- none (minimum-norm), total variation, total variation + binary ink -- and, crucially, apply the IDENTICAL
+priors -- none (minimum-norm), total variation, total variation + binary ink -- and apply the identical
 inversion to synthetic plaques whose text is known (same stone, same residual noise).  What the real inversion shows
 can then be compared with what each hypothesis would show, instead of reading letters that a prior may invent."""
 import json, os
@@ -92,7 +92,7 @@ def run(T, rec, fdir, hope, line2_cfg, out, log, steps=2500):
         c1 = canvas_line1(L1, rec, l1, fdir) if l1 != "Eternal Star" else ours1
         c2 = canvas_line2(L2, l2, L2.exact_refine(l2, line2_cfg)[1]) if l2 else ours2
         hyps[name] = (c1, c2)
-    # discrepancy principle: scale the sparsity+TV prior so that the residual on the REAL plaque equals the noise floor
+    # discrepancy principle: scale the sparsity+TV prior so that the residual on the real plaque equals the noise floor
     target = L1.floor + L2.floor
     lo_, hi_ = 0.01, 100.0
     for _ in range(9):
@@ -108,8 +108,8 @@ def run(T, rec, fdir, hope, line2_cfg, out, log, steps=2500):
     for prior in PRIORS:
         X, sse = inv.run(T, prior, steps, lam=LAMS[prior]); res["real"][prior] = dict(X=X, sse=sse)
         log("real plaque, prior %-16s residual SSE %.1f" % (prior, sse))
-    # neutral background shared by ALL hypotheses: smooth stone (planes fitted under the best reading) + real stone
-    # NOISE taken from the clean rows 23..31 (not from the text rows), so no hypothesis inherits the real text residual
+    # neutral background shared by all hypotheses: smooth stone (planes fitted under the best reading) + real stone
+    # noise taken from the clean rows 23..31 (not from the text rows), so no hypothesis inherits the real text residual
     Tt = torch.as_tensor(T, device=dev); ink_t = torch.as_tensor(ink_ours, device=dev)
     MBc = block_ops(9, 23, dev); Tc = Tt[23:32]
     noise = torch.einsum("kmn,kn->km", MBc, Tc.reshape(9, 8, 4).movedim(-2, -3).reshape(8, 36)).reshape(8, 9, 4).movedim(0, 1).reshape(9, 32)
@@ -131,7 +131,7 @@ def run(T, rec, fdir, hope, line2_cfg, out, log, steps=2500):
     np.savez_compressed(out, crop=json.dumps(crop), names=json.dumps(list(res)),
                         **{"%d_%s" % (i, k): (v if isinstance(v, np.ndarray) else v["X"]) for i, (n, d) in enumerate(res.items()) for k, v in d.items()},
                         sses=json.dumps({n: {k: v["sse"] for k, v in d.items() if isinstance(v, dict)} for n, d in res.items()}))
-    # similarity of the REAL inversion to each synthetic inversion, per text row (canvas space)
+    # similarity of the real inversion to each synthetic inversion, per text row (canvas space)
     r1 = slice(rec.offy + LINE1[0] * rec.ky, rec.offy + LINE1[1] * rec.ky); r2 = slice(rec.offy + LINE2[0] * rec.ky, rec.offy + LINE2[1] * rec.ky)
     cc = slice(crop["c0"], crop["c1"])
     def ncc(a, b):

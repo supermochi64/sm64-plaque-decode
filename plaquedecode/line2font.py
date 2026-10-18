@@ -1,10 +1,10 @@
-"""Fourth pass: is line 2 set in the same font as line 1?  And the final best fit.
+"""Is line 2 set in the same font as line 1?  And the final best fit.
 
-The font tournaments of the earlier passes were scored on line 1; line 2 only chose among Palatino faces. Here:
-  screen  every face fitted to line 2 ALONE with a continuous typesetting model (size, width, slant, tracking,
+The font tournaments (recipe search) are scored on line 1, where line 2 only chooses among Palatino faces. Here:
+  screen  every face fitted to line 2 alone with a continuous typesetting model (size, width, slant, tracking,
           resampling kernel exp(-|d/a|^p), gamma 0.5-2, stroke weight, ink level <= 60), Adam through grid_sample;
           fixed stone, weights 1/(0.15 + var)                                      -> results/line2font_screen.json
-  both    the screen's best faces + the Palatino files on BOTH lines with the same model and wrong-text controls;
+  both    the screen's best faces + the Palatino files on both lines with the same model and wrong-text controls;
           line 1 is the control (there Palatino BI is established)                 -> results/line2font_both.json
   hinted  line 2 with the release pipeline's own rendering (core.Line2: hinted, true pixel size, line-1 recipe locked),
           free size/tracking/kerning/advances/word space, a paint-program skew 0-0.3, every position
