@@ -28,6 +28,8 @@ average about 1 grey level (of 31) away from the plaque.*
 
 📄 **Full report:** [`report/report.pdf`](report/report.pdf) (LaTeX source in `report/`)
 
+🏆 **Think it's wrong?** [Take the challenge](CHALLENGE.md): beat the score with your own reading, or hide a secret word and try to fool the decoder.
+
 🎬 **Video:** [L is Real 2401 SOLVED: What Mario 64's Plaque Really Says](https://www.youtube.com/watch?v=BMtC2dH-y4g) (the whole story on the mochi64 channel)
 
 ## See it move
