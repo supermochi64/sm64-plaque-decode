@@ -6,7 +6,7 @@ plaque says something else: "Eternal Star / We hope so", typed in a font Adobe r
 
 ![The real plaque, the reconstruction, and the reconstruction before shrinking](images/1_answer.png)
 
-📄 **[Download this summary as a PDF](press_report.pdf)** · 🔬 [Full scientific report (52 pages)](../report/report.pdf) · 🎬 [Video](https://www.youtube.com/watch?v=BMtC2dH-y4g)
+📄 **[Download this summary as a PDF](press_report.pdf)** · 🔬 [Full scientific report (52 pages)](../report/report.pdf)
 
 ## The short version
 
@@ -218,4 +218,4 @@ All images in [`images/`](images/) may be used for reporting on this research. P
 | [`9_line2.png`](images/9_line2.png) | line 2: "hope" is in every one of the eight best answers |
 | [Animations](../README.md#see-it-move) | the real plaque and the reconstruction sliding over each other |
 
-**Contact:** [whitemochi64@proton.me](mailto:whitemochi64@proton.me) · [@supermochi64](https://x.com/supermochi64) on X · [mochi64 on YouTube](https://www.youtube.com/watch?v=BMtC2dH-y4g)
+**Contact:** [whitemochi64@proton.me](mailto:whitemochi64@proton.me) · [@supermochi64](https://x.com/supermochi64) on X
