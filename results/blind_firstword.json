@@ -1,0 +1,811 @@
+{
+ "n": 50,
+ "true_word_rank1": 38,
+ "true_word_top10": 49,
+ "true_word_best_real_word": 50,
+ "secret_file_sha256": "c57c3f34096153eb02ad9da7fe07b6a48b4cbfdb1a0f20e17ac642a01696c54e",
+ "note": "Blind first-word test: secret capitalised English words (data/vocab_en_core.txt) planted as '<word> Star' into the real texture (real stone + real fit residual kept), decoded with the unchanged firstword pipeline. rank = among all scored strings (vocabulary + blind beam); rank_among_real_words = among strings in the core English vocabulary.",
+ "rows": [
+  {
+   "k": 0,
+   "word": "Brace",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1205516,
+   "top5": [
+    "Brace",
+    "Bracc",
+    "Bruce",
+    "Braee",
+    "Broce"
+   ],
+   "best_real_word": "Brace"
+  },
+  {
+   "k": 1,
+   "word": "Lanai",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1061710,
+   "top5": [
+    "Lanai",
+    "Lauai",
+    "Lanal",
+    "Lunai",
+    "Lanui"
+   ],
+   "best_real_word": "Lanai"
+  },
+  {
+   "k": 2,
+   "word": "Preface",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1235056,
+   "top5": [
+    "Preface",
+    "Prefoce",
+    "Prefaee",
+    "Prsface",
+    "Prcface"
+   ],
+   "best_real_word": "Preface"
+  },
+  {
+   "k": 3,
+   "word": "Relying",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1277910,
+   "top5": [
+    "Relying",
+    "Bxlying",
+    "Bxlyiag",
+    "Rrtying",
+    "Bxlyiug"
+   ],
+   "best_real_word": "Relying"
+  },
+  {
+   "k": 4,
+   "word": "Striped",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1242871,
+   "top5": [
+    "Striped",
+    "Stripcd",
+    "Strlped",
+    "Sttiped",
+    "Stirped"
+   ],
+   "best_real_word": "Striped"
+  },
+  {
+   "k": 5,
+   "word": "Duration",
+   "rank": 2,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 807768,
+   "top5": [
+    "Dnration",
+    "Duration",
+    "Dnratiou",
+    "Duratiou",
+    "Daration"
+   ],
+   "best_real_word": "Duration"
+  },
+  {
+   "k": 6,
+   "word": "Anytime",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1122777,
+   "top5": [
+    "Anytime",
+    "Anylimx",
+    "Anyiimx",
+    "Aaylimx",
+    "Auylimx"
+   ],
+   "best_real_word": "Anytime"
+  },
+  {
+   "k": 7,
+   "word": "Gratis",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1391790,
+   "top5": [
+    "Gratis",
+    "Giatis",
+    "Gratls",
+    "Grotis",
+    "Geetis"
+   ],
+   "best_real_word": "Gratis"
+  },
+  {
+   "k": 8,
+   "word": "Intimate",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1054539,
+   "top5": [
+    "Intimate",
+    "intimate",
+    "latimore",
+    "Telimate",
+    "bitimate"
+   ],
+   "best_real_word": "Intimate"
+  },
+  {
+   "k": 9,
+   "word": "Pairwise",
+   "rank": 4,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 762250,
+   "top5": [
+    "Poirwise",
+    "Poirwisc",
+    "Poiiwtse",
+    "Pairwise",
+    "Puirwise"
+   ],
+   "best_real_word": "Pairwise"
+  },
+  {
+   "k": 10,
+   "word": "Impaired",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 908876,
+   "top5": [
+    "Impaired",
+    "Impaircd",
+    "Impairsd",
+    "Impalred",
+    "Impoired"
+   ],
+   "best_real_word": "Impaired"
+  },
+  {
+   "k": 11,
+   "word": "Those",
+   "rank": 11,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1252876,
+   "top5": [
+    "Fhose",
+    "Fhour",
+    "Fhosc",
+    "Fhase",
+    "Fbose"
+   ],
+   "best_real_word": "Those"
+  },
+  {
+   "k": 12,
+   "word": "Frequent",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1184685,
+   "top5": [
+    "Frequent",
+    "Ixequxnt",
+    "Trxqusnt",
+    "Trxqnsnt",
+    "Trxqusut"
+   ],
+   "best_real_word": "Frequent"
+  },
+  {
+   "k": 13,
+   "word": "Variance",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1093407,
+   "top5": [
+    "Variance",
+    "Xoriuuee",
+    "Xoriuuce",
+    "Xoriauee",
+    "Xorinuee"
+   ],
+   "best_real_word": "Variance"
+  },
+  {
+   "k": 14,
+   "word": "Sealed",
+   "rank": 5,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1266759,
+   "top5": [
+    "Sealsd",
+    "Scalsd",
+    "Seulsd",
+    "Seaisd",
+    "Sealed"
+   ],
+   "best_real_word": "Sealed"
+  },
+  {
+   "k": 15,
+   "word": "Inserted",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1151428,
+   "top5": [
+    "Inserted",
+    "Iuserted",
+    "Insertcd",
+    "Iusertcd",
+    "Inurrted"
+   ],
+   "best_real_word": "Inserted"
+  },
+  {
+   "k": 16,
+   "word": "Internet",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1334066,
+   "top5": [
+    "Internet",
+    "Interact",
+    "Inhiruet",
+    "Iuhiruet",
+    "Inhirnet"
+   ],
+   "best_real_word": "Internet"
+  },
+  {
+   "k": 17,
+   "word": "Samba",
+   "rank": 9,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1010109,
+   "top5": [
+    "Samhu",
+    "Sumhu",
+    "Samha",
+    "Sambu",
+    "Sumha"
+   ],
+   "best_real_word": "Samba"
+  },
+  {
+   "k": 18,
+   "word": "Affine",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1431669,
+   "top5": [
+    "Affine",
+    "Affrue",
+    "Afjiue",
+    "Affruc",
+    "Affrus"
+   ],
+   "best_real_word": "Affine"
+  },
+  {
+   "k": 19,
+   "word": "Spelled",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1261248,
+   "top5": [
+    "Spelled",
+    "Spclled",
+    "Spslled",
+    "Spelied",
+    "Speiled"
+   ],
+   "best_real_word": "Spelled"
+  },
+  {
+   "k": 20,
+   "word": "Labels",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1257081,
+   "top5": [
+    "Labels",
+    "Lahels",
+    "Lahcls",
+    "Labcls",
+    "Lubels"
+   ],
+   "best_real_word": "Labels"
+  },
+  {
+   "k": 21,
+   "word": "Occurs",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1251013,
+   "top5": [
+    "Occurs",
+    "Oeeuer",
+    "Oecuer",
+    "Oeener",
+    "Oscars"
+   ],
+   "best_real_word": "Occurs"
+  },
+  {
+   "k": 22,
+   "word": "Member",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1125387,
+   "top5": [
+    "Member",
+    "Msmber",
+    "Msmher",
+    "Memhsr",
+    "Msmhcr"
+   ],
+   "best_real_word": "Member"
+  },
+  {
+   "k": 23,
+   "word": "Glyph",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1112030,
+   "top5": [
+    "Glyph",
+    "Glypb",
+    "Gtyph",
+    "Giyph",
+    "Gtypb"
+   ],
+   "best_real_word": "Glyph"
+  },
+  {
+   "k": 24,
+   "word": "Expat",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1182626,
+   "top5": [
+    "Expat",
+    "Exput",
+    "Expot",
+    "Lxpat",
+    "Expnt"
+   ],
+   "best_real_word": "Expat"
+  },
+  {
+   "k": 25,
+   "word": "Revert",
+   "rank": 5,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1302883,
+   "top5": [
+    "Reoiet",
+    "Reocrt",
+    "Reoert",
+    "Revcrt",
+    "Revert"
+   ],
+   "best_real_word": "Revert"
+  },
+  {
+   "k": 26,
+   "word": "Entirely",
+   "rank": 3,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1227181,
+   "top5": [
+    "Entirsly",
+    "Lntirsly",
+    "Entirely",
+    "Eatirsly",
+    "Eutirsly"
+   ],
+   "best_real_word": "Entirely"
+  },
+  {
+   "k": 27,
+   "word": "Accept",
+   "rank": 2,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1202327,
+   "top5": [
+    "Aceept",
+    "Accept",
+    "Acecpt",
+    "Aeecpt",
+    "Acccpt"
+   ],
+   "best_real_word": "Accept"
+  },
+  {
+   "k": 28,
+   "word": "Prepared",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1013216,
+   "top5": [
+    "Prepared",
+    "Prxpasrd",
+    "Prxpnsrd",
+    "Prxpusrd",
+    "Prxpastd"
+   ],
+   "best_real_word": "Prepared"
+  },
+  {
+   "k": 29,
+   "word": "Stating",
+   "rank": 2,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1236281,
+   "top5": [
+    "Statiug",
+    "Stating",
+    "Siatiug",
+    "Siating",
+    "Statiag"
+   ],
+   "best_real_word": "Stating"
+  },
+  {
+   "k": 30,
+   "word": "Broad",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1188605,
+   "top5": [
+    "Broad",
+    "Brood",
+    "Braad",
+    "Broud",
+    "Brond"
+   ],
+   "best_real_word": "Broad"
+  },
+  {
+   "k": 31,
+   "word": "Opening",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1211454,
+   "top5": [
+    "Opening",
+    "Opeuing",
+    "Opcning",
+    "Openiug",
+    "Openlng"
+   ],
+   "best_real_word": "Opening"
+  },
+  {
+   "k": 32,
+   "word": "Noticed",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1201833,
+   "top5": [
+    "Noticed",
+    "Nulwvd",
+    "Nstwod",
+    "Nsticed",
+    "Nslicod"
+   ],
+   "best_real_word": "Noticed"
+  },
+  {
+   "k": 33,
+   "word": "Tolerate",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1373432,
+   "top5": [
+    "Tolerate",
+    "Tolerute",
+    "Tolcrate",
+    "Toleratc",
+    "Tolerats"
+   ],
+   "best_real_word": "Tolerate"
+  },
+  {
+   "k": 34,
+   "word": "Stencil",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1401823,
+   "top5": [
+    "Stencil",
+    "Stsncil",
+    "Stsucil",
+    "Stsneil",
+    "Stsncii"
+   ],
+   "best_real_word": "Stencil"
+  },
+  {
+   "k": 35,
+   "word": "Cycles",
+   "rank": 3,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1298198,
+   "top5": [
+    "Cyclss",
+    "Cyelss",
+    "Cycles",
+    "Cyeles",
+    "Cyciss"
+   ],
+   "best_real_word": "Cycles"
+  },
+  {
+   "k": 36,
+   "word": "Broadly",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1123095,
+   "top5": [
+    "Broadly",
+    "Bxeadly",
+    "Bxeudly",
+    "Bxeodly",
+    "Bxendly"
+   ],
+   "best_real_word": "Broadly"
+  },
+  {
+   "k": 37,
+   "word": "Model",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1366656,
+   "top5": [
+    "Model",
+    "Modsl",
+    "Modst",
+    "Modsi",
+    "Slodsl"
+   ],
+   "best_real_word": "Model"
+  },
+  {
+   "k": 38,
+   "word": "Grand",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1297824,
+   "top5": [
+    "Grand",
+    "Graud",
+    "Graod",
+    "Graad",
+    "Giand"
+   ],
+   "best_real_word": "Grand"
+  },
+  {
+   "k": 39,
+   "word": "Bloom",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1104770,
+   "top5": [
+    "Bloom",
+    "Blaom",
+    "Blovm",
+    "Blonm",
+    "Bloam"
+   ],
+   "best_real_word": "Bloom"
+  },
+  {
+   "k": 40,
+   "word": "Scanner",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1220810,
+   "top5": [
+    "Scanner",
+    "branuer",
+    "branner",
+    "hranuer",
+    "branaer"
+   ],
+   "best_real_word": "Scanner"
+  },
+  {
+   "k": 41,
+   "word": "Await",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1335897,
+   "top5": [
+    "Await",
+    "Awuit",
+    "Awnit",
+    "Awoit",
+    "Awvit"
+   ],
+   "best_real_word": "Await"
+  },
+  {
+   "k": 42,
+   "word": "Harness",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1115194,
+   "top5": [
+    "Harness",
+    "Ituinsss",
+    "Itainsss",
+    "Iturnois",
+    "Ituinosr"
+   ],
+   "best_real_word": "Harness"
+  },
+  {
+   "k": 43,
+   "word": "Superior",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1282335,
+   "top5": [
+    "Superior",
+    "Snperior",
+    "Superiur",
+    "Soperior",
+    "Supcrior"
+   ],
+   "best_real_word": "Superior"
+  },
+  {
+   "k": 44,
+   "word": "Probe",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1182600,
+   "top5": [
+    "Probe",
+    "Prohe",
+    "Probc",
+    "Prabe",
+    "Prohc"
+   ],
+   "best_real_word": "Probe"
+  },
+  {
+   "k": 45,
+   "word": "Enclose",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1243567,
+   "top5": [
+    "Enclose",
+    "bnetoee",
+    "baetoee",
+    "hnetoee",
+    "haetoee"
+   ],
+   "best_real_word": "Enclose"
+  },
+  {
+   "k": 46,
+   "word": "Applying",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1247082,
+   "top5": [
+    "Applying",
+    "Applyiug",
+    "Appiying",
+    "Applylng",
+    "Appiyiug"
+   ],
+   "best_real_word": "Applying"
+  },
+  {
+   "k": 47,
+   "word": "Adding",
+   "rank": 2,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1214825,
+   "top5": [
+    "Addiug",
+    "Adding",
+    "Addiag",
+    "kddiug",
+    "kdding"
+   ],
+   "best_real_word": "Adding"
+  },
+  {
+   "k": 48,
+   "word": "Plastic",
+   "rank": 9,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1275250,
+   "top5": [
+    "Pluslie",
+    "Plaslie",
+    "Pluslic",
+    "Plaslic",
+    "Ploslie"
+   ],
+   "best_real_word": "Plastic"
+  },
+  {
+   "k": 49,
+   "word": "Cleaner",
+   "rank": 1,
+   "rank_among_real_words": 1,
+   "rank_Eternal": null,
+   "n_scored": 1253522,
+   "top5": [
+    "Cleaner",
+    "Cleauer",
+    "Cleaaer",
+    "Cleaoer",
+    "Cleancr"
+   ],
+   "best_real_word": "Cleaner"
+  }
+ ],
+ "Eternal_in_top10": 0
+}
