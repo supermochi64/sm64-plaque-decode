@@ -74,7 +74,7 @@ def typed(fpath, l1t, l2t, w=430):
 
 
 def method(T, rows, fdir_font, out):
-    """rows: (label1, label2, pred, total, ok). The fingerprint idea on the WHOLE plaque."""
+    """rows: (label1, label2, pred, total, ok). The fingerprint idea on the whole plaque."""
     lo, hi = np.percentile(T, 1), np.percentile(T, 99.5); S = 330
     W, H = 2000, 230 + len(rows) * (S + 110) + 40; im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
     d.text((W // 2, 50), "How it works: every text leaves its own fingerprint when it is shrunk", INK, font=font(FB, 46), anchor="mm")
