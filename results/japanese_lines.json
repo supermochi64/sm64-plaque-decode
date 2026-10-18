@@ -1,0 +1,117 @@
+{
+ "note": "Japanese line-1 texts scored like every other reading (own designer-recipe search, fixed stone), in two Japanese fonts (Noto Serif CJK JP Regular, Noto Sans CJK JP Medium; modern stand-ins for 1990s Mincho/Gothic). Reference: Eternal Star 788.7.",
+ "rows": [
+  {
+   "reading": "永遠の星",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 5451.2,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "エターナルスター",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 3565.7,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "えいえんのほし",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 3891.5,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "ひみつのスター",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 4027.8,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "スターのいずみ",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 3493.7,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "星の銅像",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 5074.0,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "ピーチ城",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 5588.6,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "スーパーマリオ64",
+   "font": "NotoSerifCJKjp-Regular.ttc",
+   "line1": 3525.8,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "永遠の星",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 5428.3,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "エターナルスター",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 3907.0,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "えいえんのほし",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 3821.7,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "ひみつのスター",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 4223.7,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "スターのいずみ",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 3509.6,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "星の銅像",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 5297.4,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "ピーチ城",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 5688.2,
+   "line2": null,
+   "total": null
+  },
+  {
+   "reading": "スーパーマリオ64",
+   "font": "NotoSansCJKjp-Medium.ttc",
+   "line1": 3610.0,
+   "line2": null,
+   "total": null
+  }
+ ]
+}
