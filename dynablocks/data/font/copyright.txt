@@ -1,0 +1,15 @@
+You may freely use and distribute the G3D .fnt files in
+commercial and non-commercial projects.
+
+These .fnt files contain compressed images of characters.  
+While the original true-type fonts have copyrights owned
+by their respective owners, my understanding is that
+images of characters produced with those fonts are not
+copyrighted by the font owner (otherwise you could never
+use a font to produce a document).  Therefore the copyright
+on the .fnt file data is not owned by the font creator.
+The fonts themselves were downloaded from freeware font
+sources on the internet and the default Windows fonts.
+Attribution for fonts is listed in the Change Log.
+
+
