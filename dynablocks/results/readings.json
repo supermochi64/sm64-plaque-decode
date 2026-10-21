@@ -1,0 +1,151 @@
+{
+ "note": "Mismatch scores are mean squared errors over the line's thumbnail window (lower = closer to the real pixels), each candidate with its own best position. 'sure' = clearly separated from every alternative; 'likely' = best of the sensible alternatives with a clear margin; 'best fit' = best of the tested candidates, close alternatives exist (digits especially).",
+ "screenshot_1 (John's Puzzle Game, Jan 2004)": [
+  {
+   "line": "title",
+   "reading": "Level 1: Build a bridge that doesn't break",
+   "confidence": "sure",
+   "score": 104.4,
+   "alternatives": {
+    "Level 1: Build a tower that doesn't fall": 295.4,
+    "Level 1: Build a bridge that does break": 315.5,
+    "Level 1: Make a bridge that won't break": 319.1
+   },
+   "note": "digit: 1/2/7 score 104/108/108 -> digit not separable"
+  },
+  {
+   "line": "buttons",
+   "reading": [
+    "Run",
+    "Move",
+    "Delete"
+   ],
+   "confidence": "sure",
+   "note": "full search of 8,856 capitalised English words per slot: Move rank 1, Delete rank 1, Run rank 18 (best UI word; the 17 above are 3-letter shapes like Ave/Rev/Res). Stop rank 1,299, Reset rank 1,655."
+  },
+  {
+   "line": "separator",
+   "reading": "---",
+   "confidence": "likely",
+   "score": 13.1,
+   "alternatives": {
+    "~": 14.1,
+    "...": 14.6
+   }
+  },
+  {
+   "line": "stats 1",
+   "reading": "100 average fps",
+   "confidence": "likely",
+   "note": "'average fps' wins every word test; 100 is the best number in both screenshots independently"
+  },
+  {
+   "line": "stats 2",
+   "reading": "29 physics fps",
+   "confidence": "best fit",
+   "note": "'physics fps' wins in both screenshots; number 119/29 tie (284.1/284.3), 29 chosen (physics below 100 average)"
+  },
+  {
+   "line": "stats 3",
+   "reading": "64.702 SIM  467.701 msec",
+   "confidence": "best fit",
+   "note": "structure '<number> <label>  <number> msec'; label SIM/DM/ERR close; digits not reliable"
+  },
+  {
+   "line": "stats 4",
+   "reading": "-67.474 ERR  73.889 msec",
+   "confidence": "best fit",
+   "note": "ERR best label in both screenshots; leading minus; digits not reliable"
+  },
+  {
+   "line": "tool 1 (selected)",
+   "reading": "Join Block ( 21 )",
+   "confidence": "likely / count sure",
+   "score": 229.8,
+   "alternatives": {
+    "Add Block": 237.1,
+    "Thin Block": 265.6
+   },
+   "note": "count ( 21 ) 57.8 vs ( 23 ) 79.7"
+  },
+  {
+   "line": "tool 2",
+   "reading": "Create Block ( 33 )",
+   "confidence": "likely / count best fit"
+  },
+  {
+   "line": "bottom 1",
+   "reading": "Shop open",
+   "confidence": "best fit",
+   "alternatives": {
+    "Snap open": 288.1,
+    "Shed open": 294.5,
+    "Shop open": 295.1,
+    "Road open": 297.2,
+    "Build open": 298.4
+   },
+   "note": "second word 'open' consistent; first word chosen for context (next line 'Cost:')"
+  },
+  {
+   "line": "bottom 2",
+   "reading": "Cost: 18.86",
+   "confidence": "label likely / digits best fit",
+   "note": "'Cost:' wins against 30 labels"
+  }
+ ],
+ "screenshot_2 (Dump Truck, Jan 2004)": [
+  {
+   "line": "title",
+   "reading": "Level 4: Big Wheels",
+   "confidence": "likely",
+   "score": 259.9,
+   "alternatives": {
+    "Level 1: Dump truck": 327.6,
+    "Level 4: Dig a hole": 288.3,
+    "Level 4: Transport": 290.9
+   },
+   "note": "background behind the title is estimated; digit 0/4/8/6 within 2 %; an open two-word search finds nonsense pairs slightly better (249)"
+  },
+  {
+   "line": "stats 1",
+   "reading": "100 average fps",
+   "confidence": "likely"
+  },
+  {
+   "line": "stats 2",
+   "reading": "99 physics fps",
+   "confidence": "best fit"
+  },
+  {
+   "line": "stats 3",
+   "reading": "52.440 SIM  629.599 msec",
+   "confidence": "best fit"
+  },
+  {
+   "line": "stats 4",
+   "reading": "-787.440 ERR  71.939 msec",
+   "confidence": "best fit"
+  },
+  {
+   "line": "tools",
+   "reading": [
+    "Join Block ( 10 )",
+    "Create Block ( 34 )",
+    "Big Block ( 40 )",
+    "Heavy Block ( 14 )",
+    "Ball ( 36 ) [selected]",
+    "Beam ( 22 )"
+   ],
+   "confidence": "Join/Create likely, rest best fit",
+   "note": "Create Block 121 vs Locked Block 123 (screenshot 2 only); Big Block = Dig Block 80; Heavy Block 161 vs Small Block 174; item 5 Goal 178 / Box 186 / Ball 198 -> Ball chosen (balls in the truck); Beam 337 vs Base 347"
+  },
+  {
+   "line": "bottom",
+   "reading": [
+    "Shop open",
+    "Cost: 133.98"
+   ],
+   "confidence": "best fit"
+  }
+ ]
+}
