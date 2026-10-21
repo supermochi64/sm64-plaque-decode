@@ -1,0 +1,105 @@
+{
+ "note": "Joint colour refit of the whole sign on the game's 5-bit RGB values: shared font process (Century 751), pen per word, ink per line and colour channel, painted paper integrated out (Gaussian-process prior from the text-free board). Score = generalised least squares over the three text lines, all channels; lower = closer to the real pixels.",
+ "font": "Century 751",
+ "reading": "I'm here. See / me as you go. / Hold on!",
+ "score": 615.7,
+ "mean_abs_error_levels": 0.7,
+ "share_within_1_level": 0.824,
+ "words": [
+  [
+   0,
+   "I'm"
+  ],
+  [
+   0,
+   "here."
+  ],
+  [
+   0,
+   "See"
+  ],
+  [
+   1,
+   "me"
+  ],
+  [
+   1,
+   "as"
+  ],
+  [
+   1,
+   "you"
+  ],
+  [
+   1,
+   "go."
+  ],
+  [
+   2,
+   "Hold"
+  ],
+  [
+   2,
+   "on!"
+  ]
+ ],
+ "pen_x": [
+  5.995838642120361,
+  11.97926139831543,
+  20.14116668701172,
+  6.281197547912598,
+  11.933280944824219,
+  15.762097358703613,
+  22.31678581237793,
+  5.637046813964844,
+  14.949103355407715
+ ],
+ "baseline_y": [
+  12.444937705993652,
+  12.380861282348633,
+  12.367658615112305,
+  17.665027618408203,
+  17.58136749267578,
+  17.678312301635742,
+  17.382932662963867,
+  23.526596069335938,
+  23.379796981811523
+ ],
+ "ink_per_line_rgb": [
+  [
+   40.169551849365234,
+   37.36293029785156,
+   35.65277099609375
+  ],
+  [
+   30.686504364013672,
+   28.492353439331055,
+   30.676603317260742
+  ],
+  [
+   19.10676383972168,
+   17.568483352661133,
+   20.325233459472656
+  ]
+ ],
+ "process_raw": {
+  "lsx": 1.1919217109680176,
+  "lsy": 1.415336012840271,
+  "shear": -0.005834526382386684,
+  "track": 0.07607795298099518,
+  "a": -0.19219984114170074,
+  "p": 1.8560216426849365,
+  "lg": 0.020755667239427567,
+  "t": 0.46071985363960266
+ },
+ "controls": {
+  "I'm here. See / us as we are / Find me!": {
+   "score": 661.3,
+   "mean_abs_error_levels": 0.71
+  },
+  "Hi there. Run / to the big tree / Go now!": {
+   "score": 1050.6,
+   "mean_abs_error_levels": 1.03
+  }
+ }
+}
